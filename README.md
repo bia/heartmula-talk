@@ -64,3 +64,9 @@ Available fields per type are documented inline in `render.js` (the `RENDERERS` 
 ## Reordering slides
 
 Just cut and paste the block. Slide numbers in the HUD and scrubber tooltips update automatically.
+
+## License
+
+Unless otherwise noted, all non-music source code and project files in this repository are licensed under the Apache License 2.0. See `LICENSE`.
+
+All music in this repository (including compositions, recordings, and audio exports in `media/`) is owned by Bianca and is **not** licensed under Apache 2.0. See `MUSIC-LICENSE.txt`.

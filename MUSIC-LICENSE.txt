@@ -1,0 +1,10 @@
+Music License (All Rights Reserved)
+
+All music in this repository is the exclusive property of Bianca.
+
+This includes musical compositions, melodies, arrangements, recordings, stems, and rendered audio files (including music-related assets in `media/`).
+
+Music content is not licensed under Apache License 2.0.
+No permission is granted to copy, modify, distribute, perform, publish, sublicense, or commercially use the music without prior written permission from Bianca.
+
+All rights reserved.
