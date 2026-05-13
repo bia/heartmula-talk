@@ -351,6 +351,16 @@
                 : s["heading-style"] === "display-sm"
                     ? "display-sm"
                     : "";
+            const audioBlock = s.audio ? `
+                <figure class="lesson-audio">
+                    <audio controls preload="metadata" src="${s.audio.src}"></audio>
+                    <figcaption class="lesson-audio__caption">
+                        ${s.audio.tag ? `<span class="lesson-audio__tag">${md(s.audio.tag)}</span>` : ""}
+                        ${s.audio.caption ? `<span>${md(s.audio.caption)}</span>` : ""}
+                    </figcaption>
+                </figure>` : "";
+            const transcriptBlock = s.transcript ? `
+                <pre class="transcript-block">${String(s.transcript).trim()}</pre>` : "";
             return `<section class="${s["section-class"] || ""}">
                 ${s.photo ? `<img class="ao-photo" src="${s.photo}" alt="${s["photo-alt"] || ""}" />` : ""}
                 ${s.photo ? `<div class="ao-veil" aria-hidden="true"></div>` : ""}
@@ -360,6 +370,8 @@
                     ${lede(s.lede)}
                     ${paras(s.body)}
                     ${aside(s.aside)}
+                    ${audioBlock}
+                    ${transcriptBlock}
                     ${muted(s.muted)}
                     ${callout(s.callout)}
                     ${cards ? `<div class="three-up">${cards}</div>` : ""}

@@ -9,12 +9,11 @@
 type: hero
 photo: ./bianca-singing.png
 photo-alt: Bianca Cheng singing live with her band, warm string lights overhead
-eyebrow: A talk in 30 tracks
+eyebrow: A talk in 31 tracks
 title: |
   Teaching AI<br />to Make Music<br /><em>Like I Do</em>
 meta-left: Bianca Cheng
 meta-right: HeartMula
-
 ---
 type: stack
 eyebrow: Who am I?
@@ -36,13 +35,11 @@ cards:
   - num: "03"
     title: Technologist
     body: Computer scientist, application developer. Not an ML engineer — AI tools filled the gap.
-
 ---
 type: center
 eyebrow: The question that started this
 quote: |
   Can a machine<br />learn to sound<br /><em>like me?</em>
-
 ---
 type: bullets
 eyebrow: The project
@@ -53,7 +50,6 @@ bullets:
   - Not a tool that generates music <em>at</em> me.
   - A partner that improvises <em>with</em> me.
   - A mirror, occasionally a stranger, occasionally exactly right.
-
 ---
 type: media-audio
 eyebrow: HeartMula · day zero
@@ -67,7 +63,6 @@ style: raw
 wave-style: noise
 wave-gradient: lavender
 tag-class: cool
-
 ---
 type: stats
 heading: The corpus is me
@@ -85,7 +80,6 @@ stats:
 muted: |
   Finished records, half-baked demos, hummed melodies in airport bathrooms.
   Everything I've made, fed back to a system that was trying to become me.
-
 ---
 type: stack
 heading: How it actually works
@@ -103,7 +97,6 @@ aside: |
   discretizes a waveform into <strong>12.5 tokens per second</strong>; HeartMuLa-3B
   autoregressively predicts the next chunk of sound, just like GPT predicts the next word.
 muted: Six models in. One gets fine-tuned. Five pipeline steps follow.
-
 ---
 type: model-stack
 eyebrow: The stack
@@ -144,7 +137,6 @@ groups:
         role: Lyric transcription
         detail: Auto language detection
         status: Frozen
-
 ---
 type: pipeline-step
 eyebrow: Pipeline · 01 / 05
@@ -155,7 +147,6 @@ sub: |
 image: ./media/pipeline-01-pair.jpg
 image-alt: Finder showing the data/paired/ folder with inputs, outputs, lyrics, and tags subdirectories
 caption: data/paired/ · matched by filename
-
 ---
 type: pipeline-step
 eyebrow: Pipeline · 02 / 05
@@ -171,7 +162,6 @@ aside: |
 image: ./media/pipeline-02-annotate.jpg
 image-alt: VSCode editing annotate.py with Whisper language detection logic
 caption: annotate.py · CLAP + Whisper
-
 ---
 type: pipeline-step
 eyebrow: Pipeline · 03 / 05
@@ -187,7 +177,6 @@ aside: |
 image: ./media/pipeline-03-condition.jpg
 image-alt: Claude pane explaining the AudioConditioningModule architecture
 caption: AudioConditioningModule · WavLM hook
-
 ---
 type: pipeline-step
 eyebrow: Pipeline · 04 / 05
@@ -206,7 +195,6 @@ aside: |
 image: ./media/pipeline-04-train.jpg
 image-alt: VSCode reviewing finetune_audio2audio_direct.py for performance optimization
 caption: finetune_audio2audio_direct.py · LoRA rank 16
-
 ---
 type: pipeline-step
 eyebrow: Pipeline · 05 / 05
@@ -217,14 +205,12 @@ sub: |
 image: ./media/pipeline-05-generate.jpg
 image-alt: VSCode and Claude pane working on generate_audio2audio.py inference pipeline
 caption: generate_audio2audio.py · adapter + hook
-
 ---
 type: center
 eyebrow: Let's try it
 quote: |
   On a song<br /><em>of mine.</em>
 muted: Time to feed it a real composition and see what comes back.
-
 ---
 type: media-video-pair
 eyebrow: Some context, briefly
@@ -242,7 +228,6 @@ videos:
     tag: Now
     tag-class: ao
     caption: AO · Moments
-
 ---
 type: media-video
 eyebrow: Composition journey · 01
@@ -254,7 +239,6 @@ video: ./media/chuva-sketch.mov
 caption-tag: Sketch
 caption-text: Voice memo · piano · Barcelona, 2023
 layout: split
-
 ---
 type: media-audio
 eyebrow: Composition journey · 02
@@ -270,7 +254,6 @@ bg-image: ./media/chuva-sheet-music.jpg
 bg-image-alt: Handwritten chord chart for Chuva on staff paper with Portuguese lyrics
 wave-style: song
 wave-gradient: mixed
-
 ---
 type: stack
 section-class: section--ao section--ao--photo
@@ -285,7 +268,6 @@ body: |
   and pull it forward into the neo-soul I'm writing now with <strong>AO</strong>,
   my band in Barcelona.
 muted: Not "sound like me." More like: <em>keep up with me.</em>
-
 ---
 type: lesson
 eyebrow: Lesson 01
@@ -300,7 +282,6 @@ audio:
   tag: Gen 01
   caption: My reflexes, sung back at me.
 callout: Listening to my own habits sung back to me <em>changed</em> what I wrote next.
-
 ---
 type: lesson
 eyebrow: Lesson 02
@@ -315,7 +296,6 @@ audio:
   src: ./media/chuva-gen2.wav
   tag: Gen 02
   caption: The take I didn't see coming.
-
 ---
 type: lesson
 eyebrow: Lesson 03
@@ -332,7 +312,6 @@ audio-pair:
     tag: Gen 02
     caption: The one I kept.
 callout: Generation is cheap. <em>Curation is the artist.</em>
-
 ---
 type: lesson
 theme: ao
@@ -350,14 +329,12 @@ callout: |
   Even the training config admitted it: I told the model that getting the melody right
   was worth only <em>30% of its attention</em> — too low. Bumping that number is one
   of the things I want to try next.
-
 ---
 type: center
 eyebrow: The bigger question
 quote: |
   What if my <em>voice</em><br />was never about its sound,<br />but about my <em>musical taste?</em>
 quote-class: serif
-
 ---
 type: bullets
 heading: What's next for HeartMula
@@ -368,14 +345,12 @@ bullets:
   - <strong>More songs</strong> — the model needs new material. So do I.
   - <strong>A record</strong> — co&#8209;produced with myself. Credits get philosophical.
   - <strong>Raise the melodic bar</strong> — richer melodic depth, surprises in the chord progression.
-
 ---
 type: open-source
 eyebrow: It's open source
 pretitle: Fork it. Train it on your catalog.
 url: github.com/bia/bia-music-composer
 caption: 📷 &nbsp; Photograph this slide.
-
 ---
 type: thank-you
 eyebrow: Thank you
@@ -389,7 +364,6 @@ qrs:
   - src: ./media/qr-linkedin.svg
     label: LinkedIn
     handle: in/biancacheng
-
 ---
 type: pipeline-step
 eyebrow: Process · 01 / 04
@@ -398,7 +372,6 @@ sub: Hour after hour of CUDA out-of-memory errors.
 image: ./media/process-01-cuda-oom.jpg
 image-alt: VSCode showing a CUDA out-of-memory error during a training run
 caption: finetune_audio2audio.py · OOM
-
 ---
 type: pipeline-step
 eyebrow: Process · 02 / 04
@@ -407,7 +380,6 @@ sub: After enough yak-shaving, the model started learning.
 image: ./media/process-02-training.jpg
 image-alt: GCP Compute Engine logs streaming as the heartmula-train VM loads checkpoint shards
 caption: heartmula-train · GCP Compute
-
 ---
 type: pipeline-step
 eyebrow: Process · 03 / 04
@@ -416,7 +388,25 @@ sub: WhisperX transcribing Chuva's lyrics. The model needed to know what it was 
 image: ./media/process-03-portuguese.jpg
 image-alt: VSCode pair-programming with Claude on the finetune.py annotation pipeline
 caption: annotate.py · WhisperX
-
+---
+type: stack
+eyebrow: A delightful side effect
+heading: Whisper hallucinated.
+lede: |
+  I fed it a purely instrumental clip — no vocals at all — and Whisper-large-v3 confidently
+  transcribed... lyrics.
+audio:
+  src: ./media/lyrics_input.wav
+  tag: Input
+  caption: lyrics_input.wav · purely instrumental
+transcript: |
+  [Verse]
+  E aí E aí Legenda por Fábio Jr Laboratório Fantasma
+body: |
+  Trained on millions of hours of YouTube, Whisper has seen countless videos that open with
+  someone saying <em>"E aí"</em> ("yo, what's up") and end with a subtitle-credit line.
+  When there's nothing to transcribe, it falls back on those tropes — a slightly perfect
+  glimpse into the model's mental dataset.
 ---
 type: pipeline-step
 eyebrow: Process · 04 / 04

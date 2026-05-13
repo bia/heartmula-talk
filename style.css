@@ -938,6 +938,25 @@ ol.steps li:last-child {
     margin-top: -4px;
 }
 
+/* ---- transcript block (Whisper hallucination, etc.) --- */
+
+.transcript-block {
+    margin: clamp(20px, 2.4vw, 32px) 0 0;
+    padding: 18px 22px;
+    font-family: var(--mono);
+    font-size: clamp(15px, 1.4vw, 19px);
+    line-height: 1.55;
+    color: var(--ink);
+    background:
+        linear-gradient(180deg, rgba(255, 198, 173, 0.05), rgba(216, 186, 242, 0.03)),
+        rgba(10, 6, 20, 0.55);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    white-space: pre-wrap;
+    max-width: 64ch;
+    overflow-x: auto;
+}
+
 /* ---- lesson audio (woven into Lessons 01–03) ---------- */
 
 .lesson-audio {
