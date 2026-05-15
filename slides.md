@@ -19,7 +19,7 @@ type: stack
 eyebrow: Who am I?
 heading: Bianca Cheng
 heading-style: display
-lede: Born in São Paulo — Chinese mother, Italian father. Polyglot in seven languages.
+lede: Born in São Paulo — Chinese mother, Italian father.<br />Polyglot in seven languages.
 body: |
   MIT Media Lab → Apple (nine patents) → exhibited at Ars Electronica and the Met →
   now in Barcelona, leading <strong>AO</strong>, a neo-soul quartet rooted in
@@ -244,7 +244,7 @@ type: media-audio
 eyebrow: Composition journey · 02
 title: Using my own model.
 sub: |
-  I fed it the finished version of Chuva — fully arranged, sung in Portuguese.
+  I fed it the demo version of Chuva — fully arranged, sung in Portuguese.
   <em>Bm7(9) · Em6 · "dia de chuva e acabou o verão."</em>
 sub-tight: true
 audio: ./media/chuva.wav
@@ -304,13 +304,6 @@ lede: Voice is the editing.
 body: |
   The model can produce a thousand convincing Bianca-flavored loops in a minute.
   None of them are mine until I choose one and throw the other 999 away.
-audio-pair:
-  - src: ./media/chuva-gen1.wav
-    tag: Gen 01
-    caption: The take I started with.
-  - src: ./media/chuva-gen2.wav
-    tag: Gen 02
-    caption: The one I kept.
 callout: Generation is cheap. <em>Curation is the artist.</em>
 ---
 type: lesson
