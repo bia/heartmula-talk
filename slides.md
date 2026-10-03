@@ -264,7 +264,7 @@ lede: Not imitation. Evolution.
 body: |
   I wasn't asking the model to imitate me. I was asking it to <em>evolve</em> me.
 
-  To take Chuva — written in 2024, when I was still mostly bossa nova and MPB —
+  To take Chuva — written in 2023, when I was still mostly bossa nova and MPB —
   and pull it forward into the neo-soul I'm writing now with <strong>AO</strong>,
   my band in Barcelona.
 muted: Not "sound like me." More like: <em>keep up with me.</em>

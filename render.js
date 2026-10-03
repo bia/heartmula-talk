@@ -625,7 +625,8 @@
         const deck = document.getElementById("deck");
         if (!deck) return;
         try {
-            const res = await fetch("./slides.md");
+            const src = document.documentElement.dataset.slides || "./slides.md";
+            const res = await fetch(src);
             if (!res.ok) throw new Error("Failed to load slides.md: " + res.status);
             const text = await res.text();
             const slides = parseSlidesMd(text);
