@@ -162,23 +162,6 @@ wave-style: noise
 wave-gradient: lavender
 tag-class: cool
 ---
-type: stack
-heading: Como funciona de verdade
-lede: |
-  Não comecei do zero. Fiz um fork do projeto open source de ML do
-  <strong>Christian</strong> — feito para <em>educação</em>, não para música — e usei
-  como andaime para entender GCP e infraestrutura de treino.
-body: |
-  Em cima disso, construí um pipeline de fine-tuning em torno da suíte de modelos
-  musicais de pesos abertos <strong>HeartMuLa</strong> (Apache 2.0), com um backbone de
-  <strong>3 bilhões de parâmetros</strong> adaptado via <strong>LoRA</strong> em pares de áudio.
-aside: |
-  Um "<strong>modelo de linguagem musical</strong>" é um transformer — a mesma arquitetura
-  do GPT — mas prevendo <em>tokens de áudio</em> em vez de texto. O HeartCodec
-  discretiza a forma de onda em <strong>12,5 tokens por segundo</strong>; o HeartMuLa-3B
-  prevê, de forma autorregressiva, o próximo trecho de som — como o GPT prevê a próxima palavra.
-muted: Seis modelos. Um recebe fine-tuning. Cinco etapas de pipeline.
----
 type: model-stack
 eyebrow: A stack
 heading: Seis modelos, um ajustado.
@@ -322,6 +305,28 @@ photo-bg: ./media/ao-rehearsal-bass.jpg
 photo-bg-alt: Ensaio do AO, baixo em primeiro plano e Bianca cantando ao fundo
 photo-bg-style: side
 photo-bg-pos: 30% 40%
+---
+type: stack
+eyebrow: Nove meses depois
+heading: Por que mudar de modelo?
+lede: Em música com IA, nove meses são uma geração inteira.
+body: |
+  Quando comecei o HeartMula, o modelo aberto que escolhi cantava canções inteiras —
+  mas não aceitava um áudio de referência. Então eu construí essa ponte à mão:
+  GPU na nuvem, erros de memória, um módulo de condicionamento feito no vibe-coding.
+
+  Hoje, o <strong>ACE-Step 1.5</strong> faz isso de fábrica — e roda no meu MacBook.
+  A pergunta continua a mesma. Só a ferramenta mudou.
+cards:
+  - num: "01"
+    title: HeartMula · há 9 meses
+    body: Pipeline próprio no Google Cloud. A referência de áudio ainda estava na lista de pendências do modelo base — tive que construí-la.
+  - num: "02"
+    title: ACE-Step 1.5 · hoje
+    body: Canção completa, com voz e letra em português. Referência, remix e treino de LoRA prontos na interface — local, num laptop.
+  - num: "03"
+    title: O que não mudou
+    body: O catálogo. As mesmas 16 músicas, a mesma Chuva. É isso que torna a comparação justa.
 ---
 type: center
 eyebrow: Sistema 2 / 3

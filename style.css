@@ -1248,7 +1248,7 @@ ol.steps li:last-child {
     object-fit: cover;
     object-position: 50% 35%;
     z-index: 0;
-    filter: saturate(0.65) brightness(0.55) contrast(1.05) hue-rotate(-8deg);
+    filter: saturate(0.85) brightness(0.78) contrast(1.05) hue-rotate(-8deg);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.55) 18%, #000 45%, #000 100%);
     mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.55) 18%, #000 45%, #000 100%);
 }
@@ -1259,8 +1259,8 @@ ol.steps li:last-child {
     z-index: 1;
     pointer-events: none;
     background:
-        linear-gradient(90deg, var(--bg-0) 0%, rgba(6, 12, 24, 0.85) 25%, rgba(6, 12, 24, 0.45) 55%, rgba(6, 12, 24, 0.65) 100%),
-        linear-gradient(180deg, rgba(6, 12, 24, 0.40) 0%, transparent 30%, transparent 70%, rgba(6, 12, 24, 0.85) 100%),
+        linear-gradient(90deg, var(--bg-0) 0%, rgba(6, 12, 24, 0.75) 25%, rgba(6, 12, 24, 0.20) 55%, rgba(6, 12, 24, 0.25) 100%),
+        linear-gradient(180deg, rgba(6, 12, 24, 0.40) 0%, transparent 30%, transparent 72%, rgba(6, 12, 24, 0.75) 100%),
         radial-gradient(ellipse 60% 50% at 75% 50%, rgba(26, 77, 255, 0.10), transparent 70%);
 }
 
@@ -1851,7 +1851,7 @@ ol.steps li:last-child {
     object-fit: cover;
     object-position: 50% 40%;
     z-index: 0;
-    filter: saturate(0.75) brightness(0.55) contrast(1.06);
+    filter: saturate(0.85) brightness(0.78) contrast(1.06);
 }
 .slide-photo-veil {
     position: absolute;
@@ -1859,8 +1859,8 @@ ol.steps li:last-child {
     z-index: 1;
     pointer-events: none;
     background:
-        radial-gradient(ellipse 70% 60% at 50% 50%, rgba(10, 6, 20, 0.55) 0%, rgba(10, 6, 20, 0.82) 100%),
-        linear-gradient(180deg, rgba(10, 6, 20, 0.55) 0%, transparent 28%, transparent 70%, rgba(10, 6, 20, 0.85) 100%);
+        radial-gradient(ellipse 55% 50% at 50% 50%, rgba(10, 6, 20, 0.50) 0%, rgba(10, 6, 20, 0.25) 100%),
+        linear-gradient(180deg, rgba(10, 6, 20, 0.45) 0%, transparent 28%, transparent 72%, rgba(10, 6, 20, 0.75) 100%);
 }
 .has-photo--side .slide-photo {
     left: auto;
@@ -1870,8 +1870,8 @@ ol.steps li:last-child {
 }
 .has-photo--side .slide-photo-veil {
     background:
-        linear-gradient(90deg, var(--bg-0) 0%, rgba(10, 6, 20, 0.80) 30%, rgba(10, 6, 20, 0.40) 60%, rgba(10, 6, 20, 0.55) 100%),
-        linear-gradient(180deg, rgba(10, 6, 20, 0.45) 0%, transparent 30%, transparent 70%, rgba(10, 6, 20, 0.75) 100%);
+        linear-gradient(90deg, var(--bg-0) 0%, rgba(10, 6, 20, 0.70) 30%, rgba(10, 6, 20, 0.20) 60%, rgba(10, 6, 20, 0.25) 100%),
+        linear-gradient(180deg, rgba(10, 6, 20, 0.45) 0%, transparent 30%, transparent 72%, rgba(10, 6, 20, 0.75) 100%);
 }
 /* right: full-height photo anchored right, brighter than full-bleed */
 .has-photo--right .slide-photo {
@@ -1879,7 +1879,6 @@ ol.steps li:last-child {
     right: -350px;
     width: auto;
     aspect-ratio: 3 / 2; /* match the photo so cover doesn't crop its sides */
-    filter: saturate(0.85) brightness(0.78) contrast(1.06);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 24%, rgba(0,0,0,0.8) 36%, #000 48%, #000 100%);
     mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 24%, rgba(0,0,0,0.8) 36%, #000 48%, #000 100%);
 }
