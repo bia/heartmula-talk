@@ -1,0 +1,3 @@
+# Netlify: serve the Portuguese deck at /pt (rewrite, the URL stays /pt)
+/pt     /index.pt-BR.html   200
+/pt/    /index.pt-BR.html   200
