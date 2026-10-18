@@ -1,4 +1,4 @@
-# Ensinando a IA a fazer música do meu jeito
+# Mesma música, três sistemas
 # Bianca Cheng — palestra HeartMula · Festival Futuros Possíveis · Casa Firjan
 #
 # Versão em português (pt-BR). Aberta por index.pt-BR.html.
@@ -9,7 +9,7 @@
 type: hero
 photo: ./bianca-singing.png
 photo-alt: Bianca Cheng cantando ao vivo com a banda, luzes quentes penduradas acima
-eyebrow: Uma palestra em 31 faixas
+eyebrow: Mesma música, três sistemas
 title: |
   Ensinando a IA<br />a fazer música<br /><em>do meu jeito</em>
 meta-left: Bianca Cheng
@@ -40,9 +40,107 @@ type: center
 eyebrow: A pergunta que começou tudo
 quote: |
   Uma máquina<br />consegue aprender<br />a soar <em>como eu?</em>
+photo-bg: ./media/bia-live-blue.jpg
+photo-bg-alt: Bianca ao vivo, mãos no microfone, luz azul
+photo-bg-style: full
+photo-bg-pos: 62% 35%
 ---
 type: bullets
-eyebrow: O projeto
+eyebrow: O experimento
+heading: Mesma música, três sistemas.
+heading-style: display-sm
+lede: Uma canção minha, <em>Chuva</em>. Três maneiras de ensinar uma máquina a tocá-la do meu jeito.
+bullets:
+  - <strong>HeartMula</strong> — o meu próprio pipeline — fine-tuning do HeartMuLa-3B nos meus pares demo → arranjo.
+  - <strong>ACE-Step 1.5 · só referência</strong> — zero treino; a demo de Chuva + uma gravação do AO como referência de estilo.
+  - <strong>ACE-Step 1.5 · LoRA bia-style</strong> — o mesmo modelo, treinado em 16 músicas minhas.
+---
+type: media-video-pair
+eyebrow: Um pouco de contexto
+title: Duas eras de mim.
+sub: |
+  Da bossa nova (<em>THIS IS BOSSA</em>) ao neo-soul (<em>AO</em>) —
+  a jornada que o modelo está tentando aprender.
+sub-tight: true
+layout: split
+videos:
+  - src: ./media/bossa-fugaz.mp4
+    tag: Antes
+    caption: THIS IS BOSSA · Fugaz
+  - src: ./media/ao-moments.mp4
+    tag: Agora
+    tag-class: ao
+    caption: AO · Moments
+---
+type: media-video
+eyebrow: Jornada da composição · 01
+title: Começou como um esboço.
+sub: |
+  Uma música chamada <em>Chuva</em> — sobre o primeiro dia de chuva no fim do verão,
+  o dia em que uma das minhas melhores amigas mudou de Barcelona.
+video: ./media/chuva-sketch.mov
+caption-tag: Esboço
+caption-text: Memo de voz · piano · Barcelona, 2023
+layout: split
+---
+type: media-audio
+eyebrow: A música · a entrada
+title: A demo que os três recebem.
+sub: |
+  Dei a ele a demo de Chuva — com arranjo completo, cantada em português.
+  <em>Bm7(9) · Em6 · "dia de chuva e acabou o verão."</em>
+sub-tight: true
+audio: ./media/chuva.wav
+caption-tag: Chuva
+caption-text: Todos os instrumentos e vozes — eu.
+bg-image: ./media/chuva-sheet-music.jpg
+bg-image-alt: Cifra de Chuva escrita à mão em papel pautado, com a letra em português
+wave-style: song
+wave-gradient: mixed
+---
+type: stack
+section-class: section--ao section--ao--photo
+photo: ./media/ao-band-wide.jpg
+photo-alt: AO tocando ao vivo, banda completa no palco com luzes penduradas acima
+heading: O que eu estava realmente pedindo.
+lede: Não imitação. Evolução.
+body: |
+  Eu não estava pedindo ao modelo que me imitasse. Estava pedindo que me fizesse <em>evoluir</em>.
+
+  Que pegasse Chuva — escrita em 2023, quando eu ainda era sobretudo bossa nova e MPB —
+  e a puxasse para o neo-soul que escrevo hoje com o <strong>AO</strong>,
+  minha banda em Barcelona.
+muted: Não "soe como eu". Mais assim — <em>acompanhe o meu passo.</em>
+---
+type: stats
+heading: O corpus sou eu
+bg-image: ./media/voice-memos.jpg
+bg-image-alt: Gravador do macOS mostrando títulos de músicas como Voar, Nada tudo, Lutar
+stats:
+  - num: "47"
+    label: músicas
+  - num: "12"
+    label: anos
+  - num: "312"
+    label: memos de voz
+  - num: "1"
+    label: pianista que eu ainda não consigo replicar
+muted: |
+  Discos finalizados, demos pela metade, melodias cantaroladas em banheiros de aeroporto.
+  Tudo o que já fiz, devolvido a um sistema que tentava se tornar eu.
+---
+type: center
+eyebrow: Sistema 1 / 3
+quote: |
+  HeartMula.<br /><em>O meu próprio modelo.</em>
+muted: Fine-tuning de um modelo aberto de 3 bilhões de parâmetros, nos meus pares demo → arranjo.
+photo-bg: ./media/ao-pink-wall.jpg
+photo-bg-alt: AO diante de um muro rosa, com teclado, microfone, baquetas e baixo
+photo-bg-style: full
+photo-bg-pos: 50% 62%
+---
+type: bullets
+eyebrow: Sistema 1 · o projeto
 heading: HeartMula
 heading-style: display-sm
 lede: Um experimento de criação musical colaborativa com IA, treinado no meu próprio catálogo.
@@ -63,23 +161,6 @@ style: raw
 wave-style: noise
 wave-gradient: lavender
 tag-class: cool
----
-type: stats
-heading: O corpus sou eu
-bg-image: ./media/voice-memos.jpg
-bg-image-alt: Gravador do macOS mostrando títulos de músicas como Voar, Nada tudo, Lutar
-stats:
-  - num: "47"
-    label: músicas
-  - num: "12"
-    label: anos
-  - num: "312"
-    label: memos de voz
-  - num: "1"
-    label: pianista que eu ainda não consigo replicar
-muted: |
-  Discos finalizados, demos pela metade, melodias cantaroladas em banheiros de aeroporto.
-  Tudo o que já fiz, devolvido a um sistema que tentava se tornar eu.
 ---
 type: stack
 heading: Como funciona de verdade
@@ -209,69 +290,7 @@ image: ./media/pipeline-05-generate.jpg
 image-alt: VS Code e painel do Claude trabalhando no pipeline de inferência generate_audio2audio.py
 caption: generate_audio2audio.py · adaptador + hook
 ---
-type: center
-eyebrow: Vamos testar
-quote: |
-  Numa música<br /><em>minha.</em>
-muted: Hora de dar ao modelo uma composição de verdade e ver o que volta.
----
-type: media-video-pair
-eyebrow: Um pouco de contexto
-title: Duas eras de mim.
-sub: |
-  Da bossa nova (<em>THIS IS BOSSA</em>) ao neo-soul (<em>AO</em>) —
-  a jornada que o modelo está tentando aprender.
-sub-tight: true
-layout: split
-videos:
-  - src: ./media/bossa-fugaz.mp4
-    tag: Antes
-    caption: THIS IS BOSSA · Fugaz
-  - src: ./media/ao-moments.mp4
-    tag: Agora
-    tag-class: ao
-    caption: AO · Moments
----
-type: media-video
-eyebrow: Jornada da composição · 01
-title: Começou como um esboço.
-sub: |
-  Uma música chamada <em>Chuva</em> — sobre o primeiro dia de chuva no fim do verão,
-  o dia em que uma das minhas melhores amigas mudou de Barcelona.
-video: ./media/chuva-sketch.mov
-caption-tag: Esboço
-caption-text: Memo de voz · piano · Barcelona, 2023
-layout: split
----
-type: media-audio
-eyebrow: Jornada da composição · 02
-title: Usando meu próprio modelo.
-sub: |
-  Dei a ele a demo de Chuva — com arranjo completo, cantada em português.
-  <em>Bm7(9) · Em6 · "dia de chuva e acabou o verão."</em>
-sub-tight: true
-audio: ./media/chuva.wav
-caption-tag: Chuva
-caption-text: Todos os instrumentos e vozes — eu.
-bg-image: ./media/chuva-sheet-music.jpg
-bg-image-alt: Cifra de Chuva escrita à mão em papel pautado, com a letra em português
-wave-style: song
-wave-gradient: mixed
----
-type: stack
-section-class: section--ao section--ao--photo
-photo: ./media/ao-band-wide.jpg
-photo-alt: AO tocando ao vivo, banda completa no palco com luzes penduradas acima
-heading: O que eu estava realmente pedindo.
-lede: Não imitação. Evolução.
-body: |
-  Eu não estava pedindo ao modelo que me imitasse. Estava pedindo que me fizesse <em>evoluir</em>.
-
-  Que pegasse Chuva — escrita em 2023, quando eu ainda era sobretudo bossa nova e MPB —
-  e a puxasse para o neo-soul que escrevo hoje com o <strong>AO</strong>,
-  minha banda em Barcelona.
-muted: Não "soe como eu". Mais assim — <em>acompanhe o meu passo.</em>
----
+# TODO: Lições 01–02 são resultados do Sistema 1 (HeartMula).
 type: lesson
 eyebrow: Lição 01
 heading: A IA é um espelho
@@ -299,6 +318,113 @@ audio:
   src: ./media/chuva-gen2.wav
   tag: Geração 02
   caption: O take que eu não vi chegando.
+photo-bg: ./media/ao-rehearsal-bass.jpg
+photo-bg-alt: Ensaio do AO, baixo em primeiro plano e Bianca cantando ao fundo
+photo-bg-style: side
+photo-bg-pos: 30% 40%
+---
+type: center
+eyebrow: Sistema 2 / 3
+quote: |
+  ACE-Step 1.5.<br /><em>Sem treino nenhum.</em>
+muted: Um modelo aberto de canções completas, com voz e letra (licença MIT, roda num MacBook M1).
+photo-bg: ./media/ao-bmurals.jpg
+photo-bg-alt: AO sentado no chão do B-Murals ao entardecer
+photo-bg-style: full
+photo-bg-pos: 50% 70%
+---
+type: pipeline-step
+eyebrow: Sistema 2 · como
+title: A demo, uma referência, uma descrição.
+sub: |
+  A <strong>demo de Chuva</strong> como fonte, <em>Moments</em> do AO como <strong>referência</strong>,
+  a letra em português e uma legenda descrevendo o som.
+image: ./media/ace-01-ref.jpg
+image-alt: Interface do ACE-Step 1.5 com a demo de Chuva como fonte, Moments como referência, legenda neo-soul e a letra de Chuva
+caption: ACE-Step 1.5 · Custom · turbo 2B · MacBook
+---
+type: media-audio
+eyebrow: Sistema 2 · resultado
+title: Chuva, sem treino.
+sub: O modelo nunca ouviu o meu catálogo — só esta demo e uma música do AO.
+sub-tight: true
+audio: ./media/chuva-ace-ref.mp3
+caption-tag: Sistema 2
+caption-text: Chuva · ACE-Step 1.5 · só referência
+wave-style: song
+wave-gradient: mixed
+---
+type: center
+eyebrow: Sistema 3 / 3
+quote: |
+  ACE-Step 1.5<br />+ <em>o meu catálogo.</em>
+muted: Um LoRA treinado em 16 músicas minhas, numa GPU L4 no Google Cloud.
+photo-bg: ./media/ao-mural.jpg
+photo-bg-alt: AO de pé diante de um grande mural pintado
+photo-bg-style: full
+photo-bg-pos: 50% 82%
+---
+type: bullets
+eyebrow: Sistema 3 · o trabalho
+heading: Do meu catálogo a um LoRA.
+heading-style: display-sm
+lede: Um modelo aberto de canções completas, a interface web dele, e as minhas 16 músicas.
+bullets:
+  - <strong>Instalar</strong> — ACE-Step 1.5 no MacBook, com o backend MLX para Apple Silicon.
+  - <strong>Montar o dataset</strong> — as 16 músicas finalizadas do HeartMula — áudio, letra com [Verse]/[Chorus] e uma legenda que começa com a palavra-gatilho <em>bia-style</em>.
+  - <strong>Não deixar instrumental</strong> — a opção “All Instrumental” vem ligada; desligada, o modelo aprende também a minha voz e as letras.
+  - <strong>Treinar o LoRA</strong> — na aba LoRA Training do próprio ACE-Step — escanear, pré-processar, treinar.
+  - <strong>Gerar</strong> — LoRA carregado e <em>bia-style</em> na legenda → neo-soul, em português, com rap.
+---
+type: pipeline-step
+eyebrow: Sistema 3 · o dataset
+title: O Dataset Builder do ACE-Step.
+sub: |
+  Escanear as 16 músicas, conferir letra e legenda, pré-processar, treinar.
+  Atenção ao <strong>All Instrumental</strong> — ligado, o LoRA ignoraria as letras e a minha voz.
+image: ./media/ace-02-lora.jpg
+image-alt: Aba LoRA Training do ACE-Step 1.5, no Dataset Builder, com os campos de dataset e a opção All Instrumental
+caption: ACE-Step 1.5 · LoRA Training · Dataset Builder
+---
+type: media-audio
+eyebrow: Sistema 3 · o resultado final
+title: Chuva, com o meu catálogo.
+sub: |
+  Neo-soul, em português, com rap — o ACE-Step 1.5 com o LoRA <em>bia-style</em>,
+  treinado nas minhas 16 músicas. <em>O ponto de chegada de todos os experimentos.</em>
+sub-tight: true
+audio: ./media/bia-style-final.mp3
+caption-tag: Sistema 3
+caption-text: Chuva · ACE-Step 1.5 · LoRA bia-style · 3:30
+bg-image: ./media/ao-band-wide.jpg
+bg-image-alt: AO tocando ao vivo, banda completa no palco com luzes penduradas acima
+wave-style: song
+wave-gradient: mixed
+---
+type: stack
+eyebrow: Lado a lado
+heading: Mesma música. Três respostas.
+lede: O que cada sistema ouviu em Chuva — e o que deixou para trás.
+cards:
+  - num: "01"
+    title: HeartMula
+    body: Bem cativante — mas falta riqueza, nos instrumentos e na voz.
+  - num: "02"
+    title: ACE-Step · referência
+    body: Muita intimidade! Mas nada da minha garra.
+  - num: "03"
+    title: ACE-Step · LoRA
+    body: Erra o timbre exato da minha voz.
+---
+type: center
+eyebrow: A sua vez
+quote: |
+  Qual delas<br />soa mais <em>como eu?</em>
+muted: Levantem a mão — 1, 2 ou 3.
+photo-bg: ./media/bia-live-bfv.jpg
+photo-bg-alt: Bianca cantando ao vivo, cabeça para trás, olhos fechados
+photo-bg-style: full
+photo-bg-pos: 62% 30%
 ---
 type: lesson
 eyebrow: Lição 03
@@ -308,7 +434,12 @@ body: |
   O modelo produz mil loops convincentes com sabor de Bianca em um minuto.
   Nenhum deles é meu até eu escolher um e jogar fora os outros 999.
 callout: Gerar é barato. <em>Curar é o que faz a artista.</em>
+photo-bg: ./media/bia-live-garage.jpg
+photo-bg-alt: Bianca cantando ao vivo com o AO em Barcelona
+photo-bg-style: side
+photo-bg-pos: 88% 30%
 ---
+# TODO: rever o callout depois de ouvir os três sistemas — o teto continua o mesmo?
 type: lesson
 theme: ao
 photo: ./media/ao-band-energy.jpg
@@ -331,12 +462,16 @@ eyebrow: A pergunta maior
 quote: |
   E se a minha <em>voz</em><br />nunca foi sobre o som,<br />mas sobre o meu <em>gosto musical?</em>
 quote-class: serif
+photo-bg: ./media/bia-mural.jpg
+photo-bg-alt: Bianca diante de um mural colorido em Barcelona
+photo-bg-style: full
+photo-bg-pos: 50% 28%
 ---
 type: bullets
 heading: O que vem por aí para o HeartMula
 bullets-class: roomy
 bullets:
-  - <strong>Performance ao vivo</strong> — levar o modelo ao palco como um terceiro instrumento.
+  - <strong>Ao vivo, em tempo real</strong> — Magenta RealTime 2 num MacBook, tocado pelas minhas teclas e pela luva.
   - <strong>Toolkit aberto</strong> — empacotar o pipeline de treino para o catálogo de outros artistas.
   - <strong>Mais músicas</strong> — o modelo precisa de material novo. Eu também.
   - <strong>Um disco</strong> — coproduzido comigo mesma. Os créditos ficam filosóficos.
@@ -360,6 +495,10 @@ qrs:
   - src: ./media/qr-linkedin.svg
     label: LinkedIn
     handle: in/biancacheng
+photo-bg: ./media/ao-pink-wall.jpg
+photo-bg-alt: AO diante de um muro rosa
+photo-bg-style: full
+photo-bg-pos: 50% 62%
 ---
 type: pipeline-step
 eyebrow: Processo · 01 / 04

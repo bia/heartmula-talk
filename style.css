@@ -1752,3 +1752,127 @@ ol.steps li:last-child {
         font-size: 56px;
     }
 }
+
+/* ---- scrubbable waveforms (scrub.js) ------------------- */
+
+.scrub {
+    position: relative;
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+    outline: none;
+    --scrub-played: var(--accent);
+}
+.scrub:focus-visible {
+    box-shadow: inset 0 0 0 1px var(--accent);
+    border-radius: 4px;
+}
+.scrub > svg { position: relative; z-index: 1; }
+.scrub-waves--compact {
+    height: 44px;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 198, 173, 0.35);
+}
+.scrub-waves--compact > svg { width: 100%; height: 100%; display: block; }
+
+.scrub__played {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.scrub__played-inner { position: absolute; }
+.scrub__played-inner svg { width: 100%; height: 100%; display: block; }
+
+.scrub__hover {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 0;
+    background: rgba(255, 198, 173, 0.07);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 0;
+}
+.scrub__head {
+    position: absolute;
+    top: 8%; bottom: 8%;
+    width: 2px;
+    margin-left: -1px;
+    background: var(--scrub-played);
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(255, 198, 173, 0.6);
+    pointer-events: none;
+    z-index: 3;
+}
+.scrub__tip {
+    position: absolute;
+    top: -6px;
+    transform: translate(-50%, -100%);
+    padding: 3px 7px;
+    border-radius: 3px;
+    background: rgba(10, 6, 20, 0.92);
+    border: 1px solid var(--line-strong, rgba(255,255,255,0.15));
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 4;
+    white-space: nowrap;
+}
+.scrub:hover .scrub__hover,
+.scrub:hover .scrub__tip,
+.scrub.is-dragging .scrub__tip { opacity: 1; }
+
+.section--ao .scrub { --scrub-played: #7a9ec8; }
+
+/* ---- generic photo backgrounds (photo-bg in slides.md) ---- */
+
+.has-photo > :not(.slide-photo):not(.slide-photo-veil) {
+    position: relative;
+    z-index: 2;
+}
+.hm-deck > section > .slide-photo,
+.hm-deck > section > .slide-photo-veil {
+    transform: none;
+}
+.slide-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 40%;
+    z-index: 0;
+    filter: saturate(0.75) brightness(0.55) contrast(1.06);
+}
+.slide-photo-veil {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 70% 60% at 50% 50%, rgba(10, 6, 20, 0.55) 0%, rgba(10, 6, 20, 0.82) 100%),
+        linear-gradient(180deg, rgba(10, 6, 20, 0.55) 0%, transparent 28%, transparent 70%, rgba(10, 6, 20, 0.85) 100%);
+}
+.has-photo--side .slide-photo {
+    left: auto;
+    width: 58%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 18%, #000 45%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 18%, #000 45%, #000 100%);
+}
+.has-photo--side .slide-photo-veil {
+    background:
+        linear-gradient(90deg, var(--bg-0) 0%, rgba(10, 6, 20, 0.80) 30%, rgba(10, 6, 20, 0.40) 60%, rgba(10, 6, 20, 0.55) 100%),
+        linear-gradient(180deg, rgba(10, 6, 20, 0.45) 0%, transparent 30%, transparent 70%, rgba(10, 6, 20, 0.75) 100%);
+}
+@media (max-width: 760px) {
+    .has-photo--side .slide-photo { width: 100%; opacity: 0.45; }
+}

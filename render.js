@@ -620,6 +620,25 @@
         }
     };
 
+    /* ----- generic photo background ------------------------ */
+    // Any slide can set `photo-bg: ./media/x.jpg` (+ optional `photo-bg-alt`,
+    // `photo-bg-pos` = CSS object-position, `photo-bg-style: full | side`).
+    function withPhoto(html, s) {
+        const src = s["photo-bg"];
+        if (!src) return html;
+        const style = s["photo-bg-style"] === "side" ? "side" : "full";
+        const cls = `has-photo has-photo--${style}`;
+        const pos = s["photo-bg-pos"] ? ` style="object-position:${s["photo-bg-pos"]}"` : "";
+        const layer = `<img class="slide-photo" src="${src}" alt="${s["photo-bg-alt"] || ""}"${pos} />` +
+                      `<div class="slide-photo-veil" aria-hidden="true"></div>`;
+        return html.replace(/<section([^>]*)>/, (m, attrs) => {
+            attrs = /class="/.test(attrs)
+                ? attrs.replace(/class="/, `class="${cls} `)
+                : `${attrs} class="${cls}"`;
+            return `<section${attrs}>${layer}`;
+        });
+    }
+
     /* ----- public ------------------------------------------- */
     async function loadAndRender() {
         const deck = document.getElementById("deck");
@@ -636,7 +655,7 @@
                     console.warn("Unknown slide type:", s.type, s);
                     return `<section><div class="slide"><h2>Unknown slide type: ${s.type}</h2></div></section>`;
                 }
-                return renderer(s);
+                return withPhoto(renderer(s), s);
             }).join("\n");
             // Notify other modules that the deck is ready
             window.dispatchEvent(new CustomEvent("deck:ready"));

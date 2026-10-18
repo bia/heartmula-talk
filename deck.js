@@ -69,6 +69,8 @@
         let keyLock = false;
         document.addEventListener("keydown", (e) => {
             if (keyLock) return;
+            // Let media controls and scrubbable waveforms keep their keys.
+            if (e.target.closest && e.target.closest("audio, video, input, textarea, [data-scrub]")) return;
             switch (e.key) {
                 case "ArrowRight":
                 case "ArrowDown":
