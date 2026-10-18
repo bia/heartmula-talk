@@ -42,8 +42,8 @@ quote: |
   Uma máquina<br />consegue aprender<br />a soar <em>como eu?</em>
 photo-bg: ./media/bia-live-blue.jpg
 photo-bg-alt: Bianca ao vivo, mãos no microfone, luz azul
-photo-bg-style: full
-photo-bg-pos: 62% 35%
+photo-bg-style: right
+photo-bg-pos: 50% 35%
 ---
 type: bullets
 eyebrow: O experimento

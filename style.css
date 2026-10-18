@@ -1873,6 +1873,22 @@ ol.steps li:last-child {
         linear-gradient(90deg, var(--bg-0) 0%, rgba(10, 6, 20, 0.80) 30%, rgba(10, 6, 20, 0.40) 60%, rgba(10, 6, 20, 0.55) 100%),
         linear-gradient(180deg, rgba(10, 6, 20, 0.45) 0%, transparent 30%, transparent 70%, rgba(10, 6, 20, 0.75) 100%);
 }
+/* right: full-height photo anchored right, brighter than full-bleed */
+.has-photo--right .slide-photo {
+    left: auto;
+    right: -350px;
+    width: auto;
+    aspect-ratio: 3 / 2; /* match the photo so cover doesn't crop its sides */
+    filter: saturate(0.85) brightness(0.78) contrast(1.06);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 24%, rgba(0,0,0,0.8) 36%, #000 48%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 24%, rgba(0,0,0,0.8) 36%, #000 48%, #000 100%);
+}
+.has-photo--right .slide-photo-veil {
+    background:
+        radial-gradient(ellipse 45% 40% at 50% 50%, rgba(10, 6, 20, 0.45) 0%, transparent 100%),
+        linear-gradient(180deg, rgba(10, 6, 20, 0.45) 0%, transparent 28%, transparent 72%, rgba(10, 6, 20, 0.75) 100%);
+}
 @media (max-width: 760px) {
-    .has-photo--side .slide-photo { width: 100%; opacity: 0.45; }
+    .has-photo--side .slide-photo,
+    .has-photo--right .slide-photo { width: 100%; opacity: 0.45; }
 }
