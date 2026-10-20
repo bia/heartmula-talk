@@ -1877,8 +1877,11 @@ ol.steps li:last-child {
 .has-photo--right .slide-photo {
     left: auto;
     right: -350px;
-    width: auto;
-    aspect-ratio: 3 / 2; /* match the photo so cover doesn't crop its sides */
+    /* Explicit 3:2 width from the slide height (100vh) instead of aspect-ratio:
+       Safari sized the image to its 2400px intrinsic width, spilling it across
+       the slide and pushing the text off-screen. */
+    width: calc(100vh * 1.5);
+    max-width: none;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 24%, rgba(0,0,0,0.8) 36%, #000 48%, #000 100%);
     mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 24%, rgba(0,0,0,0.8) 36%, #000 48%, #000 100%);
 }
@@ -1897,9 +1900,16 @@ ol.steps li:last-child {
 /* Nothing may scroll sideways: photo layers and wide elements are clipped. */
 html, body { overflow-x: hidden; }
 .hm-deck { overflow-x: hidden; }
-.hm-deck > section { overflow-x: clip; }
+.hm-deck > section {
+    overflow: hidden; /* clip (not just overflow-x: clip, which older Safari ignores) */
+    /* A slide is one screen tall, but grows if its content is taller, so
+       nothing is ever cut off or hidden under the header. */
+    height: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
 
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-height: 700px) {
     /* Size to the visible screen (iOS toolbars), and let tall slides grow
        instead of spilling under the header or off the bottom. */
     .hm-deck {
@@ -1912,7 +1922,8 @@ html, body { overflow-x: hidden; }
         min-height: 100vh;
         min-height: 100dvh;
         scroll-snap-stop: normal;
-        padding: 76px 20px 40px;
+        padding-top: 76px;
+        padding-bottom: 40px;
         box-sizing: border-box;
     }
     /* Tall slides are scrolled through, so don't hide content until "active". */
@@ -1920,6 +1931,10 @@ html, body { overflow-x: hidden; }
         opacity: 1;
         transform: none;
     }
+}
+
+@media (max-width: 760px) {
+    .hm-deck > section { padding-left: 20px; padding-right: 20px; }
     /* Swipe / scroll replaces the arrow buttons, which covered slide text. */
     .hm-nav { display: none; }
 
