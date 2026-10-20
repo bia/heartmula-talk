@@ -47,24 +47,20 @@ body: |
   Lá encontrei um lugar onde o meu amor por tecnologia e por arte podia
   coexistir: trabalhei no <strong>Tangible Media Group</strong> do
   <strong>Hiroshi Ishii</strong>, no MIT Media Lab — onde a ideia é dar forma física à
-  informação, para que a gente possa&nbsp;tocá-la.
+  informação, para que a gente possa tocá-la. Esse trabalho com o Hiroshi foi exposto no
+  <strong>Ars&nbsp;Electronica</strong>.
 photo-bg: ./media/bio-mit-media-lab.jpg
 photo-bg-alt: Prédio do MIT Media Lab iluminado ao entardecer
 photo-bg-style: full
 photo-bg-pos: 50% 45%
 ---
-type: center
-eyebrow: Apple · Arte e ciência
-quote: |
-  O iPhone tinha<br />acabado de <em>sair.</em>
-muted: Ainda no MIT, recebi uma proposta para o grupo de prototipagem de software da&nbsp;Apple.
----
 type: pipeline-step
 eyebrow: Apple · Arte e ciência
 title: O trackpad háptico do&nbsp;MacBook.
 sub: |
-  Na Apple, inventei o trackpad háptico do MacBook — de novo, unindo o meu sentido do
-  toque ao mundo digital. Onze patentes nos Estados&nbsp;Unidos.
+  Ainda no MIT, com o iPhone recém-lançado, recebi uma proposta para o grupo de
+  prototipagem de software da Apple. Lá inventei o trackpad háptico do MacBook — de novo,
+  unindo o meu sentido do toque ao mundo digital. Onze patentes nos Estados&nbsp;Unidos.
 image: ./media/bio-apple-patentes.jpg
 image-alt: Figuras de patentes da Apple — superfície sensível ao toque, intensidade de contato e uma interface musical
 caption: Figuras de patentes · Apple
