@@ -66,31 +66,20 @@ image-alt: Figuras de patentes da Apple — superfície sensível ao toque, inte
 caption: Figuras de patentes · Apple
 ---
 type: center
-eyebrow: Hoje
+eyebrow: A virada
 quote: |
-  Arte<br />e&nbsp;<em>empreendedorismo.</em>
+  Do toque<br />ao&nbsp;<em>som.</em>
+muted: Levei a mesma curiosidade sensorial do toque para o áudio — tecnologia e&nbsp;música.
 photo-bg: ./media/bio-hoje.jpg
 photo-bg-alt: Bianca envolta num tecido listrado que se desfaz em partículas
 photo-bg-style: full
 photo-bg-pos: 60% 40%
 ---
-type: bullets
-eyebrow: Hoje
-heading: Muitos projetos, uma&nbsp;prática.
-heading-style: display-sm
-lede: Tudo o que faço é sobre a costura entre ferramenta e&nbsp;instrumento.
-bullets:
-  - <strong>Bloom Blanket</strong> — mantas de caxemira inspiradas em origami; o crowdfunding mais financiado da Espanha, mais de 2.000 mantas feitas à&nbsp;mão.
-  - <strong>DZCO</strong> — o meu estúdio — áudio espacial, design de interação e ferramentas de IA para&nbsp;músicos.
-  - <strong>Matter &amp; Form</strong> — cofundadora; lidero a camada de interface humana para agentes de&nbsp;IA.
-  - <strong>AO</strong> — quarteto de neo-soul em Barcelona. Eu canto e toco&nbsp;teclado.
-  - <strong>THIS IS BOSSA</strong> — duo de bossa nova autoral, com o violonista Esteban&nbsp;Matuke.
----
 type: center
 eyebrow: Música e tecnologia
 quote: |
   Música<br />e <em>tecnologia.</em>
-muted: O fio que liga tudo o que eu&nbsp;faço.
+muted: O fio que liga tudo o que eu faço — até os figurinos dos meus shows com o AO, que eu mesma&nbsp;crio.
 photo-bg: ./media/bio-musica-tecnologia.jpg
 photo-bg-alt: Retrato gerado por IA de duas figuras com trajes e cocares laranja
 photo-bg-style: full

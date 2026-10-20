@@ -67,31 +67,20 @@ image-alt: Apple patent figures — a touch-sensitive surface, contact intensity
 caption: Patent figures · Apple
 ---
 type: center
-eyebrow: Today
+eyebrow: The turn
 quote: |
-  Art<br />and&nbsp;<em>entrepreneurship.</em>
+  From touch<br />to&nbsp;<em>sound.</em>
+muted: I took the same sensory curiosity from touch into audio — technology and&nbsp;music.
 photo-bg: ./media/bio-hoje.jpg
 photo-bg-alt: Bianca wrapped in striped fabric that dissolves into particles
 photo-bg-style: full
 photo-bg-pos: 60% 40%
 ---
-type: bullets
-eyebrow: Today
-heading: Many projects, one&nbsp;practice.
-heading-style: display-sm
-lede: Everything I do lives at the seam between tool and&nbsp;instrument.
-bullets:
-  - <strong>Bloom Blanket</strong> — origami-inspired cashmere blankets; Spain's most-funded crowdfunding campaign, over 2,000 blankets made by&nbsp;hand.
-  - <strong>DZCO</strong> — my studio — spatial audio, interaction design and AI tools for&nbsp;musicians.
-  - <strong>Matter &amp; Form</strong> — co-founder; I lead the human interface layer for AI&nbsp;agents.
-  - <strong>AO</strong> — a neo-soul quartet in Barcelona. I sing and play&nbsp;keys.
-  - <strong>THIS IS BOSSA</strong> — an original bossa nova duo with guitarist Esteban&nbsp;Matuke.
----
 type: center
 eyebrow: Music and technology
 quote: |
   Music<br />and <em>technology.</em>
-muted: The thread that ties together everything I&nbsp;do.
+muted: The thread that ties together everything I do — even my AO stage outfits, which I design&nbsp;myself.
 photo-bg: ./media/bio-musica-tecnologia.jpg
 photo-bg-alt: AI-generated portrait of two figures in orange costumes and headdresses
 photo-bg-style: full

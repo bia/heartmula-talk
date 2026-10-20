@@ -1862,6 +1862,11 @@ ol.steps li:last-child {
         radial-gradient(ellipse 55% 50% at 50% 50%, rgba(10, 6, 20, 0.50) 0%, rgba(10, 6, 20, 0.25) 100%),
         linear-gradient(180deg, rgba(10, 6, 20, 0.45) 0%, transparent 28%, transparent 72%, rgba(10, 6, 20, 0.75) 100%);
 }
+/* muted lines over full-bleed photos: brighter, with a soft dark halo */
+.has-photo--full .muted {
+    color: rgba(247, 240, 232, 0.9);
+    text-shadow: 0 1px 14px rgba(10, 6, 20, 0.9), 0 0 3px rgba(10, 6, 20, 0.6);
+}
 .has-photo--side .slide-photo {
     left: auto;
     width: 58%;
