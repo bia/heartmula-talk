@@ -1932,3 +1932,20 @@ html, body { overflow-x: hidden; }
         opacity: 0.45;
     }
 }
+
+/* ---- NO ORPHANS ------------------------------------------ */
+/* Short lines (titles, labels, captions) wrap into even lines; running text
+   avoids leaving a single word alone on its last line. */
+h1, h2, h3, h4,
+blockquote, figcaption,
+.eyebrow, .hero__meta span,
+[class*="caption"], [class*="__tag"], [class*="__label"], [class*="title"] {
+    text-wrap: balance;
+}
+p, li, dd, .lede, [class*="lede"], [class*="body"], [class*="muted"], [class*="callout"] {
+    text-wrap: pretty;
+}
+/* Contact line: on phones, name · project on one line, the email on the next. */
+@media (max-width: 760px) {
+    .contact .bullet:last-of-type { display: block; height: 0; overflow: hidden; }
+}

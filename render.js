@@ -620,6 +620,40 @@
         }
     };
 
+    /* ----- no orphans -------------------------------------- */
+    // Glue the last two words of every text block with a non-breaking space,
+    // so no line ever ends a paragraph, title or caption with a lone word.
+    // (CSS text-wrap: pretty does this only in some browsers.)
+    const ORPHAN_TARGETS = "p, li, h1, h2, h3, h4, blockquote, figcaption, .bigquote, .eyebrow, " +
+        "[class*='caption'], [class*='lede'], [class*='muted'], [class*='detail'], " +
+        "[class*='callout'], [class*='sub'], [class*='label']";
+    function noOrphans(root) {
+        const done = new WeakSet();
+        root.querySelectorAll(ORPHAN_TARGETS).forEach(el => {
+            if (el.closest("svg, code, pre, .contact, .hm-scrubber")) return;
+            const nodes = [];
+            const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+            let n;
+            while ((n = w.nextNode())) if (n.data.trim()) nodes.push(n);
+            if (!nodes.length) return;
+            const last = nodes[nodes.length - 1];
+            if (done.has(last)) return;
+            done.add(last);
+            if (el.textContent.trim().split(/\s+/).length < 4) return;
+            // Prefer a space inside the last text node; otherwise the trailing
+            // space of the text node before it (e.g. "word <em>last</em>").
+            for (const t of [last, nodes[nodes.length - 2]].filter(Boolean)) {
+                const body = t === last ? t.data.trimEnd() : t.data;
+                const i = t === last ? body.search(/ (?=\S+$)/) : body.search(/ +$/);
+                if (i > 0 || (t !== last && i >= 0)) {
+                    t.data = t.data.slice(0, i) + "\u00A0" + t.data.slice(i + 1);
+                    return;
+                }
+                if (t === last && /\s/.test(body)) return;
+            }
+        });
+    }
+
     /* ----- generic photo background ------------------------ */
     // Any slide can set `photo-bg: ./media/x.jpg` (+ optional `photo-bg-alt`,
     // `photo-bg-pos` = CSS object-position, `photo-bg-style: full | side | right`).
@@ -657,6 +691,7 @@
                 }
                 return withPhoto(renderer(s), s);
             }).join("\n");
+            noOrphans(deck);
             // Notify other modules that the deck is ready
             window.dispatchEvent(new CustomEvent("deck:ready"));
         } catch (err) {

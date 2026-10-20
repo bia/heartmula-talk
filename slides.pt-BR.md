@@ -12,8 +12,8 @@ photo-alt: Bianca Cheng cantando ao vivo com a banda, luzes quentes penduradas a
 eyebrow: Mesma música, três sistemas
 title: |
   Ensinando a IA<br />a fazer música<br /><em>do meu jeito</em>
-meta-left: Bianca Cheng
-meta-right: Futuros Possíveis · Casa Firjan
+meta-left: Bianca&nbsp;Cheng
+meta-right: Futuros&nbsp;Possíveis&nbsp;· Casa&nbsp;Firjan
 ---
 type: stack
 eyebrow: Quem sou eu?
