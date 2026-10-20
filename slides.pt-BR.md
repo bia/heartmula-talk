@@ -15,39 +15,104 @@ title: |
 meta-left: Bianca&nbsp;Cheng
 meta-right: Futuros&nbsp;Possíveis&nbsp;· Casa&nbsp;Firjan
 ---
+type: center
+eyebrow: São Paulo
+quote: |
+  Eu nasci<br />em <em>São&nbsp;Paulo.</em>
+muted: Uma cidade que nunca para — e a primeira trilha sonora da minha&nbsp;vida.
+photo-bg: ./media/bio-sao-paulo.jpg
+photo-bg-alt: Vista de São Paulo ao entardecer, com o Pico do Jaraguá ao fundo
+photo-bg-style: full
+photo-bg-pos: 50% 62%
+---
 type: stack
-eyebrow: Quem sou eu?
-heading: Bianca Cheng
-heading-style: display
-lede: Nasci em São Paulo — mãe chinesa, pai italiano.<br />Poliglota em sete idiomas.
+eyebrow: Cultura
+heading: Três culturas na mesma&nbsp;mesa.
+lede: Mãe chinesa, pai italiano, infância no Brasil — e, depois, os Estados&nbsp;Unidos.
 body: |
-  MIT Media Lab → Apple (onze patentes) → exposições no Ars Electronica e no Met →
-  hoje em Barcelona, à frente do <strong>AO</strong>, um quarteto de neo-soul com raízes
-  no jazz, no funk, na psicodelia e nas tradições brasileiras e galegas.
-muted: Atualmente em algum lugar entre uma cabine de gravação e o VS Code.
-cards:
-  - num: "01"
-    title: Musicista
-    body: Compositora e artista. Doze anos de demos, memos de voz, takes de madrugada.
-  - num: "02"
-    title: Designer
-    body: Dou forma a como os produtos são sentidos. Obcecada pela costura entre ferramenta e instrumento.
-  - num: "03"
-    title: Tecnóloga
-    body: Cientista da computação, desenvolvedora de aplicações. Não sou engenheira de ML — as ferramentas de IA preencheram essa lacuna.
+  Cresci entre línguas, comidas e músicas diferentes. Hoje trabalho em sete idiomas —
+  e acho que foi aí que aprendi a ouvir as coisas de mais de um&nbsp;jeito.
+photo-bg: ./media/bio-infancia.jpg
+photo-bg-alt: Bianca bebê, sorrindo, comendo um pedaço de pão numa cadeirinha
+photo-bg-style: side
+photo-bg-pos: 50% 30%
+---
+type: stack
+eyebrow: MIT · Arte e ciência
+heading: Matemática, ciência… e&nbsp;arte.
+body: |
+  Na escola, eu gostava mesmo era de matemática e ciência — e isso me levou a estudar
+  engenharia no MIT.
+
+  Lá encontrei um lugar onde o meu amor por tecnologia e por arte podia
+  coexistir.
+photo-bg: ./media/bio-mit-media-lab.jpg
+photo-bg-alt: Prédio do MIT Media Lab iluminado ao entardecer
+photo-bg-style: full
+photo-bg-pos: 50% 45%
+---
+type: stack
+eyebrow: MIT Media Lab · Tangible Media Group
+heading: Dar forma ao que é&nbsp;digital.
+body: |
+  Antes da Apple, trabalhei no <strong>Tangible Media Group</strong> do
+  <strong>Hiroshi Ishii</strong>, no MIT Media Lab — onde a ideia é dar forma física à
+  informação, para que a gente possa tocá-la.
+
+  Foi lá que desenvolvi o <strong>Pictouch</strong>, e onde o meu trabalho foi exposto no
+  <strong>Ars Electronica</strong> e no <strong>Met</strong>.
+muted: O Hiroshi Ishii e a cultura da Apple são, até hoje, os meus grandes&nbsp;mentores.
+photo-bg: ./media/bio-experimentacao.jpg
+photo-bg-alt: Vestido de papel dobrado em tesselações de origami, em movimento
+photo-bg-style: side
+photo-bg-pos: 50% 35%
+---
+type: center
+eyebrow: Apple · Arte e ciência
+quote: |
+  O iPhone tinha<br />acabado de <em>sair.</em>
+muted: Ainda no MIT, recebi uma proposta para o grupo de prototipagem de software da&nbsp;Apple.
+---
+type: pipeline-step
+eyebrow: Apple · Arte e ciência
+title: O trackpad háptico do&nbsp;MacBook.
+sub: |
+  Na Apple, inventei o trackpad háptico do MacBook — de novo, unindo o meu sentido do
+  toque ao mundo digital. Onze patentes nos Estados&nbsp;Unidos.
+image: ./media/bio-apple-patentes.jpg
+image-alt: Figuras de patentes da Apple — superfície sensível ao toque, intensidade de contato e uma interface musical
+caption: Figuras de patentes · Apple
+---
+type: center
+eyebrow: Hoje
+quote: |
+  Arte<br />e&nbsp;<em>empreendedorismo.</em>
+photo-bg: ./media/bio-hoje.jpg
+photo-bg-alt: Bianca envolta num tecido listrado que se desfaz em partículas
+photo-bg-style: full
+photo-bg-pos: 60% 40%
 ---
 type: bullets
-eyebrow: Uma prática, muitos formatos
-heading: Antes da IA, a música.
+eyebrow: Hoje
+heading: Muitos projetos, uma&nbsp;prática.
 heading-style: display-sm
-lede: Tudo o que faço é sobre a costura entre ferramenta e instrumento.
+lede: Tudo o que faço é sobre a costura entre ferramenta e&nbsp;instrumento.
 bullets:
-  - <strong>AO</strong> — quarteto de neo-soul em Barcelona. Eu canto e toco teclado.
-  - <strong>THIS IS BOSSA</strong> — duo de bossa nova autoral, com o violonista Esteban Matuke.
-  - <strong>Apple</strong> — onze patentes, incluindo o trackpad háptico.
-  - <strong>MIT Media Lab</strong> — Tangible Media Group; obras expostas no Ars Electronica e no Met.
-  - <strong>Bloom Blanket</strong> — mantas de caxemira inspiradas em origami; o crowdfunding mais financiado da Espanha, mais de 2.000 mantas feitas à mão.
-  - <strong>DZCO</strong> — o meu estúdio — áudio espacial, design de interação e ferramentas de IA para músicos.
+  - <strong>Bloom Blanket</strong> — mantas de caxemira inspiradas em origami; o crowdfunding mais financiado da Espanha, mais de 2.000 mantas feitas à&nbsp;mão.
+  - <strong>DZCO</strong> — o meu estúdio — áudio espacial, design de interação e ferramentas de IA para&nbsp;músicos.
+  - <strong>Matter &amp; Form</strong> — cofundadora; lidero a camada de interface humana para agentes de&nbsp;IA.
+  - <strong>AO</strong> — quarteto de neo-soul em Barcelona. Eu canto e toco&nbsp;teclado.
+  - <strong>THIS IS BOSSA</strong> — duo de bossa nova autoral, com o violonista Esteban&nbsp;Matuke.
+---
+type: center
+eyebrow: Música e tecnologia
+quote: |
+  Música<br />e <em>tecnologia.</em>
+muted: O fio que liga tudo o que eu&nbsp;faço.
+photo-bg: ./media/bio-musica-tecnologia.jpg
+photo-bg-alt: Retrato gerado por IA de duas figuras com trajes e cocares laranja
+photo-bg-style: full
+photo-bg-pos: 50% 35%
 ---
 type: media-video-pair
 eyebrow: Um pouco de contexto
