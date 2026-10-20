@@ -1,0 +1,10 @@
+# Netlify: always revalidate the deck's code and content, so edits show up
+# on the next reload instead of an old cached copy.
+/*.css
+  Cache-Control: no-cache
+/*.js
+  Cache-Control: no-cache
+/*.md
+  Cache-Control: no-cache
+/*.html
+  Cache-Control: no-cache

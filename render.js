@@ -662,9 +662,11 @@
         if (!src) return html;
         const style = ["side", "right"].includes(s["photo-bg-style"]) ? s["photo-bg-style"] : "full";
         const cls = `has-photo has-photo--${style}`;
-        const pos = s["photo-bg-pos"] ? ` style="object-position:${s["photo-bg-pos"]}"` : "";
+        // Positioning is also set inline, so the photo can never fall into the
+        // slide's flex layout (e.g. with a stale cached style.css).
+        const pos = ` style="position:absolute;top:0;bottom:0;height:100%;z-index:0;${s["photo-bg-pos"] ? `object-position:${s["photo-bg-pos"]}` : ""}"`;
         const layer = `<img class="slide-photo" src="${src}" alt="${s["photo-bg-alt"] || ""}"${pos} />` +
-                      `<div class="slide-photo-veil" aria-hidden="true"></div>`;
+                      `<div class="slide-photo-veil" aria-hidden="true" style="position:absolute;inset:0;z-index:1"></div>`;
         return html.replace(/<section([^>]*)>/, (m, attrs) => {
             attrs = /class="/.test(attrs)
                 ? attrs.replace(/class="/, `class="${cls} `)
@@ -679,7 +681,7 @@
         if (!deck) return;
         try {
             const src = document.documentElement.dataset.slides || "./slides.md";
-            const res = await fetch(src);
+            const res = await fetch(src, { cache: "no-cache" });
             if (!res.ok) throw new Error("Failed to load slides.md: " + res.status);
             const text = await res.text();
             const slides = parseSlidesMd(text);
