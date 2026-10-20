@@ -545,29 +545,29 @@ caption-tag: Ao vivo
 caption-text: "[onde · quando]"
 layout: split
 ---
-# TODO: completar o que dirige a imagem e onde foi apresentado
 type: media-video
 eyebrow: Imagem em tempo real
 title: A música pinta a tela.
 sub: |
-  Animações geradas em tempo real com <strong>Stable Diffusion</strong>, como um VJ.
-  [O que dirige a imagem — áudio, gestos, MIDI? Onde foi apresentado?]
+  Um vídeo ao vivo entra, quadro a quadro, e sai transformado pelo
+  <strong>Stable Diffusion</strong> numa animação guiada por prompts — em tempo real.
+  Já usei em shows ao vivo em Barcelona e em&nbsp;Paris.
 youtube: 1joOZe2UyBA
 caption-tag: Stable Diffusion
-caption-text: VJ Stream Diffusion
+caption-text: VJ Stream Diffusion · Barcelona e Paris
 layout: split
 ---
-# TODO: completar como funciona e onde foi mostrado
 type: media-video
-eyebrow: Taste the music
-title: Provar a música.
+eyebrow: Taste the&nbsp;music
+title: Provar a&nbsp;música.
 sub: |
-  Um picolé de música.
-  [Como funciona — o que vira sabor, onde foi mostrado, como as pessoas reagiram.]
+  O gelo conduz eletricidade. Com <strong>Ableton Live</strong> e <strong>Arduino</strong>,
+  cada instrumento da música vira um sinal elétrico — a própria forma de onda —
+  enviado para dentro do picolé. Você não ouve a música — <em>prova</em> cada&nbsp;instrumento.
 youtube: sItFOYjvQEs
 portrait: true
-caption-tag: Taste the music
-caption-text: Music Popsicle
+caption-tag: Taste the&nbsp;music
+caption-text: Music Popsicle · Ableton Live + Arduino
 layout: split
 ---
 type: center
