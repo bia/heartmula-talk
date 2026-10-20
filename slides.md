@@ -647,7 +647,7 @@ caption: 📷 &nbsp; Photograph this slide.
 type: thank-you
 eyebrow: Thank you
 heading: Let's talk.
-muted: Questions, collaborations, your own catalog — all welcome.
+muted: I'm open to project ideas and creative collaborations. Questions, too — reach out anytime, I'd love to hear from&nbsp;you.
 contact: bianca cheng <span class="bullet">·</span> heartmula <span class="bullet">·</span> get.bianca@gmail.com
 qrs:
   - src: ./media/qr-instagram.svg
