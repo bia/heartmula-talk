@@ -28,7 +28,7 @@ photo-bg-pos: 50% 62%
 type: stack
 eyebrow: Cultura
 heading: Três culturas na mesma&nbsp;mesa.
-lede: Mãe chinesa, pai italiano, infância no Brasil — e, depois, os Estados&nbsp;Unidos.
+lede: Mãe chinesa, pai italiano, infância no&nbsp;Brasil.
 body: |
   Cresci entre línguas, comidas e músicas diferentes. Hoje trabalho em sete idiomas —
   e acho que foi aí que aprendi a ouvir as coisas de mais de um&nbsp;jeito.
