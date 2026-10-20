@@ -110,6 +110,31 @@
         }, { root: deck, threshold: [0.25, 0.5, 0.75] });
         slides.forEach((s) => io.observe(s));
 
+        // ----- settle on the nearest slide after free scrolling -------------
+        // Replaces CSS scroll-snap, which fought trackpad/wheel gestures.
+        let settleTimer = null, settling = false;
+        deck.addEventListener("scroll", () => {
+            if (settling) return;
+            clearTimeout(settleTimer);
+            settleTimer = setTimeout(settle, 180);
+        }, { passive: true });
+        function settle() {
+            const vh = deck.clientHeight, top = deck.scrollTop;
+            let best = null, bestDist = Infinity;
+            slides.forEach((s) => {
+                const d = s.offsetTop - top;
+                if (Math.abs(d) < bestDist) { bestDist = Math.abs(d); best = s; }
+            });
+            if (!best || bestDist < 2) return;
+            // Inside a slide taller than the screen: leave the reader where they are.
+            const cur = slides.find((s) => s.offsetTop <= top && s.offsetTop + s.offsetHeight > top + 1);
+            if (cur && cur.offsetHeight > vh + 4 && top + vh < cur.offsetTop + cur.offsetHeight + 4 && top > cur.offsetTop + 4) return;
+            if (bestDist > vh * 0.35) return;
+            settling = true;
+            deck.scrollTo({ top: best.offsetTop, behavior: "smooth" });
+            setTimeout(() => { settling = false; }, 500);
+        }
+
         // ----- touch ----------------------------------------------------
         // Native scrolling (with scroll-snap) handles touch. A JS swipe-to-jump
         // used to fight it and made slides taller than the screen unreadable.

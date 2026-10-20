@@ -1964,3 +1964,17 @@ p, li, dd, .lede, [class*="lede"], [class*="body"], [class*="muted"], [class*="c
 @media (max-width: 760px) {
     .contact .bullet:last-of-type { display: block; height: 0; overflow: hidden; }
 }
+
+/* ---- SCROLLING -------------------------------------------- */
+/* CSS scroll snapping fought trackpad/wheel gestures (scrolls sprang back to
+   the same slide). Scrolling is now free; deck.js gently settles on the
+   nearest slide once you stop. Arrow keys and ‹ › still jump one slide. */
+.hm-deck,
+.hm-deck[class] {
+    scroll-snap-type: none !important;
+    scroll-behavior: auto;
+}
+.hm-deck > section {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+}
