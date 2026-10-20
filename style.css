@@ -1962,3 +1962,25 @@ p, li, dd, .lede, [class*="lede"], [class*="body"], [class*="muted"], [class*="c
 @media (max-width: 760px) {
     .contact .bullet:last-of-type { display: block; height: 0; overflow: hidden; }
 }
+
+/* ---- YouTube embeds (youtube: <id> on media-video slides) ---- */
+.player__yt {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+.player__yt--portrait {
+    aspect-ratio: 9 / 16;
+    width: auto;
+    height: min(62vh, 640px);
+    margin: 0 auto;
+}
+.player__yt iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.player--video:has(.player__yt--portrait) { width: fit-content; justify-self: center; }

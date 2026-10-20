@@ -481,7 +481,9 @@
                         ${s.sub ? `<p class="media-slide__sub${s["sub-tight"] ? " media-slide__sub--tight" : ""}">${md(s.sub)}</p>` : ""}
                     </div>
                     <figure class="player player--video${split ? " player--video-large" : ""}">
-                        <video class="player__video" controls preload="metadata" playsinline src="${s.video}"></video>
+                        ${s.youtube
+                            ? `<div class="player__yt${s.portrait ? " player__yt--portrait" : ""}"><iframe src="https://www.youtube-nocookie.com/embed/${s.youtube}?rel=0&modestbranding=1&playsinline=1" title="${(s.title || "").replace(/<[^>]+>/g, "")}" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`
+                            : `<video class="player__video" controls preload="metadata" playsinline src="${s.video}"></video>`}
                         ${s["caption-tag"] || s["caption-text"] ? `<figcaption class="player__caption">
                             ${s["caption-tag"] ? `<span class="player__tag">${md(s["caption-tag"])}</span>` : ""}
                             ${s["caption-text"] ? `<span>${md(s["caption-text"])}</span>` : ""}

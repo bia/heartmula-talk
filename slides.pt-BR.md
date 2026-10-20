@@ -545,28 +545,30 @@ caption-tag: Ao vivo
 caption-text: "[onde · quando]"
 layout: split
 ---
-# TODO: descrever o projeto e adicionar o vídeo → media/sd-realtime.mp4
+# TODO: completar o que dirige a imagem e onde foi apresentado
 type: media-video
 eyebrow: Imagem em tempo real
 title: A música pinta a tela.
 sub: |
-  Animações geradas em tempo real com <strong>Stable Diffusion</strong>, respondendo à música.
+  Animações geradas em tempo real com <strong>Stable Diffusion</strong>, como um VJ.
   [O que dirige a imagem — áudio, gestos, MIDI? Onde foi apresentado?]
-video: ./media/sd-realtime.mp4
+youtube: 1joOZe2UyBA
 caption-tag: Stable Diffusion
-caption-text: "[projeto · ano]"
+caption-text: VJ Stream Diffusion
 layout: split
 ---
-# TODO: descrever o projeto e adicionar uma foto → media/taste-the-music.jpg
-type: pipeline-step
+# TODO: completar como funciona e onde foi mostrado
+type: media-video
 eyebrow: Taste the music
 title: Provar a música.
 sub: |
-  Um picolé que transforma música em sabor.
+  Um picolé de música.
   [Como funciona — o que vira sabor, onde foi mostrado, como as pessoas reagiram.]
-image: ./media/taste-the-music.jpg
-image-alt: O picolé do projeto Taste the music
-caption: Taste the music · [ano]
+youtube: sItFOYjvQEs
+portrait: true
+caption-tag: Taste the music
+caption-text: Music Popsicle
+layout: split
 ---
 type: center
 eyebrow: A pergunta maior
