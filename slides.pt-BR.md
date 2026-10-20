@@ -9,7 +9,7 @@
 type: hero
 photo: ./bianca-singing.png
 photo-alt: Bianca Cheng cantando ao vivo com a banda, luzes quentes penduradas acima
-eyebrow: Mesma música, três sistemas
+eyebrow: Música, design e máquinas
 title: |
   Ensinando a IA<br />a fazer música<br /><em>do meu jeito</em>
 meta-left: Bianca&nbsp;Cheng
@@ -36,24 +36,18 @@ cards:
     title: Tecnóloga
     body: Cientista da computação, desenvolvedora de aplicações. Não sou engenheira de ML — as ferramentas de IA preencheram essa lacuna.
 ---
-type: center
-eyebrow: A pergunta que começou tudo
-quote: |
-  Uma máquina<br />consegue aprender<br />a soar <em>como eu?</em>
-photo-bg: ./media/bia-live-blue.jpg
-photo-bg-alt: Bianca ao vivo, mãos no microfone, luz azul
-photo-bg-style: right
-photo-bg-pos: 50% 35%
----
 type: bullets
-eyebrow: O experimento
-heading: Mesma música, três sistemas.
+eyebrow: Uma prática, muitos formatos
+heading: Antes da IA, a música.
 heading-style: display-sm
-lede: Uma canção minha, <em>Chuva</em>. Três maneiras de ensinar uma máquina a tocá-la do meu jeito.
+lede: Tudo o que faço é sobre a costura entre ferramenta e instrumento.
 bullets:
-  - <strong>HeartMula</strong> — o meu próprio pipeline — fine-tuning do HeartMuLa-3B nos meus pares demo → arranjo.
-  - <strong>ACE-Step 1.5 · só referência</strong> — zero treino; a demo de Chuva + uma gravação do AO como referência de estilo.
-  - <strong>ACE-Step 1.5 · LoRA bia-style</strong> — o mesmo modelo, treinado em 16 músicas minhas.
+  - <strong>AO</strong> — quarteto de neo-soul em Barcelona. Eu canto e toco teclado.
+  - <strong>THIS IS BOSSA</strong> — duo de bossa nova autoral, com o violonista Esteban Matuke.
+  - <strong>Apple</strong> — onze patentes, incluindo o trackpad háptico.
+  - <strong>MIT Media Lab</strong> — Tangible Media Group; obras expostas no Ars Electronica e no Met.
+  - <strong>Bloom Blanket</strong> — mantas de caxemira inspiradas em origami; o crowdfunding mais financiado da Espanha, mais de 2.000 mantas feitas à mão.
+  - <strong>DZCO</strong> — o meu estúdio — áudio espacial, design de interação e ferramentas de IA para músicos.
 ---
 type: media-video-pair
 eyebrow: Um pouco de contexto
@@ -71,6 +65,30 @@ videos:
     tag: Agora
     tag-class: ao
     caption: AO · Moments
+---
+type: center
+eyebrow: A pergunta que começou tudo
+quote: |
+  Uma máquina<br />consegue aprender<br />a soar <em>como eu?</em>
+photo-bg: ./media/bia-live-blue.jpg
+photo-bg-alt: Bianca ao vivo, mãos no microfone, luz azul
+photo-bg-style: right
+photo-bg-pos: 50% 35%
+---
+type: center
+eyebrow: Parte 1 · Mesma música, três sistemas
+quote: |
+  O que acontece quando<br />eu ensino uma máquina<br />a fazer <em>a minha</em>&nbsp;música?
+---
+type: bullets
+eyebrow: O experimento
+heading: Mesma música, três sistemas.
+heading-style: display-sm
+lede: Uma canção minha, <em>Chuva</em>. Três maneiras de ensinar uma máquina a tocá-la do meu jeito.
+bullets:
+  - <strong>HeartMula</strong> — o meu próprio pipeline — fine-tuning do HeartMuLa-3B nos meus pares demo → arranjo.
+  - <strong>ACE-Step 1.5</strong> — um modelo aberto, em duas versões — só com uma referência de estilo, e com um LoRA treinado nas minhas 16 músicas.
+  - <strong>Suno</strong> — a ferramenta comercial que milhões de pessoas usam — e com quem vou cantar um dueto, ao vivo.
 ---
 type: media-video
 eyebrow: Jornada da composição · 01
@@ -331,15 +349,15 @@ cards:
 type: center
 eyebrow: Sistema 2 / 3
 quote: |
-  ACE-Step 1.5.<br /><em>Sem treino nenhum.</em>
-muted: Um modelo aberto de canções completas, com voz e letra (licença MIT, roda num MacBook M1).
+  ACE-Step 1.5.<br /><em>Duas versões.</em>
+muted: Um modelo aberto de canções completas, com voz e letra (licença MIT, roda num MacBook M1). Primeiro sem treino nenhum — depois com o meu catálogo.
 photo-bg: ./media/ao-bmurals.jpg
 photo-bg-alt: AO sentado no chão do B-Murals ao entardecer
 photo-bg-style: full
 photo-bg-pos: 50% 70%
 ---
 type: pipeline-step
-eyebrow: Sistema 2 · como
+eyebrow: Sistema 2A · só referência
 title: A demo, uma referência, uma descrição.
 sub: |
   A <strong>demo de Chuva</strong> como fonte, <em>Moments</em> do AO como <strong>referência</strong>,
@@ -349,18 +367,18 @@ image-alt: Interface do ACE-Step 1.5 com a demo de Chuva como fonte, Moments com
 caption: ACE-Step 1.5 · Custom · turbo 2B · MacBook
 ---
 type: media-audio
-eyebrow: Sistema 2 · resultado
+eyebrow: Sistema 2A · resultado
 title: Chuva, sem treino.
 sub: O modelo nunca ouviu o meu catálogo — só esta demo e uma música do AO.
 sub-tight: true
 audio: ./media/chuva-ace-ref.mp3
-caption-tag: Sistema 2
+caption-tag: 2A
 caption-text: Chuva · ACE-Step 1.5 · só referência
 wave-style: song
 wave-gradient: mixed
 ---
 type: center
-eyebrow: Sistema 3 / 3
+eyebrow: Sistema 2B
 quote: |
   ACE-Step 1.5<br />+ <em>o meu catálogo.</em>
 muted: Um LoRA treinado em 16 músicas minhas, numa GPU L4 no Google Cloud.
@@ -370,7 +388,7 @@ photo-bg-style: full
 photo-bg-pos: 50% 82%
 ---
 type: bullets
-eyebrow: Sistema 3 · o trabalho
+eyebrow: Sistema 2B · o trabalho
 heading: Do meu catálogo a um LoRA.
 heading-style: display-sm
 lede: Um modelo aberto de canções completas, a interface web dele, e as minhas 16 músicas.
@@ -382,7 +400,7 @@ bullets:
   - <strong>Gerar</strong> — LoRA carregado e <em>bia-style</em> na legenda → neo-soul, em português, com rap.
 ---
 type: pipeline-step
-eyebrow: Sistema 3 · o dataset
+eyebrow: Sistema 2B · o dataset
 title: O Dataset Builder do ACE-Step.
 sub: |
   Escanear as 16 músicas, conferir letra e legenda, pré-processar, treinar.
@@ -392,20 +410,57 @@ image-alt: Aba LoRA Training do ACE-Step 1.5, no Dataset Builder, com os campos 
 caption: ACE-Step 1.5 · LoRA Training · Dataset Builder
 ---
 type: media-audio
-eyebrow: Sistema 3 · o resultado final
+eyebrow: Sistema 2B · resultado
 title: Chuva, com o meu catálogo.
 sub: |
   Neo-soul, em português, com rap — o ACE-Step 1.5 com o LoRA <em>bia-style</em>,
-  treinado nas minhas 16 músicas. <em>O ponto de chegada de todos os experimentos.</em>
+  treinado nas minhas 16 músicas.
 sub-tight: true
 audio: ./media/bia-style-final.mp3
-caption-tag: Sistema 3
+caption-tag: 2B
 caption-text: Chuva · ACE-Step 1.5 · LoRA bia-style · 3:30
 bg-image: ./media/ao-band-wide.jpg
 bg-image-alt: AO tocando ao vivo, banda completa no palco com luzes penduradas acima
 wave-style: song
 wave-gradient: mixed
 ---
+type: center
+eyebrow: Sistema 3 / 3
+quote: |
+  Suno.<br /><em>A ferramenta de todo mundo.</em>
+muted: Sem código, sem treino, sem GPU — um prompt e uma letra.
+photo-bg: ./media/ao-band-wide.jpg
+photo-bg-alt: AO tocando ao vivo, banda completa no palco
+photo-bg-style: full
+photo-bg-pos: 50% 45%
+---
+# TODO: completar com o que você usou no Suno (versão, prompt de estilo, letra, persona/upload de áudio?) e um screenshot → media/suno-01.jpg
+type: stack
+eyebrow: Sistema 3 · como
+heading: Um prompt, uma letra.
+lede: O Suno não conhece o meu catálogo. Só sabe o que eu escrevo para ele.
+body: |
+  [Como gerei esta versão de Chuva no Suno — o prompt de estilo, a letra, quantas tentativas
+  até chegar nesta.]
+muted: Suno · [versão do modelo]
+---
+# TODO: exportar a faixa do Suno → media/suno-duet.mp3
+type: media-audio
+eyebrow: Sistema 3 · ao vivo
+title: Um dueto com a máquina.
+sub: O Suno toca. Eu canto por cima — <em>agora, aqui.</em>
+sub-tight: true
+audio: ./media/suno-duet.mp3
+caption-tag: Dueto
+caption-text: Chuva · Suno + Bianca, ao vivo
+wave-style: song
+wave-gradient: mixed
+photo-bg: ./media/bia-live-bfv.jpg
+photo-bg-alt: Bianca cantando ao vivo, cabeça para trás, olhos fechados
+photo-bg-style: full
+photo-bg-pos: 62% 30%
+---
+# TODO: completar o card do Suno depois do dueto
 type: stack
 eyebrow: Lado a lado
 heading: Mesma música. Três respostas.
@@ -415,21 +470,17 @@ cards:
     title: HeartMula
     body: Bem cativante — mas falta riqueza, nos instrumentos e na voz.
   - num: "02"
-    title: ACE-Step · referência
-    body: Muita intimidade! Mas nada da minha garra.
+    title: ACE-Step
+    body: Só com referência, muita intimidade! Mas nada da minha garra. Com o LoRA, erra o timbre exato da minha voz.
   - num: "03"
-    title: ACE-Step · LoRA
-    body: Erra o timbre exato da minha voz.
+    title: Suno
+    body: "[o que acertou · o que perdeu]"
 ---
 type: center
 eyebrow: A sua vez
 quote: |
   Qual delas<br />soa mais <em>como eu?</em>
 muted: Levantem a mão — 1, 2 ou 3.
-photo-bg: ./media/bia-live-bfv.jpg
-photo-bg-alt: Bianca cantando ao vivo, cabeça para trás, olhos fechados
-photo-bg-style: full
-photo-bg-pos: 62% 30%
 ---
 type: lesson
 eyebrow: Lição 03
@@ -461,6 +512,61 @@ callout: |
   Primeira tentativa de atacar isso: troquei o encoder de fala (WavLM) pelo
   <strong>MERT</strong>, treinado em música, e acrescentei um <strong>termo melódico</strong>
   à loss — com peso de só <em>0,1</em>. Ainda é pouco. Aumentar esse número é o próximo experimento.
+---
+type: center
+eyebrow: Parte 2 · Para além da geração
+quote: |
+  E se a máquina<br />não fizer a música,<br />mas <em>tocar comigo?</em>
+---
+type: bullets
+eyebrow: A luva
+heading: Uma luva que entende como eu danço.
+heading-style: display-sm
+lede: Um instrumento que eu visto. Construído com uma equipe em San Francisco.
+bullets:
+  - <strong>Sensores</strong> — de movimento e de flexão, mais rastreamento da mão.
+  - <strong>Machine learning</strong> — um modelo treinado nos meus gestos de dança, reconhecendo-os em tempo real.
+  - <strong>Saída</strong> — cada gesto acende os LEDs da luva e manda MIDI para o som e a luz.
+  - <strong>No palco</strong> — a interface vira o cenário — o público vê o modelo reconhecendo cada gesto.
+photo-bg: ./media/bia-live-blue.jpg
+photo-bg-alt: Bianca ao vivo, mãos estendidas, luz azul
+photo-bg-style: side
+photo-bg-pos: 62% 35%
+---
+# TODO: escrever com as suas palavras como é tocar com a luva; vídeo → media/glove-performance.mp4
+type: media-video
+eyebrow: A luva · ao vivo
+title: Como é tocar com o corpo.
+sub: |
+  [Como é se apresentar com a luva — o que muda na voz, no corpo, na relação com a banda
+  e com o público.]
+video: ./media/glove-performance.mp4
+caption-tag: Ao vivo
+caption-text: "[onde · quando]"
+layout: split
+---
+# TODO: descrever o projeto e adicionar o vídeo → media/sd-realtime.mp4
+type: media-video
+eyebrow: Imagem em tempo real
+title: A música pinta a tela.
+sub: |
+  Animações geradas em tempo real com <strong>Stable Diffusion</strong>, respondendo à música.
+  [O que dirige a imagem — áudio, gestos, MIDI? Onde foi apresentado?]
+video: ./media/sd-realtime.mp4
+caption-tag: Stable Diffusion
+caption-text: "[projeto · ano]"
+layout: split
+---
+# TODO: descrever o projeto e adicionar uma foto → media/taste-the-music.jpg
+type: pipeline-step
+eyebrow: Taste the music
+title: Provar a música.
+sub: |
+  Um picolé que transforma música em sabor.
+  [Como funciona — o que vira sabor, onde foi mostrado, como as pessoas reagiram.]
+image: ./media/taste-the-music.jpg
+image-alt: O picolé do projeto Taste the music
+caption: Taste the music · [ano]
 ---
 type: center
 eyebrow: A pergunta maior
