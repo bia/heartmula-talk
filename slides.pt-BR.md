@@ -663,7 +663,7 @@ photo-bg-pos: 50% 62%
 type: pipeline-step
 eyebrow: Processo · 01 / 04
 title: A GPU disse não.
-sub: Hora após hora de erros de CUDA out-of-memory.
+sub: Hora após hora de erros de CUDA&nbsp;out-of-memory.
 image: ./media/process-01-cuda-oom.jpg
 image-alt: VS Code mostrando um erro de CUDA out-of-memory durante o treino
 caption: finetune_audio2audio.py · OOM

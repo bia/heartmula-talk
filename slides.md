@@ -1,68 +1,182 @@
-# Teaching AI to Make Music Like I Do
-# Bianca Cheng — HeartMula talk
+# Same song, three systems
+# Bianca Cheng — HeartMula talk · Festival Futuros Possíveis · Casa Firjan
 #
-# Each slide is a YAML block between --- delimiters.
-# Edit text freely; the renderer (render.js) regenerates the deck on reload.
-# Inline markdown: **bold** *italic* `code`. Raw HTML (<em>, <strong>, <br/>) also works.
+# English version. Opened by index.html. Mirrors slides.pt-BR.md slide for slide —
+# every content change goes into both files.
+# Facts match the current bia-music-composer code
+# (MERT instead of WavLM, 64 prefix tokens, melodic loss term, 16 pairs).
 
 ---
 type: hero
 photo: ./bianca-singing.png
-photo-alt: Bianca Cheng singing live with her band, warm string lights overhead
-eyebrow: A talk in 31 tracks
+photo-alt: Bianca Cheng singing live with the band, warm string lights overhead
+eyebrow: Music, design and machines
 title: |
   Teaching AI<br />to Make Music<br /><em>Like I Do</em>
-meta-left: Bianca Cheng
-meta-right: HeartMula
+meta-left: Bianca&nbsp;Cheng
+meta-right: Futuros&nbsp;Possíveis&nbsp;· Casa&nbsp;Firjan
+---
+type: center
+eyebrow: São Paulo
+quote: |
+  I was born<br />in <em>São&nbsp;Paulo.</em>
+muted: A city that never stops — and the first soundtrack of my&nbsp;life.
+photo-bg: ./media/bio-sao-paulo.jpg
+photo-bg-alt: São Paulo at dusk, with Pico do Jaraguá in the distance
+photo-bg-style: full
+photo-bg-pos: 50% 62%
 ---
 type: stack
-eyebrow: Who am I?
-heading: Bianca Cheng
-heading-style: display
-lede: Born in São Paulo — Chinese mother, Italian father.<br />Polyglot in seven languages.
+eyebrow: Culture
+heading: Three cultures at one&nbsp;table.
+lede: Chinese mother, Italian father, childhood in&nbsp;Brazil.
 body: |
-  MIT Media Lab → Apple (nine patents) → exhibited at Ars Electronica and the Met →
-  now in Barcelona, leading <strong>AO</strong>, a neo-soul quartet rooted in
-  jazz, funk, psychedelia, and Brazilian / Galician traditions.
-muted: Currently somewhere between a recording booth and VSCode.
-cards:
-  - num: "01"
-    title: Musician
-    body: Songwriter and recording artist. Twelve years of demos, voice memos, late-night takes.
-  - num: "02"
-    title: Designer
-    body: Shaping how products feel. Obsessed with the seam between tool and instrument.
-  - num: "03"
-    title: Technologist
-    body: Computer scientist, application developer. Not an ML engineer — AI tools filled the gap.
+  I grew up between different languages, foods and music. Today I work in seven languages —
+  and I think that's where I learned to hear things more than one&nbsp;way.
+photo-bg: ./media/bio-infancia.jpg
+photo-bg-alt: Baby Bianca, smiling, eating a piece of bread in a high chair
+photo-bg-style: side
+photo-bg-pos: 50% 30%
+---
+type: stack
+eyebrow: MIT · Art and science
+heading: Math, science… and&nbsp;art.
+body: |
+  At school, what I really loved was math and science — and that led me to study
+  engineering at MIT.
+
+  There I found a place where my love of technology and of art could
+  coexist: I worked in <strong>Hiroshi Ishii</strong>'s
+  <strong>Tangible Media Group</strong> at the MIT Media Lab — where the idea is to give
+  information a physical form, so we can touch it. That work with Hiroshi was exhibited at
+  <strong>Ars&nbsp;Electronica</strong>.
+photo-bg: ./media/bio-mit-media-lab.jpg
+photo-bg-alt: The MIT Media Lab building lit up at dusk
+photo-bg-style: full
+photo-bg-pos: 50% 45%
+---
+type: pipeline-step
+eyebrow: Apple · Art and science
+title: The MacBook's haptic&nbsp;trackpad.
+sub: |
+  While still at MIT, with the iPhone just launched, I got an offer from Apple's software
+  prototyping group. There I invented the MacBook's haptic trackpad — once again,
+  bringing my sense of touch into the digital world. Eleven US&nbsp;patents.
+image: ./media/bio-apple-patentes.jpg
+image-alt: Apple patent figures — a touch-sensitive surface, contact intensity and a musical interface
+caption: Patent figures · Apple
+---
+type: center
+eyebrow: Today
+quote: |
+  Art<br />and&nbsp;<em>entrepreneurship.</em>
+photo-bg: ./media/bio-hoje.jpg
+photo-bg-alt: Bianca wrapped in striped fabric that dissolves into particles
+photo-bg-style: full
+photo-bg-pos: 60% 40%
+---
+type: bullets
+eyebrow: Today
+heading: Many projects, one&nbsp;practice.
+heading-style: display-sm
+lede: Everything I do lives at the seam between tool and&nbsp;instrument.
+bullets:
+  - <strong>Bloom Blanket</strong> — origami-inspired cashmere blankets; Spain's most-funded crowdfunding campaign, over 2,000 blankets made by&nbsp;hand.
+  - <strong>DZCO</strong> — my studio — spatial audio, interaction design and AI tools for&nbsp;musicians.
+  - <strong>Matter &amp; Form</strong> — co-founder; I lead the human interface layer for AI&nbsp;agents.
+  - <strong>AO</strong> — a neo-soul quartet in Barcelona. I sing and play&nbsp;keys.
+  - <strong>THIS IS BOSSA</strong> — an original bossa nova duo with guitarist Esteban&nbsp;Matuke.
+---
+type: center
+eyebrow: Music and technology
+quote: |
+  Music<br />and <em>technology.</em>
+muted: The thread that ties together everything I&nbsp;do.
+photo-bg: ./media/bio-musica-tecnologia.jpg
+photo-bg-alt: AI-generated portrait of two figures in orange costumes and headdresses
+photo-bg-style: full
+photo-bg-pos: 50% 35%
+---
+type: media-video-pair
+eyebrow: Some context, briefly
+title: Two eras of me.
+sub: |
+  From bossa nova (<em>THIS IS BOSSA</em>) to neo-soul (<em>AO</em>) —
+  the journey the model is trying to learn.
+sub-tight: true
+layout: split
+videos:
+  - src: ./media/bossa-fugaz.mp4
+    tag: Then
+    caption: THIS IS BOSSA · Fugaz
+  - src: ./media/ao-moments.mp4
+    tag: Now
+    tag-class: ao
+    caption: AO · Moments
 ---
 type: center
 eyebrow: The question that started this
 quote: |
   Can a machine<br />learn to sound<br /><em>like me?</em>
+photo-bg: ./media/bia-live-blue.jpg
+photo-bg-alt: Bianca live, hands on the microphone, blue light
+photo-bg-style: right
+photo-bg-pos: 50% 35%
+---
+type: center
+eyebrow: Part 1 · Same song, three systems
+quote: |
+  What happens when<br />I teach a machine<br />to make <em>my</em>&nbsp;music?
 ---
 type: bullets
-eyebrow: The project
-heading: HeartMula
+eyebrow: The experiment
+heading: Same song, three systems.
 heading-style: display-sm
-lede: An experiment in collaborative AI music-making, trained on my own catalog.
+lede: One song of mine, <em>Chuva</em>. Three ways of teaching a machine to play it like I&nbsp;do.
 bullets:
-  - Not a tool that generates music <em>at</em> me.
-  - A partner that improvises <em>with</em> me.
-  - A mirror, occasionally a stranger, occasionally exactly right.
+  - <strong>HeartMula</strong> — my own pipeline — fine-tuning HeartMuLa-3B on my demo → arrangement&nbsp;pairs.
+  - <strong>ACE-Step 1.5</strong> — an open model, in two versions — with just a style reference, and with a LoRA trained on my 16&nbsp;songs.
+  - <strong>Suno</strong> — the commercial tool millions of people use — and my partner for a live&nbsp;duet.
+---
+type: media-video
+eyebrow: Composition journey · 01
+title: It started as a sketch.
+sub: |
+  A song called <em>Chuva</em> ("rain") — about the first day of rain at the end of summer,
+  the day one of my best friends moved away from Barcelona.
+video: ./media/chuva-sketch.mov
+caption-tag: Sketch
+caption-text: Voice memo · piano · Barcelona, 2023
+layout: split
 ---
 type: media-audio
-eyebrow: HeartMula · day zero
-title: Untrained. Untouched.
-sub: The base model's first attempt — <em>before it had ever heard a note of mine.</em>
+eyebrow: The song · the input
+title: The demo all three get.
+sub: |
+  The demo of Chuva — fully arranged, sung in Portuguese.
+  <em>Bm7(9) · Em6 · "dia de chuva e acabou o verão."</em>
 sub-tight: true
-audio: ./media/first-output.wav
-caption-tag: v0
-caption-text: first-output.wav · pre-fine-tuning
-style: raw
-wave-style: noise
-wave-gradient: lavender
-tag-class: cool
+audio: ./media/chuva.wav
+caption-tag: Chuva
+caption-text: All instruments, vocals — me.
+bg-image: ./media/chuva-sheet-music.jpg
+bg-image-alt: Handwritten chord chart for Chuva on staff paper, with Portuguese lyrics
+wave-style: song
+wave-gradient: mixed
+---
+type: stack
+section-class: section--ao section--ao--photo
+photo: ./media/ao-band-wide.jpg
+photo-alt: AO performing live, full band on stage with string lights overhead
+heading: What I was actually asking.
+lede: Not imitation. Evolution.
+body: |
+  I wasn't asking the model to imitate me. I was asking it to <em>evolve</em> me.
+
+  To take Chuva — written in 2023, when I was still mostly bossa nova and MPB —
+  and pull it forward into the neo-soul I'm writing now with <strong>AO</strong>,
+  my band in Barcelona.
+muted: Not "sound like me." More like — <em>keep up with me.</em>
 ---
 type: stats
 heading: The corpus is me
@@ -81,22 +195,38 @@ muted: |
   Finished records, half-baked demos, hummed melodies in airport bathrooms.
   Everything I've made, fed back to a system that was trying to become me.
 ---
-type: stack
-heading: How it actually works
-lede: |
-  I didn't start from scratch. I forked <strong>Christian</strong>'s open-source
-  ML project — built for <em>education</em>, not music — and used it as
-  scaffolding to figure out GCP and training infrastructure.
-body: |
-  On top of that I built a fine-tuning pipeline around the <strong>HeartMuLa</strong>
-  open-weights music-model suite, with a <strong>3 billion parameter</strong>
-  backbone adapted via <strong>LoRA</strong> on paired audio.
-aside: |
-  A "<strong>music language model</strong>" is a transformer LM — same architecture
-  as GPT — but predicting <em>audio tokens</em> instead of text. HeartCodec
-  discretizes a waveform into <strong>12.5 tokens per second</strong>; HeartMuLa-3B
-  autoregressively predicts the next chunk of sound, just like GPT predicts the next word.
-muted: Six models in. One gets fine-tuned. Five pipeline steps follow.
+type: center
+eyebrow: System 1 / 3
+quote: |
+  HeartMula.<br /><em>My own model.</em>
+muted: Fine-tuning an open 3-billion-parameter model on my demo → arrangement&nbsp;pairs.
+photo-bg: ./media/ao-pink-wall.jpg
+photo-bg-alt: AO in front of a pink wall, with keyboard, microphone, drumsticks and bass
+photo-bg-style: full
+photo-bg-pos: 50% 62%
+---
+type: bullets
+eyebrow: System 1 · the project
+heading: HeartMula
+heading-style: display-sm
+lede: An experiment in collaborative AI music-making, trained on my own catalog.
+bullets:
+  - Not a tool that generates music <em>at</em> me.
+  - A partner that improvises <em>with</em> me.
+  - A mirror — occasionally a stranger, occasionally exactly right.
+---
+type: media-audio
+eyebrow: HeartMula · day zero
+title: Untrained. Untouched.
+sub: The base model's first attempt — <em>before it had ever heard a note of mine.</em>
+sub-tight: true
+audio: ./media/first-output.wav
+caption-tag: v0
+caption-text: first-output.wav · pre-fine-tuning
+style: raw
+wave-style: noise
+wave-gradient: lavender
+tag-class: cool
 ---
 type: model-stack
 eyebrow: The stack
@@ -107,7 +237,7 @@ groups:
       - num: "01"
         name: HeartMuLa-oss-3B
         role: Music language model
-        detail: 3 billion parameters · base frozen, LoRA adapter trains
+        detail: 3 billion parameters · happy-new-year checkpoint (Feb 2026) · base frozen, LoRA adapter trains
         status: Adapted · LoRA r16
         featured: true
       - num: "02"
@@ -117,15 +247,15 @@ groups:
         status: Frozen
       - num: "03"
         name: HeartMuLaGen
-        role: Tokenizer & generation assets
+        role: Tokenizer &amp; generation assets
         detail: Shared utilities
         status: Frozen
   - label: Auxiliary
     cards:
       - num: "04"
-        name: WavLM
-        role: Audio feature encoder
-        detail: Feeds the conditioning module
+        name: MERT-v1-95M
+        role: Music audio encoder
+        detail: Pre-trained on music (replaced WavLM) · feeds the conditioning module
         status: Frozen
       - num: "05"
         name: LAION CLAP
@@ -145,7 +275,7 @@ sub: |
   Input WAVs (demos, sketches) matched to target WAVs (finished arrangements) by filename.
   The model learns the <em>move</em> between them — not just the catalog.
 image: ./media/pipeline-01-pair.jpg
-image-alt: Finder showing the data/paired/ folder with inputs, outputs, lyrics, and tags subdirectories
+image-alt: Finder showing the data/paired/ folder with inputs, outputs, lyrics and tags subfolders
 caption: data/paired/ · matched by filename
 ---
 type: pipeline-step
@@ -160,41 +290,44 @@ aside: |
   check. <strong>HTSAT</strong> (Hierarchical Token-Semantic Audio Transformer) is the
   audio encoder under the hood.
 image: ./media/pipeline-02-annotate.jpg
-image-alt: VSCode editing annotate.py with Whisper language detection logic
+image-alt: VS Code editing annotate.py with Whisper language detection logic
 caption: annotate.py · CLAP + Whisper
 ---
 type: pipeline-step
 eyebrow: Pipeline · 03 / 05
 title: Condition the backbone.
 sub: |
-  WavLM frame features → pooled to <strong>32 prefix tokens</strong> →
-  projected to backbone dimension → added as a global bias on every backbone
-  forward pass via a forward hook.
+  <strong>MERT</strong> frame features → pooled to <strong>64 prefix tokens</strong> →
+  projected to backbone dimension → prepended to the sequence in training;
+  added as a global bias via a forward hook at generation.
 aside: |
   Honest aside: I vibe-coded this bridge with AI — the
-  <strong>AudioConditioningModule</strong> that connects WavLM to HeartMuLa's
-  backbone wouldn't have come out of my head from scratch.
+  <strong>AudioConditioningModule</strong> that connects the encoder to HeartMuLa's
+  backbone wouldn't have come out of my head from scratch. I started with
+  <strong>WavLM</strong> (built for speech) and swapped it for <strong>MERT</strong>, trained on music.
 image: ./media/pipeline-03-condition.jpg
 image-alt: Claude pane explaining the AudioConditioningModule architecture
-caption: AudioConditioningModule · WavLM hook
+caption: AudioConditioningModule · MERT hook
 ---
 type: pipeline-step
 eyebrow: Pipeline · 04 / 05
 title: Train with LoRA.
 sub: |
   <strong>LoRA rank 16</strong> on the attention projections of
-  HeartMuLa-3B's global backbone. The 3B base weights stay frozen.
+  HeartMuLa-3B's global backbone. The 3B base weights stay frozen. On top of
+  cross-entropy, a <strong>melodic term</strong> in the loss pulls the demo's
+  representation toward the final arrangement's.
 aside: |
   <strong>LoRA</strong> = Low-Rank Adaptation. Instead of retraining all
   3 billion parameters, you train tiny <em>B × A</em> adapter matrices that
   nudge the model's behavior. Roughly <strong>10M trainable params</strong>
-  at rank 16 — about <strong>300× fewer</strong> than full fine-tuning,
-  fits on a single GPU, produces a <strong>10 MB</strong> adapter file you can swap.
-  The small parameter count is also what makes <strong>few-shot training</strong>
-  viable — <strong>47 paired songs</strong> is enough.
+  at rank 16 — about <strong>300× fewer</strong> than full fine-tuning; it fits on a
+  single GPU and produces a <strong>~20 MB</strong> adapter you can swap like a plugin.
+  That small count is what makes <strong>few-shot training</strong> viable —
+  <strong>16 song pairs</strong> are enough to start.
 image: ./media/pipeline-04-train.jpg
-image-alt: VSCode reviewing finetune_audio2audio_direct.py for performance optimization
-caption: finetune_audio2audio_direct.py · LoRA rank 16
+image-alt: VS Code reviewing finetune_audio2audio_direct.py for performance optimization
+caption: finetune_audio2audio.py · LoRA rank 16 · melodic weight 0.1
 ---
 type: pipeline-step
 eyebrow: Pipeline · 05 / 05
@@ -203,72 +336,10 @@ sub: |
   Apply the LoRA adapter, install the conditioning hook, hand it a new input.
   Decode <strong>30 seconds</strong> of audio.
 image: ./media/pipeline-05-generate.jpg
-image-alt: VSCode and Claude pane working on generate_audio2audio.py inference pipeline
+image-alt: VS Code and Claude pane working on the generate_audio2audio.py inference pipeline
 caption: generate_audio2audio.py · adapter + hook
 ---
-type: center
-eyebrow: Let's try it
-quote: |
-  On a song<br /><em>of mine.</em>
-muted: Time to feed it a real composition and see what comes back.
----
-type: media-video-pair
-eyebrow: Some context, briefly
-title: Two eras of me.
-sub: |
-  From bossa nova (<em>THIS IS BOSSA</em>) to neo-soul (<em>AO</em>) —
-  the journey the model is trying to learn.
-sub-tight: true
-layout: split
-videos:
-  - src: ./media/bossa-fugaz.mp4
-    tag: Then
-    caption: THIS IS BOSSA · Fugaz
-  - src: ./media/ao-moments.mp4
-    tag: Now
-    tag-class: ao
-    caption: AO · Moments
----
-type: media-video
-eyebrow: Composition journey · 01
-title: It started as a sketch.
-sub: |
-  A song called <em>Chuva</em> — about the first day of rain at the end of summer,
-  the day a friend moved away from Barcelona.
-video: ./media/chuva-sketch.mov
-caption-tag: Sketch
-caption-text: Voice memo · piano · Barcelona, 2023
-layout: split
----
-type: media-audio
-eyebrow: Composition journey · 02
-title: Using my own model.
-sub: |
-  I fed it the demo version of Chuva — fully arranged, sung in Portuguese.
-  <em>Bm7(9) · Em6 · "dia de chuva e acabou o verão."</em>
-sub-tight: true
-audio: ./media/chuva.wav
-caption-tag: Chuva
-caption-text: All instruments, vocals — me.
-bg-image: ./media/chuva-sheet-music.jpg
-bg-image-alt: Handwritten chord chart for Chuva on staff paper with Portuguese lyrics
-wave-style: song
-wave-gradient: mixed
----
-type: stack
-section-class: section--ao section--ao--photo
-photo: ./media/ao-band-wide.jpg
-photo-alt: AO performing live, full band on stage with string lights overhead
-heading: What I was actually asking.
-lede: Not imitation. Evolution.
-body: |
-  I wasn't asking the model to imitate me. I was asking it to <em>evolve</em> me.
-
-  To take Chuva — written in 2023, when I was still mostly bossa nova and MPB —
-  and pull it forward into the neo-soul I'm writing now with <strong>AO</strong>,
-  my band in Barcelona.
-muted: Not "sound like me." More like: <em>keep up with me.</em>
----
+# TODO: Lessons 01–02 are System 1 (HeartMula) results.
 type: lesson
 eyebrow: Lesson 01
 heading: AI is a mirror
@@ -296,6 +367,168 @@ audio:
   src: ./media/chuva-gen2.wav
   tag: Gen 02
   caption: The take I didn't see coming.
+photo-bg: ./media/ao-rehearsal-bass.jpg
+photo-bg-alt: AO rehearsal, bass in the foreground and Bianca singing behind
+photo-bg-style: side
+photo-bg-pos: 30% 40%
+---
+type: stack
+eyebrow: Nine months later
+heading: Why switch models?
+lede: In AI music, nine months is a whole generation.
+body: |
+  When I started HeartMula, the open model I picked could sing whole songs —
+  but couldn't take an audio reference. So I built that bridge by hand:
+  a cloud GPU, out-of-memory errors, a vibe-coded conditioning module.
+
+  Today, <strong>ACE-Step 1.5</strong> does it out of the box — and runs on my MacBook.
+  The question is the same. Only the tool changed.
+cards:
+  - num: "01"
+    title: HeartMula · 9 months ago
+    body: My own pipeline on Google Cloud. Audio reference was still on the base model's to-do list — I had to build it.
+  - num: "02"
+    title: ACE-Step 1.5 · today
+    body: A full song, with vocals and Portuguese lyrics. Reference, remix and LoRA training built into the UI — local, on a laptop.
+  - num: "03"
+    title: What didn't change
+    body: The catalog. The same 16 songs, the same Chuva. That's what makes the comparison fair.
+---
+type: center
+eyebrow: System 2 / 3
+quote: |
+  ACE-Step 1.5.<br /><em>Two versions.</em>
+muted: An open full-song model, with vocals and lyrics (MIT license, runs on a MacBook M1). First with no training at all — then with my catalog.
+photo-bg: ./media/ao-bmurals.jpg
+photo-bg-alt: AO sitting on the floor at B-Murals at dusk
+photo-bg-style: full
+photo-bg-pos: 50% 70%
+---
+type: pipeline-step
+eyebrow: System 2A · reference only
+title: The demo, a reference, a description.
+sub: |
+  The <strong>Chuva demo</strong> as source, AO's <em>Moments</em> as <strong>reference</strong>,
+  the Portuguese lyrics and a caption describing the sound.
+image: ./media/ace-01-ref.jpg
+image-alt: ACE-Step 1.5 interface with the Chuva demo as source, Moments as reference, a neo-soul caption and the Chuva lyrics
+caption: ACE-Step 1.5 · Custom · turbo 2B · MacBook
+---
+type: media-audio
+eyebrow: System 2A · result
+title: Chuva, untrained.
+sub: The model has never heard my catalog — just this demo and one AO song.
+sub-tight: true
+audio: ./media/chuva-ace-ref.mp3
+caption-tag: 2A
+caption-text: Chuva · ACE-Step 1.5 · reference only
+wave-style: song
+wave-gradient: mixed
+---
+type: center
+eyebrow: System 2B
+quote: |
+  ACE-Step 1.5<br />+ <em>my catalog.</em>
+muted: A LoRA trained on 16 of my songs, on an L4 GPU in Google Cloud.
+photo-bg: ./media/ao-mural.jpg
+photo-bg-alt: AO standing in front of a large painted mural
+photo-bg-style: full
+photo-bg-pos: 50% 82%
+---
+type: bullets
+eyebrow: System 2B · the work
+heading: From my catalog to a LoRA.
+heading-style: display-sm
+lede: An open full-song model, its web UI, and my 16 songs.
+bullets:
+  - <strong>Install</strong> — ACE-Step 1.5 on the MacBook, with the MLX backend for Apple Silicon.
+  - <strong>Build the dataset</strong> — the 16 finished HeartMula songs — audio, lyrics with [Verse]/[Chorus] and a caption that starts with the trigger word <em>bia-style</em>.
+  - <strong>Don't leave it instrumental</strong> — “All Instrumental” is on by default; switched off, the model also learns my voice and the lyrics.
+  - <strong>Train the LoRA</strong> — in ACE-Step's own LoRA Training tab — scan, preprocess, train.
+  - <strong>Generate</strong> — LoRA loaded and <em>bia-style</em> in the caption → neo-soul, in Portuguese, with rap.
+---
+type: pipeline-step
+eyebrow: System 2B · the dataset
+title: ACE-Step's Dataset Builder.
+sub: |
+  Scan the 16 songs, check lyrics and captions, preprocess, train.
+  Watch out for <strong>All Instrumental</strong> — left on, the LoRA would ignore the lyrics and my voice.
+image: ./media/ace-02-lora.jpg
+image-alt: ACE-Step 1.5 LoRA Training tab, in the Dataset Builder, with the dataset fields and the All Instrumental option
+caption: ACE-Step 1.5 · LoRA Training · Dataset Builder
+---
+type: media-audio
+eyebrow: System 2B · result
+title: Chuva, with my catalog.
+sub: |
+  Neo-soul, in Portuguese, with rap — ACE-Step 1.5 with the <em>bia-style</em> LoRA,
+  trained on my 16 songs.
+sub-tight: true
+audio: ./media/bia-style-final.mp3
+caption-tag: 2B
+caption-text: Chuva · ACE-Step 1.5 · bia-style LoRA · 3:30
+bg-image: ./media/ao-band-wide.jpg
+bg-image-alt: AO performing live, full band on stage with string lights overhead
+wave-style: song
+wave-gradient: mixed
+---
+type: center
+eyebrow: System 3 / 3
+quote: |
+  Suno.<br /><em>Everyone's tool.</em>
+muted: No code, no training, no GPU — a prompt and some lyrics.
+photo-bg: ./media/ao-band-wide.jpg
+photo-bg-alt: AO performing live, full band on stage
+photo-bg-style: full
+photo-bg-pos: 50% 45%
+---
+# TODO: fill in what you used in Suno (version, style prompt, lyrics, persona/audio upload?) and a screenshot → media/suno-01.jpg
+type: stack
+eyebrow: System 3 · how
+heading: A prompt, some lyrics.
+lede: Suno doesn't know my catalog. It only knows what I write to it.
+body: |
+  [How I generated this version of Chuva in Suno — the style prompt, the lyrics, how many tries
+  it took to get here.]
+muted: Suno · [model version]
+---
+# TODO: export the Suno track → media/suno-duet.mp3
+type: media-audio
+eyebrow: System 3 · live
+title: A duet with the machine.
+sub: Suno plays. I sing on top — <em>right here, right now.</em>
+sub-tight: true
+audio: ./media/suno-duet.mp3
+caption-tag: Duet
+caption-text: Chuva · Suno + Bianca, live
+wave-style: song
+wave-gradient: mixed
+photo-bg: ./media/bia-live-bfv.jpg
+photo-bg-alt: Bianca singing live, head back, eyes closed
+photo-bg-style: full
+photo-bg-pos: 62% 30%
+---
+# TODO: complete the Suno card after the duet
+type: stack
+eyebrow: Side by side
+heading: Same song. Three answers.
+lede: What each system heard in Chuva — and what it left behind.
+cards:
+  - num: "01"
+    title: HeartMula
+    body: Pretty catchy — but lacking richness, in the instruments and the vocals.
+  - num: "02"
+    title: ACE-Step
+    body: Reference only, a lot of intimacy! But none of my grit. With the LoRA, it misses my exact vocal tone.
+  - num: "03"
+    title: Suno
+    body: "[what it got right · what it lost]"
+---
+type: center
+eyebrow: Your turn
+quote: |
+  Which one<br />sounds most <em>like me?</em>
+muted: Raise your hand — 1, 2 or 3.
 ---
 type: lesson
 eyebrow: Lesson 03
@@ -305,7 +538,12 @@ body: |
   The model can produce a thousand convincing Bianca-flavored loops in a minute.
   None of them are mine until I choose one and throw the other 999 away.
 callout: Generation is cheap. <em>Curation is the artist.</em>
+photo-bg: ./media/bia-live-garage.jpg
+photo-bg-alt: Bianca singing live with AO in Barcelona
+photo-bg-style: side
+photo-bg-pos: 88% 30%
 ---
+# TODO: revisit the callout after hearing all three systems — is the ceiling still the same?
 type: lesson
 theme: ao
 photo: ./media/ao-band-energy.jpg
@@ -319,25 +557,86 @@ body: |
   Rich chord progressions. The note that surprises me. The line that sets up a
   moment three bars later.
 callout: |
-  Even the training config admitted it: I told the model that getting the melody right
-  was worth only <em>30% of its attention</em> — too low. Bumping that number is one
-  of the things I want to try next.
+  First attempt at tackling it: I swapped the speech encoder (WavLM) for
+  <strong>MERT</strong>, trained on music, and added a <strong>melodic term</strong>
+  to the loss — weighted at just <em>0.1</em>. Still too low. Raising that number is the next experiment.
+---
+type: center
+eyebrow: Part 2 · Beyond generation
+quote: |
+  What if the machine<br />doesn't make the music,<br />but <em>plays with me?</em>
+---
+type: bullets
+eyebrow: The glove
+heading: A glove that understands how I&nbsp;dance.
+heading-style: display-sm
+lede: An instrument I wear. Built with a team in San&nbsp;Francisco.
+bullets:
+  - <strong>Sensors</strong> — motion and flex sensors, plus hand tracking.
+  - <strong>Machine learning</strong> — a model trained on my dance gestures, recognizing them in real time.
+  - <strong>Output</strong> — each gesture lights the glove's LEDs and sends MIDI to sound and light.
+  - <strong>On stage</strong> — the interface becomes the set — the audience watches the model recognize each gesture.
+photo-bg: ./media/bia-live-blue.jpg
+photo-bg-alt: Bianca live, hands outstretched, blue light
+photo-bg-style: side
+photo-bg-pos: 62% 35%
+---
+# TODO: write in your own words what it's like to perform with the glove; video → media/glove-performance.mp4
+type: media-video
+eyebrow: The glove · live
+title: Playing with my whole body.
+sub: |
+  [What it's like to perform with the glove — what changes in the voice, the body, the
+  relationship with the band and the audience.]
+video: ./media/glove-performance.mp4
+caption-tag: Live
+caption-text: "[where · when]"
+layout: split
+---
+type: media-video
+eyebrow: Real-time image
+title: The music paints the screen.
+sub: |
+  A live video goes in, frame by frame, and comes out transformed by
+  <strong>Stable Diffusion</strong> into a prompt-driven animation — in real time.
+  I've used it in live shows in Barcelona and&nbsp;Paris.
+youtube: 1joOZe2UyBA
+caption-tag: Stable Diffusion
+caption-text: VJ Stream Diffusion · Barcelona and Paris
+layout: split
+---
+type: media-video
+eyebrow: Taste the&nbsp;music
+title: Tasting the&nbsp;music.
+sub: |
+  Ice conducts electricity. With <strong>Ableton Live</strong> and <strong>Arduino</strong>,
+  each instrument in the song becomes an electrical signal — its own waveform —
+  sent into the popsicle. You don't hear the music — you <em>taste</em> each&nbsp;instrument.
+youtube: sItFOYjvQEs
+portrait: true
+caption-tag: Taste the&nbsp;music
+caption-text: Music Popsicle · Ableton Live + Arduino
+layout: split
 ---
 type: center
 eyebrow: The bigger question
 quote: |
   What if my <em>voice</em><br />was never about its sound,<br />but about my <em>musical taste?</em>
 quote-class: serif
+photo-bg: ./media/bia-mural.jpg
+photo-bg-alt: Bianca in front of a colorful mural in Barcelona
+photo-bg-style: full
+photo-bg-pos: 50% 28%
 ---
 type: bullets
 heading: What's next for HeartMula
 bullets-class: roomy
 bullets:
-  - <strong>Live performance</strong> — bringing the model on stage as a third instrument.
+  - <strong>Live, in real time</strong> — Magenta RealTime 2 on a MacBook, played by my keys and the glove.
   - <strong>Open toolkit</strong> — packaging the training pipeline for other artists' catalogs.
   - <strong>More songs</strong> — the model needs new material. So do I.
   - <strong>A record</strong> — co&#8209;produced with myself. Credits get philosophical.
-  - <strong>Raise the melodic bar</strong> — richer melodic depth, surprises in the chord progression.
+  - <strong>Raise the melodic bar</strong> — a heavier melodic weight in the loss, more surprises in the chord progression.
 ---
 type: open-source
 eyebrow: It's open source
@@ -357,13 +656,17 @@ qrs:
   - src: ./media/qr-linkedin.svg
     label: LinkedIn
     handle: in/biancacheng
+photo-bg: ./media/ao-pink-wall.jpg
+photo-bg-alt: AO in front of a pink wall
+photo-bg-style: full
+photo-bg-pos: 50% 62%
 ---
 type: pipeline-step
 eyebrow: Process · 01 / 04
 title: GPU said no.
-sub: Hour after hour of CUDA out-of-memory errors.
+sub: Hour after hour of CUDA out-of-memory&nbsp;errors.
 image: ./media/process-01-cuda-oom.jpg
-image-alt: VSCode showing a CUDA out-of-memory error during a training run
+image-alt: VS Code showing a CUDA out-of-memory error during training
 caption: finetune_audio2audio.py · OOM
 ---
 type: pipeline-step
@@ -371,7 +674,7 @@ eyebrow: Process · 02 / 04
 title: Training, finally.
 sub: After enough yak-shaving, the model started learning.
 image: ./media/process-02-training.jpg
-image-alt: GCP Compute Engine logs streaming as the heartmula-train VM loads checkpoint shards
+image-alt: GCP Compute Engine logs as the heartmula-train VM loads checkpoint shards
 caption: heartmula-train · GCP Compute
 ---
 type: pipeline-step
@@ -379,7 +682,7 @@ eyebrow: Process · 03 / 04
 title: Teaching it Portuguese.
 sub: WhisperX transcribing Chuva's lyrics. The model needed to know what it was hearing.
 image: ./media/process-03-portuguese.jpg
-image-alt: VSCode pair-programming with Claude on the finetune.py annotation pipeline
+image-alt: VS Code pair-programming with Claude on the finetune.py annotation pipeline
 caption: annotate.py · WhisperX
 ---
 type: stack
@@ -406,5 +709,5 @@ eyebrow: Process · 04 / 04
 title: Training complete.
 sub: First successful run. Eval losses landed where they were supposed to.
 image: ./media/process-04-training-success.jpg
-image-alt: Claude pane showing 'Training completed and successful' with eval epoch summaries
+image-alt: Claude pane showing 'Training completed and successful' with the eval epoch summary
 caption: v1 · 4 epochs
