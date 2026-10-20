@@ -648,7 +648,7 @@ type: thank-you
 eyebrow: Thank you
 heading: Let's talk.
 muted: I'm open to project ideas and creative collaborations. Questions, too — reach out anytime, I'd love to hear from&nbsp;you.
-contact: bianca cheng <span class="bullet">·</span> heartmula <span class="bullet">·</span> get.bianca@gmail.com
+contact: bianca cheng&nbsp;costanzo <span class="bullet">·</span> get.bianca@gmail.com
 qrs:
   - src: ./media/qr-instagram.svg
     label: Instagram
