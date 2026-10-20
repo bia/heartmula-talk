@@ -97,10 +97,10 @@ videos:
   - src: ./media/bossa-fugaz.mp4
     tag: Antes
     caption: THIS IS BOSSA · Fugaz
-  - src: ./media/ao-moments.mp4
+  - src: ./media/ao-moments-artificial.mp4
     tag: Agora
     tag-class: ao
-    caption: AO · Moments
+    caption: AO · Moments · Arteficial
 ---
 type: center
 eyebrow: A pergunta que começou tudo

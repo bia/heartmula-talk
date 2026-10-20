@@ -98,10 +98,10 @@ videos:
   - src: ./media/bossa-fugaz.mp4
     tag: Then
     caption: THIS IS BOSSA · Fugaz
-  - src: ./media/ao-moments.mp4
+  - src: ./media/ao-moments-artificial.mp4
     tag: Now
     tag-class: ao
-    caption: AO · Moments
+    caption: AO · Moments · Arteficial
 ---
 type: center
 eyebrow: The question that started this
