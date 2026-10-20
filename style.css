@@ -1901,15 +1901,13 @@ ol.steps li:last-child {
 html, body { overflow-x: hidden; }
 .hm-deck { overflow-x: hidden; }
 .hm-deck > section {
-    overflow: hidden; /* clip (not just overflow-x: clip, which older Safari ignores) */
-    /* A slide is one screen tall, but grows if its content is taller, so
-       nothing is ever cut off or hidden under the header. */
-    height: auto;
-    min-height: 100vh;
-    box-sizing: border-box;
+    /* Clip photo layers that extend past the edge. overflow: clip (unlike
+       hidden) doesn't turn each slide into a scroll container, so the deck's
+       original snap scrolling keeps working. */
+    overflow-x: clip;
 }
 
-@media (max-width: 760px), (max-height: 700px) {
+@media (max-width: 760px) {
     /* Size to the visible screen (iOS toolbars), and let tall slides grow
        instead of spilling under the header or off the bottom. */
     .hm-deck {
@@ -1963,18 +1961,4 @@ p, li, dd, .lede, [class*="lede"], [class*="body"], [class*="muted"], [class*="c
 /* Contact line: on phones, name · project on one line, the email on the next. */
 @media (max-width: 760px) {
     .contact .bullet:last-of-type { display: block; height: 0; overflow: hidden; }
-}
-
-/* ---- SCROLLING -------------------------------------------- */
-/* CSS scroll snapping fought trackpad/wheel gestures (scrolls sprang back to
-   the same slide). Scrolling is now free; deck.js gently settles on the
-   nearest slide once you stop. Arrow keys and ‹ › still jump one slide. */
-.hm-deck,
-.hm-deck[class] {
-    scroll-snap-type: none !important;
-    scroll-behavior: auto;
-}
-.hm-deck > section {
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
 }
