@@ -45,27 +45,13 @@ body: |
   engenharia no MIT.
 
   Lá encontrei um lugar onde o meu amor por tecnologia e por arte podia
-  coexistir.
+  coexistir: trabalhei no <strong>Tangible Media Group</strong> do
+  <strong>Hiroshi Ishii</strong>, no MIT Media Lab — onde a ideia é dar forma física à
+  informação, para que a gente possa&nbsp;tocá-la.
 photo-bg: ./media/bio-mit-media-lab.jpg
 photo-bg-alt: Prédio do MIT Media Lab iluminado ao entardecer
 photo-bg-style: full
 photo-bg-pos: 50% 45%
----
-type: stack
-eyebrow: MIT Media Lab · Tangible Media Group
-heading: Dar forma ao que é&nbsp;digital.
-body: |
-  Antes da Apple, trabalhei no <strong>Tangible Media Group</strong> do
-  <strong>Hiroshi Ishii</strong>, no MIT Media Lab — onde a ideia é dar forma física à
-  informação, para que a gente possa tocá-la.
-
-  Foi lá que desenvolvi o <strong>Pictouch</strong>, e onde o meu trabalho foi exposto no
-  <strong>Ars Electronica</strong> e no <strong>Met</strong>.
-muted: O Hiroshi Ishii e a cultura da Apple são, até hoje, os meus grandes&nbsp;mentores.
-photo-bg: ./media/bio-experimentacao.jpg
-photo-bg-alt: Vestido de papel dobrado em tesselações de origami, em movimento
-photo-bg-style: side
-photo-bg-pos: 50% 35%
 ---
 type: center
 eyebrow: Apple · Arte e ciência
