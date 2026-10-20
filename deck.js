@@ -110,15 +110,9 @@
         }, { root: deck, threshold: [0.25, 0.5, 0.75] });
         slides.forEach((s) => io.observe(s));
 
-        // ----- swipe gestures (touch) ---------------------------------
-        let touchStartY = null;
-        deck.addEventListener("touchstart", (e) => { touchStartY = e.touches[0].clientY; }, { passive: true });
-        deck.addEventListener("touchend", (e) => {
-            if (touchStartY === null) return;
-            const dy = e.changedTouches[0].clientY - touchStartY;
-            if (Math.abs(dy) > 60) { if (dy < 0) next(); else prev(); }
-            touchStartY = null;
-        }, { passive: true });
+        // ----- touch ----------------------------------------------------
+        // Native scrolling (with scroll-snap) handles touch. A JS swipe-to-jump
+        // used to fight it and made slides taller than the screen unreadable.
 
         // ----- init ---------------------------------------------------
         setActive(0);

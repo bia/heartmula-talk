@@ -1891,3 +1891,44 @@ ol.steps li:last-child {
     .has-photo--side .slide-photo,
     .has-photo--right .slide-photo { width: 100%; opacity: 0.45; }
 }
+
+/* ---- MOBILE LAYOUT FIXES -------------------------------- */
+
+/* Nothing may scroll sideways: photo layers and wide elements are clipped. */
+html, body { overflow-x: hidden; }
+.hm-deck { overflow-x: hidden; }
+.hm-deck > section { overflow-x: clip; }
+
+@media (max-width: 760px) {
+    /* Size to the visible screen (iOS toolbars), and let tall slides grow
+       instead of spilling under the header or off the bottom. */
+    .hm-deck {
+        height: 100vh;
+        height: 100dvh;
+        scroll-snap-type: y proximity;
+    }
+    .hm-deck > section {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        scroll-snap-stop: normal;
+        padding: 76px 20px 40px;
+        box-sizing: border-box;
+    }
+    /* Tall slides are scrolled through, so don't hide content until "active". */
+    .hm-deck > section > * {
+        opacity: 1;
+        transform: none;
+    }
+    /* Swipe / scroll replaces the arrow buttons, which covered slide text. */
+    .hm-nav { display: none; }
+
+    /* Right-anchored photos: fill the slide instead of hanging off the edge. */
+    .has-photo--right .slide-photo {
+        left: 0;
+        right: 0;
+        width: 100%;
+        aspect-ratio: auto;
+        opacity: 0.45;
+    }
+}
