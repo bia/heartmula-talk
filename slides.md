@@ -609,14 +609,15 @@ photo-bg-style: full
 photo-bg-pos: 50% 28%
 ---
 type: bullets
-heading: What's next for HeartMula
+heading: What's&nbsp;next
+lede: For my music, and for the tools I build for&nbsp;it.
 bullets-class: roomy
 bullets:
-  - <strong>Live, in real time</strong> — Magenta RealTime 2 on a MacBook, played by my keys and the glove.
-  - <strong>Open toolkit</strong> — packaging the training pipeline for other artists' catalogs.
-  - <strong>More songs</strong> — the model needs new material. So do I.
-  - <strong>A record</strong> — co&#8209;produced with myself. Credits get philosophical.
-  - <strong>Raise the melodic bar</strong> — a heavier melodic weight in the loss, more surprises in the chord progression.
+  - <strong>Live, in real time</strong> — Magenta RealTime 2 on a MacBook, played by my keys and the&nbsp;glove.
+  - <strong>All on one stage</strong> — the glove, the visuals and the AI together in an AO&nbsp;show.
+  - <strong>Open tools</strong> — the training pipeline, and whatever I learn along the way, for other&nbsp;artists.
+  - <strong>More songs</strong> — the machine needs new material. So do&nbsp;I.
+  - <strong>A record</strong> — co&#8209;produced with myself. Credits get&nbsp;philosophical.
 ---
 type: open-source
 eyebrow: It's open source

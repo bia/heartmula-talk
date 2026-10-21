@@ -608,14 +608,15 @@ photo-bg-style: full
 photo-bg-pos: 50% 28%
 ---
 type: bullets
-heading: O que vem por aí para o HeartMula
+heading: O que vem por&nbsp;aí
+lede: Para a minha música e para as ferramentas que eu construo para&nbsp;ela.
 bullets-class: roomy
 bullets:
-  - <strong>Ao vivo, em tempo real</strong> — Magenta RealTime 2 num MacBook, tocado pelas minhas teclas e pela luva.
-  - <strong>Toolkit aberto</strong> — empacotar o pipeline de treino para o catálogo de outros artistas.
-  - <strong>Mais músicas</strong> — o modelo precisa de material novo. Eu também.
-  - <strong>Um disco</strong> — coproduzido comigo mesma. Os créditos ficam filosóficos.
-  - <strong>Subir a régua melódica</strong> — um peso melódico maior na loss, mais surpresas na progressão de acordes.
+  - <strong>Ao vivo, em tempo real</strong> — Magenta RealTime 2 num MacBook, tocado pelas minhas teclas e pela&nbsp;luva.
+  - <strong>Tudo no mesmo palco</strong> — a luva, as imagens e a IA juntas num show do&nbsp;AO.
+  - <strong>Ferramentas abertas</strong> — o pipeline de treino e o que eu aprender pelo caminho, para outros&nbsp;artistas.
+  - <strong>Mais músicas</strong> — a máquina precisa de material novo. Eu&nbsp;também.
+  - <strong>Um disco</strong> — coproduzido comigo mesma. Os créditos ficam&nbsp;filosóficos.
 ---
 type: open-source
 eyebrow: É open source
