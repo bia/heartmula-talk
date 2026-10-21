@@ -621,7 +621,6 @@ bullets:
 ---
 type: open-source
 eyebrow: It's open source
-pretitle: Fork it. Train it on your catalog.
 url: github.com/bia/bia-music-composer
 url2: heartmula-talk.netlify.app
 caption: 📷 &nbsp; Photograph this — the code and this talk's&nbsp;slides.
