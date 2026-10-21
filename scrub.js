@@ -229,8 +229,44 @@
         io.observe(host);
     }
 
+    /* ----- videos: keep the native controls seekable ------- */
+    // Browsers can only seek a video when the server answers HTTP Range
+    // requests. Netlify does; `python3 -m http.server` doesn't, so there the
+    // video is fetched once as a blob (always seekable) when its slide nears.
+    let rangeSupport;
+    function serverHasRanges(src) {
+        if (!rangeSupport) {
+            rangeSupport = fetch(src, { method: "HEAD", cache: "no-store" })
+                .then(r => /bytes/i.test(r.headers.get("accept-ranges") || ""))
+                .catch(() => true);
+        }
+        return rangeSupport;
+    }
+    function seekableVideo(video) {
+        const src = video.getAttribute("src");
+        if (!src || src.startsWith("blob:")) return;
+        const io = new IntersectionObserver(async (entries) => {
+            if (!entries.some(en => en.isIntersecting)) return;
+            io.disconnect();
+            if (await serverHasRanges(src)) return;
+            try {
+                const blob = await load(src);
+                const t = video.currentTime, wasPlaying = !video.paused;
+                video.src = URL.createObjectURL(blob);
+                video.addEventListener("loadedmetadata", () => {
+                    if (t) video.currentTime = t;
+                    if (wasPlaying) video.play().catch(() => {});
+                }, { once: true });
+            } catch (err) {
+                console.warn("scrub: could not preload video", src, err);
+            }
+        }, { rootMargin: "100% 0px" });
+        io.observe(video);
+    }
+
     function init() {
         document.querySelectorAll("#deck audio").forEach(enhance);
+        document.querySelectorAll("#deck video").forEach(seekableVideo);
     }
     window.addEventListener("deck:ready", init);
 })();
