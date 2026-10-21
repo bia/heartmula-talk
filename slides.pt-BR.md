@@ -648,8 +648,14 @@ photo-bg-alt: AO diante de um muro rosa
 photo-bg-style: full
 photo-bg-pos: 50% 62%
 ---
+type: center
+eyebrow: Anexo
+quote: |
+  A palestra<br />termina&nbsp;<em>aqui.</em>
+muted: O que vem a seguir é um anexo para quem está lendo estes slides depois — os bastidores do treino do HeartMula. Não faz parte da apresentação ao&nbsp;vivo.
+---
 type: pipeline-step
-eyebrow: Processo · 01 / 04
+eyebrow: Anexo · Processo · 01 / 04
 title: A GPU disse não.
 sub: Hora após hora de erros de CUDA&nbsp;out-of-memory.
 image: ./media/process-01-cuda-oom.jpg
@@ -657,7 +663,7 @@ image-alt: VS Code mostrando um erro de CUDA out-of-memory durante o treino
 caption: finetune_audio2audio.py · OOM
 ---
 type: pipeline-step
-eyebrow: Processo · 02 / 04
+eyebrow: Anexo · Processo · 02 / 04
 title: Treinando, finalmente.
 sub: Depois de muito trabalho de bastidor, o modelo começou a aprender.
 image: ./media/process-02-training.jpg
@@ -665,7 +671,7 @@ image-alt: Logs do GCP Compute Engine enquanto a VM heartmula-train carrega os s
 caption: heartmula-train · GCP Compute
 ---
 type: pipeline-step
-eyebrow: Processo · 03 / 04
+eyebrow: Anexo · Processo · 03 / 04
 title: Ensinando português.
 sub: WhisperX transcrevendo a letra de Chuva. O modelo precisava saber o que estava ouvindo.
 image: ./media/process-03-portuguese.jpg
@@ -673,7 +679,7 @@ image-alt: VS Code em pair programming com o Claude no pipeline de anotação do
 caption: annotate.py · WhisperX
 ---
 type: stack
-eyebrow: Um efeito colateral delicioso
+eyebrow: Anexo · Um efeito colateral delicioso
 heading: O Whisper alucinou.
 lede: |
   Dei a ele um trecho puramente instrumental — sem voz nenhuma — e o Whisper-large-v3
@@ -692,7 +698,7 @@ body: |
   perfeita no dataset mental do modelo.
 ---
 type: pipeline-step
-eyebrow: Processo · 04 / 04
+eyebrow: Anexo · Processo · 04 / 04
 title: Treino concluído.
 sub: Primeira execução bem-sucedida. As losses de avaliação caíram onde deviam.
 image: ./media/process-04-training-success.jpg

@@ -649,8 +649,14 @@ photo-bg-alt: AO in front of a pink wall
 photo-bg-style: full
 photo-bg-pos: 50% 62%
 ---
+type: center
+eyebrow: Appendix
+quote: |
+  The talk<br />ends&nbsp;<em>here.</em>
+muted: What follows is an appendix for anyone reading these slides afterwards — behind the scenes of training HeartMula. It isn't part of the live&nbsp;talk.
+---
 type: pipeline-step
-eyebrow: Process · 01 / 04
+eyebrow: Appendix · Process · 01 / 04
 title: GPU said no.
 sub: Hour after hour of CUDA out-of-memory&nbsp;errors.
 image: ./media/process-01-cuda-oom.jpg
@@ -658,7 +664,7 @@ image-alt: VS Code showing a CUDA out-of-memory error during training
 caption: finetune_audio2audio.py · OOM
 ---
 type: pipeline-step
-eyebrow: Process · 02 / 04
+eyebrow: Appendix · Process · 02 / 04
 title: Training, finally.
 sub: After enough yak-shaving, the model started learning.
 image: ./media/process-02-training.jpg
@@ -666,7 +672,7 @@ image-alt: GCP Compute Engine logs as the heartmula-train VM loads checkpoint sh
 caption: heartmula-train · GCP Compute
 ---
 type: pipeline-step
-eyebrow: Process · 03 / 04
+eyebrow: Appendix · Process · 03 / 04
 title: Teaching it Portuguese.
 sub: WhisperX transcribing Chuva's lyrics. The model needed to know what it was hearing.
 image: ./media/process-03-portuguese.jpg
@@ -674,7 +680,7 @@ image-alt: VS Code pair-programming with Claude on the finetune.py annotation pi
 caption: annotate.py · WhisperX
 ---
 type: stack
-eyebrow: A delightful side effect
+eyebrow: Appendix · A delightful side effect
 heading: Whisper hallucinated.
 lede: |
   I fed it a purely instrumental clip — no vocals at all — and Whisper-large-v3 confidently
@@ -693,7 +699,7 @@ body: |
   glimpse into the model's mental dataset.
 ---
 type: pipeline-step
-eyebrow: Process · 04 / 04
+eyebrow: Appendix · Process · 04 / 04
 title: Training complete.
 sub: First successful run. Eval losses landed where they were supposed to.
 image: ./media/process-04-training-success.jpg
