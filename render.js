@@ -381,30 +381,40 @@
         },
 
         "open-source"(s) {
-            // Renders the github URL with the existing oss styling (peach→lavender gradient on the repo path)
-            const url = s.url || "";
-            const m = url.match(/^([^\/]+\/[^\/]+\/)(.+)$/);
-            const scheme = m ? m[1] : "github.com/";
-            const path = m ? m[2] : url;
-            return `<section class="oss-section">
-                <div class="slide center oss">
-                    ${eyebrow(s.eyebrow)}
-                    ${s.pretitle ? `<p class="oss__pretitle">${flow(s.pretitle)}</p>` : ""}
-                    <div class="oss__url">
+            // Big URL lines in the oss styling: grey host, peach→lavender gradient on the
+            // meaningful part. Glyph width is kept the same across lines.
+            const urlLine = (url, i) => {
+                // repo URLs (host/owner/repo): highlight the repo. Site URLs: highlight the
+                // site name and any path, e.g. heartmula-talk.netlify.app/pt.
+                const repo = url.match(/^([^\/]+\/[^\/]+\/)(.+)$/);
+                const site = url.match(/^([^.\/]+)([^\/]*\/?)(.*)$/);
+                const parts = repo
+                    ? [[repo[1], false], [repo[2], true]]
+                    : [[site[1], true], [site[2], false], [site[3], true]].filter(p => p[0]);
+                const len = Math.min(1920, url.length * 58);
+                const tspans = parts.map(([t, hi]) => hi
+                    ? `<tspan fill="url(#ossGrad${i})" font-weight="700">${t}</tspan>`
+                    : `<tspan fill="#8a8194">${t}</tspan>`).join("");
+                return `<div class="oss__url${i ? " oss__url--more" : ""}">
                         <svg class="oss__url-svg" viewBox="0 0 2000 130" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-label="${url}">
                             <defs>
-                                <linearGradient id="ossGrad" x1="0" y1="0" x2="1" y2="0">
+                                <linearGradient id="ossGrad${i}" x1="0" y1="0" x2="1" y2="0">
                                     <stop offset="0" stop-color="#ffb89c"/>
                                     <stop offset="1" stop-color="#c8a8e9"/>
                                 </linearGradient>
                             </defs>
-                            <text x="1000" y="98" text-anchor="middle" textLength="1920" lengthAdjust="spacingAndGlyphs"
+                            <text x="1000" y="98" text-anchor="middle" textLength="${len}" lengthAdjust="spacingAndGlyphs"
                                   font-family="JetBrains Mono, ui-monospace, monospace" font-size="100" font-weight="500"
-                                  letter-spacing="-1">
-                                <tspan fill="#8a8194">${scheme}</tspan><tspan fill="url(#ossGrad)" font-weight="700">${path}</tspan>
-                            </text>
+                                  letter-spacing="-1">${tspans}</text>
                         </svg>
-                    </div>
+                    </div>`;
+            };
+            const urls = [s.url, s.url2].filter(Boolean);
+            return `<section class="oss-section">
+                <div class="slide center oss">
+                    ${eyebrow(s.eyebrow)}
+                    ${s.pretitle ? `<p class="oss__pretitle">${flow(s.pretitle)}</p>` : ""}
+                    ${urls.map(urlLine).join("")}
                     ${s.caption ? `<p class="oss__caption">${flow(s.caption)}</p>` : ""}
                     ${s.qrs ? `<div class="qr-row oss__qrs">${s.qrs.map(q => `
                         <div class="qr-card">

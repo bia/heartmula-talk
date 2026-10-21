@@ -695,6 +695,11 @@ ol.steps li:last-child {
     max-width: 100%;
 }
 
+.oss__url--more {
+    margin-top: -28px;
+    border-top: none;
+}
+
 .oss__qrs {
     margin-top: clamp(20px, 3vw, 36px);
     justify-content: center;
