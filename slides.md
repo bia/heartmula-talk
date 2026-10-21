@@ -623,10 +623,13 @@ type: open-source
 eyebrow: It's open source
 pretitle: Fork it. Train it on your catalog.
 url: github.com/bia/bia-music-composer
-caption: 📷 &nbsp; Photograph this slide.
+caption: 📷 &nbsp; Photograph this — the code and this talk's&nbsp;slides.
 qrs:
+  - src: ./media/qr-github.svg
+    label: The code
+    handle: github.com/bia/bia-music-composer
   - src: ./media/qr-talk-en.svg
-    label: This talk
+    label: These slides
     handle: heartmula-talk.netlify.app
 ---
 type: thank-you
