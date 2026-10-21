@@ -83,6 +83,7 @@ eyebrow: Música e tecnologia
 quote: |
   Música<br />e <em>tecnologia.</em>
 muted: O fio que liga tudo o que eu faço — até os figurinos dos meus shows com o AO, que eu mesma&nbsp;crio.
+video-bg: ./media/bio-musica-tecnologia.mp4
 photo-bg: ./media/bio-musica-tecnologia.jpg
 photo-bg-alt: Retrato gerado por IA de duas figuras com trajes e cocares laranja
 photo-bg-style: full

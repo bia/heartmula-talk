@@ -84,6 +84,7 @@ eyebrow: Music and technology
 quote: |
   Music<br />and <em>technology.</em>
 muted: The thread that ties together everything I do — even my AO stage outfits, which I design&nbsp;myself.
+video-bg: ./media/bio-musica-tecnologia.mp4
 photo-bg: ./media/bio-musica-tecnologia.jpg
 photo-bg-alt: AI-generated portrait of two figures in orange costumes and headdresses
 photo-bg-style: full
