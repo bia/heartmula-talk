@@ -490,7 +490,6 @@ photo-bg-alt: Bianca singing live, head back, eyes closed
 photo-bg-style: full
 photo-bg-pos: 62% 30%
 ---
-# TODO: complete the Suno card after the duet
 type: stack
 eyebrow: Side by side
 heading: Same song. Three answers.
@@ -504,7 +503,8 @@ cards:
     body: Reference only, a lot of intimacy! But none of my grit. With the LoRA, it misses my exact vocal tone.
   - num: "03"
     title: Suno
-    body: "[what it got right · what it lost]"
+    body: It invented its own song — but, as we just saw, it can be a partner for&nbsp;me.
+closing: All of these are <em>tools.</em>
 ---
 type: center
 eyebrow: Your turn

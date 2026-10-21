@@ -489,7 +489,6 @@ photo-bg-alt: Bianca cantando ao vivo, cabeça para trás, olhos fechados
 photo-bg-style: full
 photo-bg-pos: 62% 30%
 ---
-# TODO: completar o card do Suno depois do dueto
 type: stack
 eyebrow: Lado a lado
 heading: Mesma música. Três respostas.
@@ -503,7 +502,8 @@ cards:
     body: Só com referência, muita intimidade! Mas nada da minha garra. Com o LoRA, erra o timbre exato da minha voz.
   - num: "03"
     title: Suno
-    body: "[o que acertou · o que perdeu]"
+    body: Inventou a sua própria música — mas, como acabamos de ver, pode ser uma parceira para&nbsp;mim.
+closing: Todas essas coisas são <em>ferramentas.</em>
 ---
 type: center
 eyebrow: A sua vez

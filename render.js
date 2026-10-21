@@ -375,6 +375,7 @@
                     ${muted(s.muted)}
                     ${callout(s.callout)}
                     ${cards ? `<div class="three-up">${cards}</div>` : ""}
+                    ${callout(s.closing)}
                 </div>
             </section>`;
         },
