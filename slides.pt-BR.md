@@ -545,7 +545,7 @@ callout: |
 type: stack
 eyebrow: Para além da geração
 heading: Gerar é só uma parte da&nbsp;história.
-lede: Depois de ensinar uma máquina a compor, eu quis que a tecnologia tocasse comigo&nbsp;— no corpo, na imagem e até no&nbsp;paladar.
+lede: Treinar modelos é só um dos jeitos que eu tenho de fazer música com tecnologia. Também toco com ela — no corpo, na imagem e até no&nbsp;paladar.
 cards:
   - num: "01"
     title: A luva

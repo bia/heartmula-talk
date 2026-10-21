@@ -546,7 +546,7 @@ callout: |
 type: stack
 eyebrow: Beyond generation
 heading: Generation is only part of the&nbsp;story.
-lede: After teaching a machine to compose, I wanted technology to play with me&nbsp;— through the body, the image and even&nbsp;taste.
+lede: Training models is just one of the ways I make music with technology. I also play with it — through the body, the image and even&nbsp;taste.
 cards:
   - num: "01"
     title: The glove
