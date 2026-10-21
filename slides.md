@@ -126,8 +126,8 @@ heading: Same song, three systems.
 heading-style: display-sm
 lede: One song of mine, <em>Chuva</em>. Three ways of teaching a machine to play it like I&nbsp;do.
 bullets:
-  - <strong>HeartMula</strong> — my own pipeline — fine-tuning HeartMuLa-3B on my demo → arrangement&nbsp;pairs.
-  - <strong>ACE-Step 1.5</strong> — an open model, in two versions — with just a style reference, and with a LoRA trained on my 16&nbsp;songs.
+  - <strong>HeartMula</strong> — my own pipeline. Early this year it was the only option — I built the fine-tuning of HeartMuLa-3B on my demo → arrangement pairs by&nbsp;hand.
+  - <strong>ACE-Step 1.5</strong> — months later, what I did by hand comes built in. Two versions — with just a style reference, and with a LoRA trained on my 16&nbsp;songs.
   - <strong>Suno</strong> — the commercial tool millions of people use — and my partner for a live&nbsp;duet.
 ---
 type: media-video

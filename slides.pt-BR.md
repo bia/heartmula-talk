@@ -125,8 +125,8 @@ heading: Mesma música, três sistemas.
 heading-style: display-sm
 lede: Uma canção minha, <em>Chuva</em>. Três maneiras de ensinar uma máquina a tocá-la do meu jeito.
 bullets:
-  - <strong>HeartMula</strong> — o meu próprio pipeline — fine-tuning do HeartMuLa-3B nos meus pares demo → arranjo.
-  - <strong>ACE-Step 1.5</strong> — um modelo aberto, em duas versões — só com uma referência de estilo, e com um LoRA treinado nas minhas 16 músicas.
+  - <strong>HeartMula</strong> — o meu próprio pipeline. No começo do ano era a única opção — construí à mão o fine-tuning do HeartMuLa-3B nos meus pares demo →&nbsp;arranjo.
+  - <strong>ACE-Step 1.5</strong> — meses depois, o que eu fiz à mão já vem embutido. Em duas versões — só com uma referência de estilo, e com um LoRA treinado nas minhas 16&nbsp;músicas.
   - <strong>Suno</strong> — a ferramenta comercial que milhões de pessoas usam — e com quem vou cantar um dueto, ao vivo.
 ---
 type: media-video
