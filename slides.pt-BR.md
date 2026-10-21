@@ -600,7 +600,7 @@ layout: split
 type: center
 eyebrow: A pergunta maior
 quote: |
-  E se a minha <em>voz</em><br />nunca foi sobre o som,<br />mas sobre o meu <em>gosto musical?</em>
+  E se a minha <em>voz</em><br />não for o som que eu faço,<br />mas o que eu&nbsp;<em>escolho?</em>
 quote-class: serif
 photo-bg: ./media/bia-mural.jpg
 photo-bg-alt: Bianca diante de um mural colorido em Barcelona

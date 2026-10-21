@@ -601,7 +601,7 @@ layout: split
 type: center
 eyebrow: The bigger question
 quote: |
-  What if my <em>voice</em><br />was never about its sound,<br />but about my <em>musical taste?</em>
+  What if my <em>voice</em><br />isn't the sound I make,<br />but what I&nbsp;<em>choose?</em>
 quote-class: serif
 photo-bg: ./media/bia-mural.jpg
 photo-bg-alt: Bianca in front of a colorful mural in Barcelona
