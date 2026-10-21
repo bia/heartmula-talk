@@ -543,6 +543,21 @@ callout: |
   <strong>MERT</strong>, trained on music, and added a <strong>melodic term</strong>
   to the loss — weighted at just <em>0.1</em>. Still too low. Raising that number is the next experiment.
 ---
+type: stack
+eyebrow: Beyond generation
+heading: Generation is only part of the&nbsp;story.
+lede: After teaching a machine to compose, I wanted technology to play with me&nbsp;— through the body, the image and even&nbsp;taste.
+cards:
+  - num: "01"
+    title: The glove
+    body: An instrument I wear — one that recognizes my dance in real&nbsp;time.
+  - num: "02"
+    title: Live image
+    body: Stable Diffusion turns the show's video, frame by frame, into an&nbsp;animation.
+  - num: "03"
+    title: Taste the music
+    body: A popsicle that conducts the music — so you can taste each&nbsp;instrument.
+---
 type: bullets
 eyebrow: The glove
 heading: A glove that understands how I&nbsp;dance.

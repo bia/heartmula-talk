@@ -542,6 +542,21 @@ callout: |
   <strong>MERT</strong>, treinado em música, e acrescentei um <strong>termo melódico</strong>
   à loss — com peso de só <em>0,1</em>. Ainda é pouco. Aumentar esse número é o próximo experimento.
 ---
+type: stack
+eyebrow: Para além da geração
+heading: Gerar é só uma parte da&nbsp;história.
+lede: Depois de ensinar uma máquina a compor, eu quis que a tecnologia tocasse comigo&nbsp;— no corpo, na imagem e até no&nbsp;paladar.
+cards:
+  - num: "01"
+    title: A luva
+    body: Um instrumento que eu visto — e que reconhece a minha dança em tempo&nbsp;real.
+  - num: "02"
+    title: Imagem ao vivo
+    body: O Stable Diffusion transforma o vídeo do show, quadro a quadro, numa&nbsp;animação.
+  - num: "03"
+    title: Taste the music
+    body: Um picolé que conduz a música — para você provar cada&nbsp;instrumento.
+---
 type: bullets
 eyebrow: A luva
 heading: Uma luva que entende como eu danço.
