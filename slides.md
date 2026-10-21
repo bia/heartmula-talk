@@ -31,7 +31,7 @@ eyebrow: Culture
 heading: Three cultures, seven&nbsp;languages.
 lede: Chinese mother, Italian&nbsp;father.
 body: |
-  I grew up in Italy and went to school in the US. Then Barcelona, Sweden and Germany&nbsp;—
+  I grew up and went to school in Italy and the US. Then Barcelona, Sweden and Germany&nbsp;—
   and back to Barcelona. I spent a lot of time in China, and travelled through many places
   I never got to live&nbsp;in.
 

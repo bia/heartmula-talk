@@ -30,7 +30,7 @@ eyebrow: Cultura
 heading: Três culturas, sete&nbsp;idiomas.
 lede: Mãe chinesa, pai&nbsp;italiano.
 body: |
-  Cresci na Itália e estudei nos Estados Unidos. Depois, Barcelona, Suécia e Alemanha&nbsp;—
+  Cresci e estudei na Itália e nos Estados Unidos. Depois, Barcelona, Suécia e Alemanha&nbsp;—
   e de volta a Barcelona. Passei muito tempo na China, e viajei por muitos lugares onde
   nunca cheguei a&nbsp;morar.
 
