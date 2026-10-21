@@ -28,10 +28,13 @@ photo-bg-pos: 50% 62%
 type: stack
 eyebrow: Cultura
 heading: Três culturas na mesma&nbsp;mesa.
-lede: Mãe chinesa, pai italiano, infância no&nbsp;Brasil.
+lede: Mãe chinesa, pai italiano, infância na&nbsp;Itália.
 body: |
-  Cresci entre línguas, comidas e músicas diferentes. Hoje trabalho em sete idiomas —
-  e acho que foi aí que aprendi a ouvir as coisas de mais de um&nbsp;jeito.
+  Estudei nos Estados Unidos. Depois, Barcelona, Suécia e Alemanha — e de volta a Barcelona.
+  Passei muito tempo na China, e viajei por muitos lugares onde nunca cheguei a&nbsp;morar.
+
+  Hoje trabalho em sete idiomas — e acho que foi aí que aprendi a ouvir as coisas
+  de mais de um&nbsp;jeito.
 photo-bg: ./media/bio-infancia.jpg
 photo-bg-alt: Bianca bebê, sorrindo, comendo um pedaço de pão numa cadeirinha
 photo-bg-style: side

@@ -29,10 +29,13 @@ photo-bg-pos: 50% 62%
 type: stack
 eyebrow: Culture
 heading: Three cultures at one&nbsp;table.
-lede: Chinese mother, Italian father, childhood in&nbsp;Brazil.
+lede: Chinese mother, Italian father, childhood in&nbsp;Italy.
 body: |
-  I grew up between different languages, foods and music. Today I work in seven languages —
-  and I think that's where I learned to hear things more than one&nbsp;way.
+  I went to school in the US. Then Barcelona, Sweden and Germany — and back to Barcelona.
+  I spent a lot of time in China, and travelled through many places I never got to live&nbsp;in.
+
+  Today I work in seven languages — and I think that's where I learned to hear things
+  more than one&nbsp;way.
 photo-bg: ./media/bio-infancia.jpg
 photo-bg-alt: Baby Bianca, smiling, eating a piece of bread in a high chair
 photo-bg-style: side
