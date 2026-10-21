@@ -630,6 +630,9 @@ heading: Vamos conversar.
 muted: Estou aberta a ideias de projetos e colaborações criativas. Perguntas também — me procurem, vou adorar ouvir&nbsp;vocês.
 contact: bianca cheng&nbsp;costanzo <span class="bullet">·</span> get.bianca@gmail.com
 qrs:
+  - src: ./media/qr-talk-pt.svg
+    label: Esta palestra
+    handle: heartmula-talk.netlify.app/pt
   - src: ./media/qr-instagram.svg
     label: Instagram
     handle: "@biancachenggg"
