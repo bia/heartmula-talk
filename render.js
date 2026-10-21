@@ -727,7 +727,40 @@
         }
     }
 
-    window.HeartMulaRender = { loadAndRender };
+    /* ----- fit tall slides on short screens ----------------- */
+    // On desktop each slide is exactly one screen high. When a slide's content
+    // is taller than the space between the header and the bottom edge (short
+    // laptop windows), shrink that slide with CSS zoom so nothing is cut off.
+    // Phones (<= 760px) are skipped: there, tall slides simply grow.
+    function fitSlides() {
+        const deck = document.getElementById("deck");
+        if (!deck) return;
+        const hud = document.querySelector(".hm-hud");
+        const hudH = hud ? hud.getBoundingClientRect().height : 0;
+        const mobile = window.innerWidth <= 760;
+        deck.querySelectorAll(":scope > section").forEach(sec => {
+            const slide = sec.querySelector(":scope > .slide, :scope > [class*='slide']:not(.slide-photo):not(.slide-photo-veil)");
+            if (!slide) return;
+            slide.style.zoom = "";
+            if (mobile) return;
+            const cs = getComputedStyle(sec);
+            const pad = Math.max(parseFloat(cs.paddingTop) || 0, hudH + 16);
+            const avail = sec.clientHeight - 2 * pad;
+            const need = slide.scrollHeight;
+            if (need > avail && avail > 0) slide.style.zoom = String(Math.max(0.55, avail / need));
+        });
+    }
+    let fitTimer;
+    const fitSoon = () => { clearTimeout(fitTimer); fitTimer = setTimeout(fitSlides, 120); };
+    window.addEventListener("deck:ready", () => {
+        fitSlides();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitSoon);
+        document.querySelectorAll("#deck img").forEach(img => { if (!img.complete) img.addEventListener("load", fitSoon, { once: true }); });
+    });
+    window.addEventListener("load", fitSoon);
+    window.addEventListener("resize", fitSoon);
+
+    window.HeartMulaRender = { loadAndRender, fitSlides };
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", loadAndRender);
     } else {

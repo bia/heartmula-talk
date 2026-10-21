@@ -308,7 +308,7 @@ sub: |
   <strong>LoRA rank 16</strong> nas projeções de atenção do backbone global do
   HeartMuLa-3B. Os 3B de pesos base ficam congelados. Além da entropia cruzada,
   um <strong>termo melódico</strong> na loss aproxima a representação da demo
-  da do arranjo final.
+  à do arranjo final.
 aside: |
   <strong>LoRA</strong> = Low-Rank Adaptation. Em vez de retreinar os 3 bilhões de
   parâmetros, você treina pequenas matrizes adaptadoras <em>B × A</em> que ajustam o
