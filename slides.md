@@ -573,18 +573,6 @@ photo-bg-alt: Bianca live, hands outstretched, blue light
 photo-bg-style: side
 photo-bg-pos: 62% 35%
 ---
-# TODO: write in your own words what it's like to perform with the glove; video → media/glove-performance.mp4
-type: media-video
-eyebrow: The glove · live
-title: Playing with my whole body.
-sub: |
-  [What it's like to perform with the glove — what changes in the voice, the body, the
-  relationship with the band and the audience.]
-video: ./media/glove-performance.mp4
-caption-tag: Live
-caption-text: "[where · when]"
-layout: split
----
 type: media-video
 eyebrow: Real-time image
 title: The music paints the screen.

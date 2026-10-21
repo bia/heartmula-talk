@@ -572,18 +572,6 @@ photo-bg-alt: Bianca ao vivo, mãos estendidas, luz azul
 photo-bg-style: side
 photo-bg-pos: 62% 35%
 ---
-# TODO: escrever com as suas palavras como é tocar com a luva; vídeo → media/glove-performance.mp4
-type: media-video
-eyebrow: A luva · ao vivo
-title: Como é tocar com o corpo.
-sub: |
-  [Como é se apresentar com a luva — o que muda na voz, no corpo, na relação com a banda
-  e com o público.]
-video: ./media/glove-performance.mp4
-caption-tag: Ao vivo
-caption-text: "[onde · quando]"
-layout: split
----
 type: media-video
 eyebrow: Imagem em tempo real
 title: A música pinta a tela.
