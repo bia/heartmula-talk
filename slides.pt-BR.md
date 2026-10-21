@@ -474,25 +474,14 @@ photo-bg-alt: AO tocando ao vivo, banda completa no palco
 photo-bg-style: full
 photo-bg-pos: 50% 45%
 ---
-# TODO: completar com o que você usou no Suno (versão, prompt de estilo, letra, persona/upload de áudio?) e um screenshot → media/suno-01.jpg
-type: stack
-eyebrow: Sistema 3 · como
-heading: Um prompt, uma letra.
-lede: O Suno não conhece o meu catálogo. Só sabe o que eu escrevo para ele.
-body: |
-  [Como gerei esta versão de Chuva no Suno — o prompt de estilo, a letra, quantas tentativas
-  até chegar nesta.]
-muted: Suno · [versão do modelo]
----
-# TODO: exportar a faixa do Suno → media/suno-duet.mp3
 type: media-audio
 eyebrow: Sistema 3 · ao vivo
 title: Um dueto com a máquina.
 sub: O Suno toca. Eu canto por cima — <em>agora, aqui.</em>
 sub-tight: true
-audio: ./media/suno-duet.mp3
+audio: ./media/late-train-to-nowhere.mp3
 caption-tag: Dueto
-caption-text: Chuva · Suno + Bianca, ao vivo
+caption-text: Late Train To Nowhere · Suno + Bianca, ao&nbsp;vivo
 wave-style: song
 wave-gradient: mixed
 photo-bg: ./media/bia-live-bfv.jpg

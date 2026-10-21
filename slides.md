@@ -475,25 +475,14 @@ photo-bg-alt: AO performing live, full band on stage
 photo-bg-style: full
 photo-bg-pos: 50% 45%
 ---
-# TODO: fill in what you used in Suno (version, style prompt, lyrics, persona/audio upload?) and a screenshot → media/suno-01.jpg
-type: stack
-eyebrow: System 3 · how
-heading: A prompt, some lyrics.
-lede: Suno doesn't know my catalog. It only knows what I write to it.
-body: |
-  [How I generated this version of Chuva in Suno — the style prompt, the lyrics, how many tries
-  it took to get here.]
-muted: Suno · [model version]
----
-# TODO: export the Suno track → media/suno-duet.mp3
 type: media-audio
 eyebrow: System 3 · live
 title: A duet with the machine.
 sub: Suno plays. I sing on top — <em>right here, right now.</em>
 sub-tight: true
-audio: ./media/suno-duet.mp3
+audio: ./media/late-train-to-nowhere.mp3
 caption-tag: Duet
-caption-text: Chuva · Suno + Bianca, live
+caption-text: Late Train To Nowhere · Suno + Bianca,&nbsp;live
 wave-style: song
 wave-gradient: mixed
 photo-bg: ./media/bia-live-bfv.jpg
