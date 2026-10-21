@@ -623,6 +623,10 @@ eyebrow: É open source
 pretitle: Faça um fork. Treine no seu catálogo.
 url: github.com/bia/bia-music-composer
 caption: 📷 &nbsp; Fotografe este slide.
+qrs:
+  - src: ./media/qr-talk-pt.svg
+    label: Esta palestra
+    handle: heartmula-talk.netlify.app/pt
 ---
 type: thank-you
 eyebrow: Obrigada
@@ -630,9 +634,6 @@ heading: Vamos conversar.
 muted: Estou aberta a ideias de projetos e colaborações criativas. Perguntas também — me procurem, vou adorar ouvir&nbsp;vocês.
 contact: bianca cheng&nbsp;costanzo <span class="bullet">·</span> get.bianca@gmail.com
 qrs:
-  - src: ./media/qr-talk-pt.svg
-    label: Esta palestra
-    handle: heartmula-talk.netlify.app/pt
   - src: ./media/qr-instagram.svg
     label: Instagram
     handle: "@biancachenggg"

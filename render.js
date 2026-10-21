@@ -406,6 +406,12 @@
                         </svg>
                     </div>
                     ${s.caption ? `<p class="oss__caption">${flow(s.caption)}</p>` : ""}
+                    ${s.qrs ? `<div class="qr-row oss__qrs">${s.qrs.map(q => `
+                        <div class="qr-card">
+                            <img class="qr-card__img" src="${q.src}" alt="${q.label} QR — ${q.handle}" />
+                            <div class="qr-card__label">${md(q.label || "")}</div>
+                            <div class="qr-card__handle">${md(q.handle || "")}</div>
+                        </div>`).join("")}</div>` : ""}
                 </div>
             </section>`;
         },
