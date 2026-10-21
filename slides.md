@@ -543,11 +543,6 @@ callout: |
   <strong>MERT</strong>, trained on music, and added a <strong>melodic term</strong>
   to the loss — weighted at just <em>0.1</em>. Still too low. Raising that number is the next experiment.
 ---
-type: center
-eyebrow: Part 2 · Beyond generation
-quote: |
-  What if the machine<br />doesn't make the music,<br />but <em>plays with me?</em>
----
 type: bullets
 eyebrow: The glove
 heading: A glove that understands how I&nbsp;dance.

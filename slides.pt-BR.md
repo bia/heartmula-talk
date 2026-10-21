@@ -542,11 +542,6 @@ callout: |
   <strong>MERT</strong>, treinado em música, e acrescentei um <strong>termo melódico</strong>
   à loss — com peso de só <em>0,1</em>. Ainda é pouco. Aumentar esse número é o próximo experimento.
 ---
-type: center
-eyebrow: Parte 2 · Para além da geração
-quote: |
-  E se a máquina<br />não fizer a música,<br />mas <em>tocar comigo?</em>
----
 type: bullets
 eyebrow: A luva
 heading: Uma luva que entende como eu danço.
