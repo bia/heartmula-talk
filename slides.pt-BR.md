@@ -158,8 +158,8 @@ wave-gradient: mixed
 ---
 type: stack
 section-class: section--ao section--ao--photo
-photo: ./media/ao-band-wide.jpg
-photo-alt: AO tocando ao vivo, banda completa no palco com luzes penduradas acima
+photo: ./media/ao-bmurals.jpg
+photo-alt: AO sentado no chão do B-Murals ao entardecer
 heading: O que eu estava realmente pedindo.
 lede: Não imitação. Evolução.
 body: |
@@ -459,8 +459,8 @@ sub-tight: true
 audio: ./media/bia-style-final.mp3
 caption-tag: 2B
 caption-text: Chuva · ACE-Step 1.5 · LoRA bia-style · 3:30
-bg-image: ./media/ao-band-wide.jpg
-bg-image-alt: AO tocando ao vivo, banda completa no palco com luzes penduradas acima
+bg-image: ./media/ao-rehearsal-bass.jpg
+bg-image-alt: Ensaio do AO, baixo em primeiro plano e Bianca cantando ao fundo
 wave-style: song
 wave-gradient: mixed
 ---
@@ -469,10 +469,10 @@ eyebrow: Sistema 3 / 3
 quote: |
   Suno.<br /><em>A ferramenta de todo mundo.</em>
 muted: Sem código, sem treino, sem GPU — um prompt e uma letra.
-photo-bg: ./media/ao-band-wide.jpg
-photo-bg-alt: AO tocando ao vivo, banda completa no palco
+photo-bg: ./media/bia-live-garage.jpg
+photo-bg-alt: Bianca cantando ao vivo com o AO em Barcelona
 photo-bg-style: full
-photo-bg-pos: 50% 45%
+photo-bg-pos: 70% 30%
 ---
 type: media-audio
 eyebrow: Sistema 3 · ao vivo

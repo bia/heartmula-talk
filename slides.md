@@ -159,8 +159,8 @@ wave-gradient: mixed
 ---
 type: stack
 section-class: section--ao section--ao--photo
-photo: ./media/ao-band-wide.jpg
-photo-alt: AO performing live, full band on stage with string lights overhead
+photo: ./media/ao-bmurals.jpg
+photo-alt: AO sitting on the floor at B-Murals at dusk
 heading: What I was actually asking.
 lede: Not imitation. Evolution.
 body: |
@@ -460,8 +460,8 @@ sub-tight: true
 audio: ./media/bia-style-final.mp3
 caption-tag: 2B
 caption-text: Chuva · ACE-Step 1.5 · bia-style LoRA · 3:30
-bg-image: ./media/ao-band-wide.jpg
-bg-image-alt: AO performing live, full band on stage with string lights overhead
+bg-image: ./media/ao-rehearsal-bass.jpg
+bg-image-alt: AO rehearsal, bass in the foreground and Bianca singing behind
 wave-style: song
 wave-gradient: mixed
 ---
@@ -470,10 +470,10 @@ eyebrow: System 3 / 3
 quote: |
   Suno.<br /><em>Everyone's tool.</em>
 muted: No code, no training, no GPU — a prompt and some lyrics.
-photo-bg: ./media/ao-band-wide.jpg
-photo-bg-alt: AO performing live, full band on stage
+photo-bg: ./media/bia-live-garage.jpg
+photo-bg-alt: Bianca singing live with AO in Barcelona
 photo-bg-style: full
-photo-bg-pos: 50% 45%
+photo-bg-pos: 70% 30%
 ---
 type: media-audio
 eyebrow: System 3 · live
