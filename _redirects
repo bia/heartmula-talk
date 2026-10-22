@@ -1,3 +1,4 @@
-# Netlify: serve the Portuguese deck at /pt (rewrite, the URL stays /pt)
-/pt     /index.pt-BR.html   200
-/pt/    /index.pt-BR.html   200
+# Serve the Portuguese deck at /pt (rewrite: the address stays /pt).
+# Works on Cloudflare Workers static assets (and Netlify).
+/pt     /index.pt-BR   200
+/pt/    /index.pt-BR   200

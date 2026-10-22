@@ -1,0 +1,19 @@
+# Files in this folder that must NOT be uploaded to the Worker
+.git
+.gitignore
+.assetsignore
+.DS_Store
+**/.DS_Store
+.wrangler
+node_modules
+wrangler.jsonc
+_to_delete
+*.bak
+*.mov
+media/ao-moments.mp4
+media/og-en.jpg
+media/og-pt.jpg
+media/lyrics_input.txt
+README.md
+LICENSE
+MUSIC-LICENSE.txt

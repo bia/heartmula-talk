@@ -138,7 +138,7 @@ title: It started as a sketch.
 sub: |
   A song called <em>Chuva</em> ("rain") — about the first day of rain at the end of summer,
   the day one of my best friends moved away from Barcelona.
-video: ./media/chuva-sketch.mov
+video: ./media/chuva-sketch.mp4
 caption-tag: Sketch
 caption-text: Voice memo · piano · Barcelona, 2023
 layout: split

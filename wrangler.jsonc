@@ -1,0 +1,13 @@
+// Cloudflare Worker that serves this deck as static files.
+// Deploy:  npx wrangler deploy        (first time: npx wrangler login)
+// Preview: npx wrangler dev
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "heartmula-talk",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}

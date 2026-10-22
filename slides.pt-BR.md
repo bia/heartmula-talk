@@ -137,7 +137,7 @@ title: Começou como um esboço.
 sub: |
   Uma música chamada <em>Chuva</em> — sobre o primeiro dia de chuva no fim do verão,
   o dia em que uma das minhas melhores amigas mudou de Barcelona.
-video: ./media/chuva-sketch.mov
+video: ./media/chuva-sketch.mp4
 caption-tag: Esboço
 caption-text: Memo de voz · piano · Barcelona, 2023
 layout: split
