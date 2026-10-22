@@ -51,6 +51,7 @@
 
         function setActive(i) {
             i = Math.max(0, Math.min(total - 1, i));
+            if (i !== current) nextPlayer.delete(i);   // arriving: start its players from the top
             current = i;
             slides.forEach((s, idx) => s.classList.toggle("is-active", idx === i));
             scrubItems.forEach((btn, idx) => btn.classList.toggle("is-active", idx === i));
@@ -66,16 +67,39 @@
             stopMedia(i);
         }
 
-        function next() { goTo(current + 1); }
+        // Forward steps through the slide's players before leaving it:
+        //   1 → play the first · 2 → stop it · 3 → play the second · 4 → stop it
+        //   · next press → next slide.  (A player that already finished on its
+        //   own needs no "stop" press.)  Back always goes straight back.
+        const nextPlayer = new Map();   // slide index → which player plays next
+        function next() {
+            const media = mediaOf(current);
+            if (media.length) {
+                const playing = media.findIndex(m => !m.paused);
+                if (playing !== -1) {                         // stop it
+                    media[playing].pause();
+                    nextPlayer.set(current, playing + 1);
+                    return;
+                }
+                const k = nextPlayer.get(current) || 0;
+                if (k < media.length) {                       // play the next one
+                    if (media[k].ended) media[k].currentTime = 0;
+                    media[k].play().catch(() => {});
+                    nextPlayer.set(current, k + 1);
+                    return;
+                }
+            }
+            goTo(current + 1);
+        }
         function prev() { goTo(current - 1); }
 
         // ----- keyboard + presentation clickers -------------------------
         // Clickers (Logitech R400/R500/Spotlight, Kensington, Targus…) send
         //   ›  PageDown / ArrowRight     ‹  PageUp / ArrowLeft
-        //   ▶  F5 / Shift+F5 / Esc ("start slideshow", alternates)
         //   ■  B or . ("blank screen")
-        // Next/previous always work, even if a player was clicked with the mouse.
-        // ▶ plays/pauses the music or video on the current slide.
+        // Everything runs from the forward button (see next()). Next/previous
+        // work even if a player was clicked with the mouse. The clicker's
+        // "slideshow" button (F5/Esc) is ignored so it can't reload the page.
         // ■ blacks the screen out and back.  F toggles full screen.
         const CLICKER_KEYS = ["PageDown", "PageUp", "F5", "Escape"];
         document.addEventListener("keydown", (e) => {
@@ -99,8 +123,7 @@
                 case "End":
                     e.preventDefault(); goTo(total - 1); break;
                 case "F5":
-                case "Escape":
-                    e.preventDefault(); togglePlay(); break;
+                    e.preventDefault(); break;
                 case "b": case "B": case ".": case "w": case "W":
                     e.preventDefault(); blanked ? unblank() : blank(); break;
                 case "f": case "F":
@@ -108,23 +131,7 @@
             }
         });
 
-        // ▶ on a slide with several players works through them in order:
-        //   press 1 → play the first · press 2 → pause it ·
-        //   press 3 → play the second · press 4 → pause it · and so on.
-        // Each player resumes where it was paused. Starting one pauses the others.
         function mediaOf(i) { return slides[i] ? Array.from(slides[i].querySelectorAll("audio, video:not(.slide-photo--video)")) : []; }
-        const lastPlayed = new Map();   // slide index → index of its last player used
-        function togglePlay() {
-            const media = mediaOf(current);
-            if (!media.length) return;
-            const playing = media.findIndex(m => !m.paused);
-            if (playing !== -1) { media[playing].pause(); lastPlayed.set(current, playing); return; }
-            const k = lastPlayed.has(current) ? (lastPlayed.get(current) + 1) % media.length : 0;
-            media.forEach((m, j) => { if (j !== k && !m.paused) m.pause(); });
-            if (media[k].ended) media[k].currentTime = 0;
-            media[k].play().catch(() => {});
-            lastPlayed.set(current, k);
-        }
         // Moving to another slide stops what was playing on the previous one.
         function stopMedia(except) {
             slides.forEach((s, i) => { if (i !== except) mediaOf(i).forEach(m => { if (!m.paused) m.pause(); }); });
