@@ -108,12 +108,23 @@
             }
         });
 
-        // Play/pause the first audio or video on the current slide.
+        // ▶ on a slide with several players works through them in order:
+        //   press → play the first · press → pause it · press → resume it…
+        //   once one has finished, the next press starts the next player.
+        // Starting one player pauses any other on the slide.
         function mediaOf(i) { return slides[i] ? Array.from(slides[i].querySelectorAll("audio, video:not(.slide-photo--video)")) : []; }
+        const lastPlayed = new Map();   // slide index → index of its last player used
         function togglePlay() {
-            const m = mediaOf(current)[0];
-            if (!m) return;
-            if (m.paused) m.play().catch(() => {}); else m.pause();
+            const media = mediaOf(current);
+            if (!media.length) return;
+            const playing = media.findIndex(m => !m.paused);
+            if (playing !== -1) { media[playing].pause(); lastPlayed.set(current, playing); return; }
+            let k = lastPlayed.has(current) ? lastPlayed.get(current) : 0;
+            if (media[k].ended) k = (k + 1) % media.length;
+            media.forEach((m, j) => { if (j !== k && !m.paused) m.pause(); });
+            if (media[k].ended) media[k].currentTime = 0;
+            media[k].play().catch(() => {});
+            lastPlayed.set(current, k);
         }
         // Moving to another slide stops what was playing on the previous one.
         function stopMedia(except) {
