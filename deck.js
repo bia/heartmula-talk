@@ -109,9 +109,9 @@
         });
 
         // ▶ on a slide with several players works through them in order:
-        //   press → play the first · press → pause it · press → resume it…
-        //   once one has finished, the next press starts the next player.
-        // Starting one player pauses any other on the slide.
+        //   press 1 → play the first · press 2 → pause it ·
+        //   press 3 → play the second · press 4 → pause it · and so on.
+        // Each player resumes where it was paused. Starting one pauses the others.
         function mediaOf(i) { return slides[i] ? Array.from(slides[i].querySelectorAll("audio, video:not(.slide-photo--video)")) : []; }
         const lastPlayed = new Map();   // slide index → index of its last player used
         function togglePlay() {
@@ -119,8 +119,7 @@
             if (!media.length) return;
             const playing = media.findIndex(m => !m.paused);
             if (playing !== -1) { media[playing].pause(); lastPlayed.set(current, playing); return; }
-            let k = lastPlayed.has(current) ? lastPlayed.get(current) : 0;
-            if (media[k].ended) k = (k + 1) % media.length;
+            const k = lastPlayed.has(current) ? (lastPlayed.get(current) + 1) % media.length : 0;
             media.forEach((m, j) => { if (j !== k && !m.paused) m.pause(); });
             if (media[k].ended) media[k].currentTime = 0;
             media[k].play().catch(() => {});
