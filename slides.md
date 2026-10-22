@@ -83,7 +83,11 @@ type: center
 eyebrow: Music and technology
 quote: |
   Music<br />and <em>technology.</em>
-muted: The thread that ties together everything I do — even my AO stage outfits, which I design&nbsp;myself.
+muted: |
+  The thread that ties together everything I do — even my AO stage outfits, which I design&nbsp;myself.
+
+  I recently learned the word <em>qualia</em> — the subjective, individual qualities of conscious experience; what it's like to live something from the&nbsp;inside.
+  <strong>How do I explain that to a machine whose inner workings are more and more opaque to most of&nbsp;us?</strong>
 video-bg: ./media/bio-musica-tecnologia.mp4
 photo-bg: ./media/bio-musica-tecnologia.jpg
 photo-bg-alt: AI-generated portrait of two figures in orange costumes and headdresses

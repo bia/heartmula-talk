@@ -82,7 +82,11 @@ type: center
 eyebrow: Música e tecnologia
 quote: |
   Música<br />e <em>tecnologia.</em>
-muted: O fio que liga tudo o que eu faço — até os figurinos dos meus shows com o AO, que eu mesma&nbsp;crio.
+muted: |
+  O fio que liga tudo o que eu faço — até os figurinos dos meus shows com o AO, que eu mesma&nbsp;crio.
+
+  Há pouco tempo aprendi a palavra <em>qualia</em> — as qualidades subjetivas e individuais das experiências conscientes; o “como é” viver algo por&nbsp;dentro.
+  <strong>Como explicar isso a uma máquina cujo funcionamento interno é cada vez mais opaco para a maioria de&nbsp;nós?</strong>
 video-bg: ./media/bio-musica-tecnologia.mp4
 photo-bg: ./media/bio-musica-tecnologia.jpg
 photo-bg-alt: Retrato gerado por IA de duas figuras com trajes e cocares laranja

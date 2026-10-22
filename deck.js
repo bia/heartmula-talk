@@ -17,6 +17,7 @@
 
         const total = slides.length;
         let current = 0;
+        let navUntil = 0;
 
         // ----- build scrubber ----------------------------------------
         const scrubItems = [];
@@ -58,39 +59,82 @@
 
         function goTo(i) {
             i = Math.max(0, Math.min(total - 1, i));
+            if (i === current && Math.abs(slides[i].getBoundingClientRect().top) < 2) return;
+            navUntil = Date.now() + 900;   // ignore scroll-position updates while gliding
             slides[i].scrollIntoView({ behavior: "smooth", block: "start" });
             setActive(i);
+            stopMedia(i);
         }
 
         function next() { goTo(current + 1); }
         function prev() { goTo(current - 1); }
 
-        // ----- keyboard -----------------------------------------------
-        let keyLock = false;
+        // ----- keyboard + presentation clickers -------------------------
+        // Clickers (Logitech R400/R500/Spotlight, Kensington, Targus…) send
+        //   ›  PageDown / ArrowRight     ‹  PageUp / ArrowLeft
+        //   ▶  F5 / Shift+F5 / Esc ("start slideshow", alternates)
+        //   ■  B or . ("blank screen")
+        // Next/previous always work, even if a player was clicked with the mouse.
+        // ▶ plays/pauses the music or video on the current slide.
+        // ■ blacks the screen out and back.  F toggles full screen.
+        const CLICKER_KEYS = ["PageDown", "PageUp", "F5", "Escape"];
         document.addEventListener("keydown", (e) => {
-            if (keyLock) return;
-            // Let media controls and scrubbable waveforms keep their keys.
-            if (e.target.closest && e.target.closest("audio, video, input, textarea, [data-scrub]")) return;
+            if (e.repeat) { if (["PageDown","PageUp","ArrowRight","ArrowLeft","ArrowDown","ArrowUp"," "].includes(e.key)) e.preventDefault(); return; }
+            if (e.metaKey || e.ctrlKey || e.altKey) return;
+            const inControl = e.target.closest && e.target.closest("audio, video, input, textarea, [data-scrub]");
+            if (inControl && !CLICKER_KEYS.includes(e.key)) return;
+            if (inControl && e.target.blur) e.target.blur();
             switch (e.key) {
+                case "PageDown":
                 case "ArrowRight":
                 case "ArrowDown":
-                case "PageDown":
                 case " ":
-                    e.preventDefault(); next(); lockKeys(); break;
+                    e.preventDefault(); if (blanked) unblank(); else next(); break;
+                case "PageUp":
                 case "ArrowLeft":
                 case "ArrowUp":
-                case "PageUp":
-                    e.preventDefault(); prev(); lockKeys(); break;
+                    e.preventDefault(); if (blanked) unblank(); else prev(); break;
                 case "Home":
-                    e.preventDefault(); goTo(0); lockKeys(); break;
+                    e.preventDefault(); goTo(0); break;
                 case "End":
-                    e.preventDefault(); goTo(total - 1); lockKeys(); break;
+                    e.preventDefault(); goTo(total - 1); break;
+                case "F5":
+                case "Escape":
+                    e.preventDefault(); togglePlay(); break;
+                case "b": case "B": case ".": case "w": case "W":
+                    e.preventDefault(); blanked ? unblank() : blank(); break;
+                case "f": case "F":
+                    e.preventDefault(); toggleFullscreen(); break;
             }
         });
 
-        function lockKeys() {
-            keyLock = true;
-            setTimeout(() => { keyLock = false; }, 360);
+        // Play/pause the first audio or video on the current slide.
+        function mediaOf(i) { return slides[i] ? Array.from(slides[i].querySelectorAll("audio, video:not(.slide-photo--video)")) : []; }
+        function togglePlay() {
+            const m = mediaOf(current)[0];
+            if (!m) return;
+            if (m.paused) m.play().catch(() => {}); else m.pause();
+        }
+        // Moving to another slide stops what was playing on the previous one.
+        function stopMedia(except) {
+            slides.forEach((s, i) => { if (i !== except) mediaOf(i).forEach(m => { if (!m.paused) m.pause(); }); });
+        }
+
+        // Blank screen (clicker "B"/"." button).
+        let blanked = false;
+        const blankEl = document.createElement("div");
+        blankEl.className = "hm-blank";
+        blankEl.setAttribute("aria-hidden", "true");
+        blankEl.style.cssText = "position:fixed;inset:0;background:#000;z-index:9999;opacity:0;pointer-events:none;transition:opacity .25s ease";
+        document.body.appendChild(blankEl);
+        function blank() { blanked = true; blankEl.style.opacity = "1"; blankEl.style.pointerEvents = "auto"; }
+        function unblank() { blanked = false; blankEl.style.opacity = "0"; blankEl.style.pointerEvents = "none"; }
+        blankEl.addEventListener("click", unblank);
+
+        function toggleFullscreen() {
+            const d = document;
+            if (d.fullscreenElement || d.webkitFullscreenElement) (d.exitFullscreen || d.webkitExitFullscreen).call(d);
+            else { const r = d.documentElement; (r.requestFullscreen || r.webkitRequestFullscreen).call(r); }
         }
 
         // ----- buttons ------------------------------------------------
@@ -103,6 +147,7 @@
             for (const entry of entries) {
                 if (!best || entry.intersectionRatio > best.intersectionRatio) best = entry;
             }
+            if (Date.now() < navUntil) return;
             if (best && best.intersectionRatio > 0.5) {
                 const idx = slides.indexOf(best.target);
                 if (idx !== -1 && idx !== current) setActive(idx);
