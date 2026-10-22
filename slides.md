@@ -513,23 +513,19 @@ photo-bg-alt: Bianca singing live with AO in Barcelona
 photo-bg-style: side
 photo-bg-pos: 88% 30%
 ---
-# TODO: revisit the callout after hearing both systems — is the ceiling still the same?
 type: lesson
 theme: ao
 photo: ./media/ao-band-energy.jpg
 photo-alt: Bianca performing with AO, hands raised mid-song, bandmates framing the moment
 eyebrow: Lesson 04
-heading: There's a ceiling I haven't broken.
-lede: The model picks up timbre, mood, even some phrasing.
+heading: There's a ceiling neither of them has&nbsp;broken.
+lede: Both models pick up timbre, mood, even some&nbsp;phrasing.
 body: |
-  What it doesn't catch — yet — is the melodic and harmonic depth
-  <strong>Pablo Puentes</strong>, AO's keys player, brings to the band.
-  Rich chord progressions. The note that surprises me. The line that sets up a
-  moment three bars later.
-callout: |
-  First attempt at tackling it: I swapped the speech encoder (WavLM) for
-  <strong>MERT</strong>, trained on music, and added a <strong>melodic term</strong>
-  to the loss — weighted at just <em>0.1</em>. Still too low. Raising that number is the next experiment.
+  Neither catches my grit, or the exact tone of my voice. And neither comes close
+  to the melodic and harmonic depth <strong>Pablo Puentes</strong>, AO's keys player,
+  brings to the band — the note that surprises me, the line that sets up a moment
+  three bars&nbsp;later.
+callout: That gap is where the artist still lives. The machine generates; <em>listening, choosing and discarding</em> is still&nbsp;me.
 ---
 type: center
 eyebrow: AI as a mirror

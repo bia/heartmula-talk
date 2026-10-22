@@ -512,23 +512,19 @@ photo-bg-alt: Bianca cantando ao vivo com o AO em Barcelona
 photo-bg-style: side
 photo-bg-pos: 88% 30%
 ---
-# TODO: rever o callout depois de ouvir os dois sistemas — o teto continua o mesmo?
 type: lesson
 theme: ao
 photo: ./media/ao-band-energy.jpg
 photo-alt: Bianca se apresentando com o AO, mãos para o alto no meio da música, a banda ao redor
 eyebrow: Lição 04
-heading: Tem um teto que eu ainda não quebrei.
-lede: O modelo pega timbre, clima, até um pouco do fraseado.
+heading: Tem um teto que nenhum dos dois&nbsp;quebrou.
+lede: Os dois modelos pegam timbre, clima, até um pouco do&nbsp;fraseado.
 body: |
-  O que ele ainda não capta é a profundidade melódica e harmônica que o
-  <strong>Pablo Puentes</strong>, tecladista do AO, traz para a banda.
-  Progressões ricas. A nota que me surpreende. A linha que prepara um
-  momento três compassos depois.
-callout: |
-  Primeira tentativa de atacar isso: troquei o encoder de fala (WavLM) pelo
-  <strong>MERT</strong>, treinado em música, e acrescentei um <strong>termo melódico</strong>
-  à loss — com peso de só <em>0,1</em>. Ainda é pouco. Aumentar esse número é o próximo experimento.
+  Nenhum capta a minha garra, nem o timbre exato da minha voz. E nenhum chega perto
+  da profundidade melódica e harmônica que o <strong>Pablo Puentes</strong>, tecladista do AO,
+  traz para a banda — a nota que me surpreende, a linha que prepara um momento
+  três compassos&nbsp;depois.
+callout: É nesse espaço que a artista continua. A máquina gera; quem <em>ouve, escolhe e descarta</em> sou&nbsp;eu.
 ---
 type: center
 eyebrow: IA como espelho
