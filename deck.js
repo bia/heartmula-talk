@@ -131,7 +131,55 @@
             }
         });
 
-        function mediaOf(i) { return slides[i] ? Array.from(slides[i].querySelectorAll("audio, video:not(.slide-photo--video)")) : []; }
+        // Players on a slide, in order: <audio>, <video> and YouTube embeds.
+        // YouTube iframes get a small wrapper with the same play()/pause()/
+        // paused/ended interface, driven by YouTube's IFrame postMessage API.
+        function mediaOf(i) {
+            if (!slides[i]) return [];
+            return Array.from(slides[i].querySelectorAll("audio, video:not(.slide-photo--video), .player__yt iframe"))
+                .map(el => el.tagName === "IFRAME" ? ytPlayer(el) : el);
+        }
+        function ytPlayer(iframe) {
+            if (iframe._yt) return iframe._yt;
+            const send = (func, args = []) => iframe.contentWindow &&
+                iframe.contentWindow.postMessage(JSON.stringify({ event: "command", func, args }), "*");
+            const listen = () => iframe.contentWindow &&
+                iframe.contentWindow.postMessage(JSON.stringify({ event: "listening", id: iframe.id || "yt", channel: "widget" }), "*");
+            const yt = {
+                iframe, state: -1,                        // -1 unstarted, 0 ended, 1 playing, 2 paused, 3 buffering
+                get paused() { return this.state !== 1 && this.state !== 3; },
+                get ended() { return this.state === 0; },
+                set currentTime(t) { send("seekTo", [t, true]); },
+                play() {
+                    iframe.loading = "eager";
+                    send("playVideo"); this.state = 1; this.playAt = Date.now();
+                    return Promise.resolve();
+                },
+                pause() { send("pauseVideo"); this.state = 2; },
+            };
+            iframe._yt = yt;
+            iframe.addEventListener("load", listen);
+            listen();
+            return yt;
+        }
+        // Keep each wrapper's state in sync with what YouTube reports
+        // (also catches plays/pauses done with the mouse, and the video ending).
+        window.addEventListener("message", (e) => {
+            let host = ""; try { host = new URL(e.origin).hostname; } catch { return; }
+            if (!/(^|\.)youtube(-nocookie)?\.com$/.test(host)) return;
+            let data; try { data = typeof e.data === "string" ? JSON.parse(e.data) : e.data; } catch { return; }
+            const state = data && (data.event === "onStateChange" ? data.info
+                : data.event === "infoDelivery" && data.info ? data.info.playerState : undefined);
+            if (typeof state !== "number") return;
+            const frame = Array.from(document.querySelectorAll(".player__yt iframe")).find(f => f.contentWindow === e.source);
+            if (!frame) return;
+            const yt = ytPlayer(frame);
+            // Right after a play command YouTube may still say "unstarted"/"cued";
+            // don't let that make the next click skip the video.
+            if ((state === -1 || state === 5) && yt.playAt && Date.now() - yt.playAt < 5000) return;
+            yt.state = state;
+        });
+        document.querySelectorAll(".player__yt iframe").forEach(ytPlayer);
         // Moving to another slide stops what was playing on the previous one.
         function stopMedia(except) {
             slides.forEach((s, i) => { if (i !== except) mediaOf(i).forEach(m => { if (!m.paused) m.pause(); }); });
