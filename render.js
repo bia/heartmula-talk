@@ -391,7 +391,10 @@
                 const parts = repo
                     ? [[repo[1], false], [repo[2], true]]
                     : [[site[1], true], [site[2], false], [site[3], true]].filter(p => p[0]);
-                const len = Math.min(1920, url.length * 58);
+                // Size the type so the line fits on its own (monospace ≈ 0.6em per
+                // character); iOS Safari ignores textLength on text with tspans.
+                const fs = Math.min(100, Math.floor(1900 / (url.length * 0.61)));
+                const len = Math.min(1920, Math.round(url.length * fs * 0.58));
                 const tspans = parts.map(([t, hi]) => hi
                     ? `<tspan fill="url(#ossGrad${i})" font-weight="700">${t}</tspan>`
                     : `<tspan fill="#8a8194">${t}</tspan>`).join("");
@@ -403,8 +406,8 @@
                                     <stop offset="1" stop-color="#c8a8e9"/>
                                 </linearGradient>
                             </defs>
-                            <text x="1000" y="98" text-anchor="middle" textLength="${len}" lengthAdjust="spacingAndGlyphs"
-                                  font-family="JetBrains Mono, ui-monospace, monospace" font-size="100" font-weight="500"
+                            <text x="1000" y="${Math.round(65 + fs * 0.34)}" text-anchor="middle" textLength="${len}" lengthAdjust="spacingAndGlyphs"
+                                  font-family="JetBrains Mono, ui-monospace, monospace" font-size="${fs}" font-weight="500"
                                   letter-spacing="-1">${tspans}</text>
                         </svg>
                     </div>`;
