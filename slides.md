@@ -120,6 +120,7 @@ type: center
 eyebrow: Part 1 · Same song, three systems
 quote: |
   What happens when<br />I teach a machine<br />to make <em>my</em>&nbsp;music?
+muted: AI as a mirror — what defines an artist isn't what they generate, but what they choose to&nbsp;discard.
 ---
 type: bullets
 eyebrow: The experiment
@@ -288,7 +289,7 @@ caption: annotate.py · CLAP + Whisper
 ---
 type: pipeline-step
 eyebrow: Pipeline · 03 / 05
-title: Condition the backbone.
+title: Condition the&nbsp;backbone.
 sub: |
   <strong>MERT</strong> frame features → pooled to <strong>64 prefix tokens</strong> →
   projected to backbone dimension → prepended to the sequence in training;
@@ -543,9 +544,16 @@ callout: |
   <strong>MERT</strong>, trained on music, and added a <strong>melodic term</strong>
   to the loss — weighted at just <em>0.1</em>. Still too low. Raising that number is the next experiment.
 ---
+type: center
+eyebrow: AI as a mirror
+quote: |
+  What defines an artist<br />isn't what they <em>generate</em>,<br />but what they choose to&nbsp;<em>discard.</em>
+quote-class: serif
+muted: In all three systems, the machine generated. I decided what&nbsp;stayed.
+---
 type: stack
-eyebrow: Beyond generation
-heading: Generation is only part of the&nbsp;story.
+eyebrow: Extra · Beyond generation
+heading: The same mirror, other&nbsp;tools.
 lede: Training models is just one of the ways I make music with technology. I also play with it — through the body, the image and even&nbsp;taste.
 cards:
   - num: "01"
@@ -559,7 +567,7 @@ cards:
     body: A popsicle that conducts the music — so you can taste each&nbsp;instrument.
 ---
 type: bullets
-eyebrow: The glove
+eyebrow: Extra · The glove
 heading: A glove that understands how I&nbsp;dance.
 heading-style: display-sm
 lede: An instrument I wear. Built with a team in San&nbsp;Francisco.
@@ -574,7 +582,7 @@ photo-bg-style: side
 photo-bg-pos: 62% 35%
 ---
 type: media-video
-eyebrow: Real-time image
+eyebrow: Extra · Real-time image
 title: The music paints the screen.
 sub: |
   A live video goes in, frame by frame, and comes out transformed by
@@ -586,7 +594,7 @@ caption-text: VJ Stream Diffusion · Barcelona and Paris
 layout: split
 ---
 type: media-video
-eyebrow: Taste the&nbsp;music
+eyebrow: Extra · Taste the&nbsp;music
 title: Tasting the&nbsp;music.
 sub: |
   Ice conducts electricity. With <strong>Ableton Live</strong> and <strong>Arduino</strong>,
@@ -597,16 +605,6 @@ portrait: true
 caption-tag: Taste the&nbsp;music
 caption-text: Music Popsicle · Ableton Live + Arduino
 layout: split
----
-type: center
-eyebrow: The bigger question
-quote: |
-  What if my <em>voice</em><br />isn't the sound I make,<br />but what I&nbsp;<em>choose?</em>
-quote-class: serif
-photo-bg: ./media/bia-mural.jpg
-photo-bg-alt: Bianca in front of a colorful mural in Barcelona
-photo-bg-style: full
-photo-bg-pos: 50% 28%
 ---
 type: bullets
 heading: What's&nbsp;next

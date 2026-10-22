@@ -119,6 +119,7 @@ type: center
 eyebrow: Parte 1 · Mesma música, três sistemas
 quote: |
   O que acontece quando<br />eu ensino uma máquina<br />a fazer <em>a minha</em>&nbsp;música?
+muted: IA como espelho — o que define um artista não é o que ele gera, mas o que escolhe&nbsp;descartar.
 ---
 type: bullets
 eyebrow: O experimento
@@ -287,7 +288,7 @@ caption: annotate.py · CLAP + Whisper
 ---
 type: pipeline-step
 eyebrow: Pipeline · 03 / 05
-title: Condicionar o backbone.
+title: Condicionar o&nbsp;backbone.
 sub: |
   Features por frame do <strong>MERT</strong> → agrupadas em <strong>64 tokens de prefixo</strong> →
   projetadas para a dimensão do backbone → no treino, prefixadas à sequência;
@@ -542,9 +543,16 @@ callout: |
   <strong>MERT</strong>, treinado em música, e acrescentei um <strong>termo melódico</strong>
   à loss — com peso de só <em>0,1</em>. Ainda é pouco. Aumentar esse número é o próximo experimento.
 ---
+type: center
+eyebrow: IA como espelho
+quote: |
+  O que define um artista<br />não é o que ele <em>gera</em>,<br />mas o que escolhe&nbsp;<em>descartar.</em>
+quote-class: serif
+muted: Nos três sistemas, a máquina gerou. Quem decidiu o que ficava fui&nbsp;eu.
+---
 type: stack
-eyebrow: Para além da geração
-heading: Gerar é só uma parte da&nbsp;história.
+eyebrow: Extra · Para além da geração
+heading: O mesmo espelho, outras&nbsp;ferramentas.
 lede: Treinar modelos é só um dos jeitos que eu tenho de fazer música com tecnologia. Também toco com ela — no corpo, na imagem e até no&nbsp;paladar.
 cards:
   - num: "01"
@@ -558,7 +566,7 @@ cards:
     body: Um picolé que conduz a música — para você provar cada&nbsp;instrumento.
 ---
 type: bullets
-eyebrow: A luva
+eyebrow: Extra · A luva
 heading: Uma luva que entende como eu danço.
 heading-style: display-sm
 lede: Um instrumento que eu visto. Construído com uma equipe em San Francisco.
@@ -573,7 +581,7 @@ photo-bg-style: side
 photo-bg-pos: 62% 35%
 ---
 type: media-video
-eyebrow: Imagem em tempo real
+eyebrow: Extra · Imagem em tempo real
 title: A música pinta a tela.
 sub: |
   Um vídeo ao vivo entra, quadro a quadro, e sai transformado pelo
@@ -585,7 +593,7 @@ caption-text: VJ Stream Diffusion · Barcelona e Paris
 layout: split
 ---
 type: media-video
-eyebrow: Taste the&nbsp;music
+eyebrow: Extra · Taste the&nbsp;music
 title: Provar a&nbsp;música.
 sub: |
   O gelo conduz eletricidade. Com <strong>Ableton Live</strong> e <strong>Arduino</strong>,
@@ -596,16 +604,6 @@ portrait: true
 caption-tag: Taste the&nbsp;music
 caption-text: Music Popsicle · Ableton Live + Arduino
 layout: split
----
-type: center
-eyebrow: A pergunta maior
-quote: |
-  E se a minha <em>voz</em><br />não for o som que eu faço,<br />mas o que eu&nbsp;<em>escolho?</em>
-quote-class: serif
-photo-bg: ./media/bia-mural.jpg
-photo-bg-alt: Bianca diante de um mural colorido em Barcelona
-photo-bg-style: full
-photo-bg-pos: 50% 28%
 ---
 type: bullets
 heading: O que vem por&nbsp;aí
