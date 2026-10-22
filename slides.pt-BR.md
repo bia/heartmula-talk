@@ -129,7 +129,7 @@ lede: Uma canção minha, <em>Chuva</em>. Três maneiras de ensinar uma máquina
 bullets:
   - <strong>HeartMula</strong> — o meu próprio pipeline. No começo do ano era a única opção — construí à mão o fine-tuning do HeartMuLa-3B nos meus pares demo →&nbsp;arranjo.
   - <strong>ACE-Step 1.5</strong> — meses depois, o que eu fiz à mão já vem embutido. Em duas versões — só com uma referência de estilo, e com um LoRA treinado nas minhas 16&nbsp;músicas.
-  - <strong>Suno</strong> — a ferramenta comercial que milhões de pessoas usam — e com quem vou cantar um dueto, ao vivo.
+  - <strong>Suno</strong> — não para treinar, mas para tocar — um parceiro de palco para um dueto, ao&nbsp;vivo.
 ---
 type: media-video
 eyebrow: Jornada da composição · 01
@@ -465,20 +465,10 @@ bg-image-alt: Ensaio do AO, baixo em primeiro plano e Bianca cantando ao fundo
 wave-style: song
 wave-gradient: mixed
 ---
-type: center
-eyebrow: Sistema 3 / 3
-quote: |
-  Suno.<br /><em>A ferramenta de todo mundo.</em>
-muted: Sem código, sem treino, sem GPU — um prompt e uma letra.
-photo-bg: ./media/bia-live-garage.jpg
-photo-bg-alt: Bianca cantando ao vivo com o AO em Barcelona
-photo-bg-style: full
-photo-bg-pos: 70% 30%
----
 type: media-audio
-eyebrow: Sistema 3 · ao vivo
+eyebrow: Sistema 3 · Suno · ao vivo
 title: Um dueto com a máquina.
-sub: O Suno toca. Eu canto por cima — <em>agora, aqui.</em>
+sub: Não treinei o Suno — voltei a ele porque é um ótimo parceiro de palco. Ele toca, eu canto por cima — <em>agora,&nbsp;aqui.</em>
 sub-tight: true
 audio: ./media/late-train-to-nowhere.mp3
 caption-tag: Dueto
@@ -492,8 +482,8 @@ photo-bg-pos: 62% 30%
 ---
 type: stack
 eyebrow: Lado a lado
-heading: Mesma música. Três respostas.
-lede: O que cada sistema ouviu em Chuva — e o que deixou para trás.
+heading: Mesma música. Duas respostas.
+lede: O que cada modelo ouviu em Chuva — e o que deixou para&nbsp;trás.
 cards:
   - num: "01"
     title: HeartMula
@@ -501,16 +491,13 @@ cards:
   - num: "02"
     title: ACE-Step
     body: Só com referência, muita intimidade! Mas nada da minha garra. Com o LoRA, erra o timbre exato da minha voz.
-  - num: "03"
-    title: Suno
-    body: Inventou a sua própria música — mas, como acabamos de ver, pode ser uma parceira para&nbsp;mim.
-closing: Todas essas coisas são <em>ferramentas.</em>
+closing: E o Suno? Não é para imitar a minha Chuva — é para tocar comigo. Todas essas coisas são <em>ferramentas.</em>
 ---
 type: center
 eyebrow: A sua vez
 quote: |
   Qual delas<br />soa mais <em>como eu?</em>
-muted: Levantem a mão — 1, 2 ou 3.
+muted: Levantem a mão — HeartMula ou&nbsp;ACE-Step?
 ---
 type: lesson
 eyebrow: Lição 03

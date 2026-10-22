@@ -130,7 +130,7 @@ lede: One song of mine, <em>Chuva</em>. Three ways of teaching a machine to play
 bullets:
   - <strong>HeartMula</strong> — my own pipeline. Early this year it was the only option — I built the fine-tuning of HeartMuLa-3B on my demo → arrangement pairs by&nbsp;hand.
   - <strong>ACE-Step 1.5</strong> — months later, what I did by hand comes built in. Two versions — with just a style reference, and with a LoRA trained on my 16&nbsp;songs.
-  - <strong>Suno</strong> — the commercial tool millions of people use — and my partner for a live&nbsp;duet.
+  - <strong>Suno</strong> — not to train, but to play — a stage partner for a live&nbsp;duet.
 ---
 type: media-video
 eyebrow: Composition journey · 01
@@ -466,20 +466,10 @@ bg-image-alt: AO rehearsal, bass in the foreground and Bianca singing behind
 wave-style: song
 wave-gradient: mixed
 ---
-type: center
-eyebrow: System 3 / 3
-quote: |
-  Suno.<br /><em>Everyone's tool.</em>
-muted: No code, no training, no GPU — a prompt and some lyrics.
-photo-bg: ./media/bia-live-garage.jpg
-photo-bg-alt: Bianca singing live with AO in Barcelona
-photo-bg-style: full
-photo-bg-pos: 70% 30%
----
 type: media-audio
-eyebrow: System 3 · live
+eyebrow: System 3 · Suno · live
 title: A duet with the machine.
-sub: Suno plays. I sing on top — <em>right here, right now.</em>
+sub: I didn't train Suno — I came back to it because it's a great stage partner. It plays, I sing on top — <em>right here, right&nbsp;now.</em>
 sub-tight: true
 audio: ./media/late-train-to-nowhere.mp3
 caption-tag: Duet
@@ -493,8 +483,8 @@ photo-bg-pos: 62% 30%
 ---
 type: stack
 eyebrow: Side by side
-heading: Same song. Three answers.
-lede: What each system heard in Chuva — and what it left behind.
+heading: Same song. Two answers.
+lede: What each model heard in Chuva — and what it left&nbsp;behind.
 cards:
   - num: "01"
     title: HeartMula
@@ -502,16 +492,13 @@ cards:
   - num: "02"
     title: ACE-Step
     body: Reference only, a lot of intimacy! But none of my grit. With the LoRA, it misses my exact vocal tone.
-  - num: "03"
-    title: Suno
-    body: It invented its own song — but, as we just saw, it can be a partner for&nbsp;me.
-closing: All of these are <em>tools.</em>
+closing: And Suno? It's not there to imitate my Chuva — it's there to play with me. All of these are <em>tools.</em>
 ---
 type: center
 eyebrow: Your turn
 quote: |
   Which one<br />sounds most <em>like me?</em>
-muted: Raise your hand — 1, 2 or 3.
+muted: Raise your hand — HeartMula or&nbsp;ACE-Step?
 ---
 type: lesson
 eyebrow: Lesson 03
