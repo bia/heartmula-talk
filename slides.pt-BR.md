@@ -1,4 +1,4 @@
-# Mesma música, três sistemas
+# Mesma música, dois sistemas
 # Bianca Cheng — palestra HeartMula · Festival Futuros Possíveis · Casa Firjan
 #
 # Versão em português (pt-BR). Aberta por index.pt-BR.html.
@@ -116,20 +116,20 @@ photo-bg-style: right
 photo-bg-pos: 50% 35%
 ---
 type: center
-eyebrow: Parte 1 · Mesma música, três sistemas
+eyebrow: Parte 1 · Mesma música, dois sistemas
 quote: |
   O que acontece quando<br />eu ensino uma máquina<br />a fazer <em>a minha</em>&nbsp;música?
 muted: IA como espelho — o que define um artista não é o que ele gera, mas o que escolhe&nbsp;descartar.
 ---
 type: bullets
 eyebrow: O experimento
-heading: Mesma música, três sistemas.
+heading: Mesma música, dois sistemas.
 heading-style: display-sm
-lede: Uma canção minha, <em>Chuva</em>. Três maneiras de ensinar uma máquina a tocá-la do meu jeito.
+lede: Uma canção minha, <em>Chuva</em>. Duas maneiras de ensinar uma máquina a tocá&#8209;la do meu&nbsp;jeito.
 bullets:
   - <strong>HeartMula</strong> — o meu próprio pipeline. No começo do ano era a única opção — construí à mão o fine-tuning do HeartMuLa-3B nos meus pares demo →&nbsp;arranjo.
   - <strong>ACE-Step 1.5</strong> — meses depois, o que eu fiz à mão já vem embutido. Em duas versões — só com uma referência de estilo, e com um LoRA treinado nas minhas 16&nbsp;músicas.
-  - <strong>Suno</strong> — não para treinar, mas para tocar — um parceiro de palco para um dueto, ao&nbsp;vivo.
+  - <strong>E um bônus — o Suno</strong> — que testei lá no começo e trouxe de volta, não para treinar, mas para tocar comigo, ao&nbsp;vivo.
 ---
 type: media-video
 eyebrow: Jornada da composição · 01
@@ -144,7 +144,7 @@ layout: split
 ---
 type: media-audio
 eyebrow: A música · a entrada
-title: A demo que os três recebem.
+title: A demo que os dois recebem.
 sub: |
   Dei a ele a demo de Chuva — com arranjo completo, cantada em português.
   <em>Bm7(9) · Em6 · "dia de chuva e acabou o verão."</em>
@@ -189,7 +189,7 @@ muted: |
   Tudo o que já fiz, devolvido a um sistema que tentava se tornar eu.
 ---
 type: center
-eyebrow: Sistema 1 / 3
+eyebrow: Sistema 1 / 2
 quote: |
   HeartMula.<br /><em>O meu próprio modelo.</em>
 muted: Fine-tuning de um modelo aberto de 3 bilhões de parâmetros, nos meus pares demo → arranjo.
@@ -388,7 +388,7 @@ cards:
     body: O catálogo. As mesmas 16 músicas, a mesma Chuva. É isso que torna a comparação justa.
 ---
 type: center
-eyebrow: Sistema 2 / 3
+eyebrow: Sistema 2 / 2
 quote: |
   ACE-Step 1.5.<br /><em>Duas versões.</em>
 muted: Um modelo aberto de canções completas, com voz e letra (licença MIT, roda num MacBook M1). Primeiro sem treino nenhum — depois com o meu catálogo.
@@ -466,9 +466,9 @@ wave-style: song
 wave-gradient: mixed
 ---
 type: media-audio
-eyebrow: Sistema 3 · Suno · ao vivo
+eyebrow: Bônus · Suno · ao vivo
 title: Um dueto com a máquina.
-sub: Não treinei o Suno — voltei a ele porque é um ótimo parceiro de palco. Ele toca, eu canto por cima — <em>agora,&nbsp;aqui.</em>
+sub: O Suno foi uma das primeiras coisas que testei, lá no começo. Trouxe de volta não para treinar, mas para tocar comigo — ele toca, eu canto por cima, <em>agora,&nbsp;aqui.</em>
 sub-tight: true
 audio: ./media/late-train-to-nowhere.mp3
 caption-tag: Dueto
@@ -512,7 +512,7 @@ photo-bg-alt: Bianca cantando ao vivo com o AO em Barcelona
 photo-bg-style: side
 photo-bg-pos: 88% 30%
 ---
-# TODO: rever o callout depois de ouvir os três sistemas — o teto continua o mesmo?
+# TODO: rever o callout depois de ouvir os dois sistemas — o teto continua o mesmo?
 type: lesson
 theme: ao
 photo: ./media/ao-band-energy.jpg
@@ -535,7 +535,7 @@ eyebrow: IA como espelho
 quote: |
   O que define um artista<br />não é o que ele <em>gera</em>,<br />mas o que escolhe&nbsp;<em>descartar.</em>
 quote-class: serif
-muted: Nos três sistemas, a máquina gerou. Quem decidiu o que ficava fui&nbsp;eu.
+muted: Nos dois sistemas, a máquina gerou. Quem decidiu o que ficava fui&nbsp;eu.
 ---
 type: stack
 eyebrow: Extra · Para além da geração
@@ -606,7 +606,7 @@ bullets:
 type: open-source
 eyebrow: É open source
 url: github.com/bia/bia-music-composer
-url2: heartmula-talk.netlify.app/pt
+url2: heartmula-talk.get-bianca.workers.dev/pt
 caption: 📷 &nbsp; Fotografe — o código e os slides desta&nbsp;palestra.
 qrs:
   - src: ./media/qr-github.svg
@@ -614,7 +614,7 @@ qrs:
     handle: github.com/bia/bia-music-composer
   - src: ./media/qr-talk-pt.svg
     label: Estes slides
-    handle: heartmula-talk.netlify.app/pt
+    handle: heartmula-talk.get-bianca.workers.dev/pt
 ---
 type: thank-you
 eyebrow: Obrigada

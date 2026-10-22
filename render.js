@@ -385,7 +385,7 @@
             // meaningful part. Glyph width is kept the same across lines.
             const urlLine = (url, i) => {
                 // repo URLs (host/owner/repo): highlight the repo. Site URLs: highlight the
-                // site name and any path, e.g. heartmula-talk.netlify.app/pt.
+                // site name and any path, e.g. heartmula-talk.get-bianca.workers.dev/pt.
                 const repo = url.match(/^([^\/]+\/[^\/]+\/)(.+)$/);
                 const site = url.match(/^([^.\/]+)([^\/]*\/?)(.*)$/);
                 const parts = repo

@@ -1,4 +1,4 @@
-# Same song, three systems
+# Same song, two systems
 # Bianca Cheng — HeartMula talk · Festival Futuros Possíveis · Casa Firjan
 #
 # English version. Opened by index.html. Mirrors slides.pt-BR.md slide for slide —
@@ -117,20 +117,20 @@ photo-bg-style: right
 photo-bg-pos: 50% 35%
 ---
 type: center
-eyebrow: Part 1 · Same song, three systems
+eyebrow: Part 1 · Same song, two systems
 quote: |
   What happens when<br />I teach a machine<br />to make <em>my</em>&nbsp;music?
 muted: AI as a mirror — what defines an artist isn't what they generate, but what they choose to&nbsp;discard.
 ---
 type: bullets
 eyebrow: The experiment
-heading: Same song, three systems.
+heading: Same song, two systems.
 heading-style: display-sm
-lede: One song of mine, <em>Chuva</em>. Three ways of teaching a machine to play it like I&nbsp;do.
+lede: One song of mine, <em>Chuva</em>. Two ways of teaching a machine to play it like I&nbsp;do.
 bullets:
   - <strong>HeartMula</strong> — my own pipeline. Early this year it was the only option — I built the fine-tuning of HeartMuLa-3B on my demo → arrangement pairs by&nbsp;hand.
   - <strong>ACE-Step 1.5</strong> — months later, what I did by hand comes built in. Two versions — with just a style reference, and with a LoRA trained on my 16&nbsp;songs.
-  - <strong>Suno</strong> — not to train, but to play — a stage partner for a live&nbsp;duet.
+  - <strong>And a bonus — Suno</strong> — something I tried at the very beginning and brought back, not to train, but to play with me,&nbsp;live.
 ---
 type: media-video
 eyebrow: Composition journey · 01
@@ -145,7 +145,7 @@ layout: split
 ---
 type: media-audio
 eyebrow: The song · the input
-title: The demo all three get.
+title: The demo both get.
 sub: |
   The demo of Chuva — fully arranged, sung in Portuguese.
   <em>Bm7(9) · Em6 · "dia de chuva e acabou o verão."</em>
@@ -190,7 +190,7 @@ muted: |
   Everything I've made, fed back to a system that was trying to become me.
 ---
 type: center
-eyebrow: System 1 / 3
+eyebrow: System 1 / 2
 quote: |
   HeartMula.<br /><em>My own model.</em>
 muted: Fine-tuning an open 3-billion-parameter model on my demo → arrangement&nbsp;pairs.
@@ -389,7 +389,7 @@ cards:
     body: The catalog. The same 16 songs, the same Chuva. That's what makes the comparison fair.
 ---
 type: center
-eyebrow: System 2 / 3
+eyebrow: System 2 / 2
 quote: |
   ACE-Step 1.5.<br /><em>Two versions.</em>
 muted: An open full-song model, with vocals and lyrics (MIT license, runs on a MacBook M1). First with no training at all — then with my catalog.
@@ -467,9 +467,9 @@ wave-style: song
 wave-gradient: mixed
 ---
 type: media-audio
-eyebrow: System 3 · Suno · live
+eyebrow: Bonus · Suno · live
 title: A duet with the machine.
-sub: I didn't train Suno — I came back to it because it's a great stage partner. It plays, I sing on top — <em>right here, right&nbsp;now.</em>
+sub: Suno was one of the first things I tried, at the very beginning. I brought it back not to train, but to play with me — it plays, I sing on top, <em>right here, right&nbsp;now.</em>
 sub-tight: true
 audio: ./media/late-train-to-nowhere.mp3
 caption-tag: Duet
@@ -513,7 +513,7 @@ photo-bg-alt: Bianca singing live with AO in Barcelona
 photo-bg-style: side
 photo-bg-pos: 88% 30%
 ---
-# TODO: revisit the callout after hearing all three systems — is the ceiling still the same?
+# TODO: revisit the callout after hearing both systems — is the ceiling still the same?
 type: lesson
 theme: ao
 photo: ./media/ao-band-energy.jpg
@@ -536,7 +536,7 @@ eyebrow: AI as a mirror
 quote: |
   What defines an artist<br />isn't what they <em>generate</em>,<br />but what they choose to&nbsp;<em>discard.</em>
 quote-class: serif
-muted: In all three systems, the machine generated. I decided what&nbsp;stayed.
+muted: In both systems, the machine generated. I decided what&nbsp;stayed.
 ---
 type: stack
 eyebrow: Extra · Beyond generation
@@ -607,7 +607,7 @@ bullets:
 type: open-source
 eyebrow: It's open source
 url: github.com/bia/bia-music-composer
-url2: heartmula-talk.netlify.app
+url2: heartmula-talk.get-bianca.workers.dev
 caption: 📷 &nbsp; Photograph this — the code and this talk's&nbsp;slides.
 qrs:
   - src: ./media/qr-github.svg
@@ -615,7 +615,7 @@ qrs:
     handle: github.com/bia/bia-music-composer
   - src: ./media/qr-talk-en.svg
     label: These slides
-    handle: heartmula-talk.netlify.app
+    handle: heartmula-talk.get-bianca.workers.dev
 ---
 type: thank-you
 eyebrow: Thank you
